@@ -2,20 +2,20 @@
 # -*- coding: utf-8 -*-
 
 from astropy.table import Table,Column
-from pydrive.auth import GoogleAuth
-from pydrive.drive import GoogleDrive
-
-gauth = GoogleAuth()
-gauth.LocalWebserverAuth()
-
-drive = GoogleDrive(gauth)
-
-file_list = drive.ListFile({'q': "'0B7ZDkYLdRh3AWVJyNF9SLWhRODQ' in parents and trashed=false"}).GetList()
-for file1 in file_list:
-    print(('title: %s, id: %s' % (file1['title'], file1['id'])))
-
-drivefile=drive.CreateFile({'id':'18w3dbA3lga8So5sCUml7xUFyOPjfTEZ-vXSzobYprhY'})
-drivefile.GetContentFile('downloaded_table.csv',mimetype='text/csv')
+# from pydrive.auth import GoogleAuth
+# from pydrive.drive import GoogleDrive
+#
+# gauth = GoogleAuth()
+# gauth.LocalWebserverAuth()
+#
+# drive = GoogleDrive(gauth)
+#
+# file_list = drive.ListFile({'q': "'0B7ZDkYLdRh3AWVJyNF9SLWhRODQ' in parents and trashed=false"}).GetList()
+# for file1 in file_list:
+#     print(('title: %s, id: %s' % (file1['title'], file1['id'])))
+#
+# drivefile=drive.CreateFile({'id':'18w3dbA3lga8So5sCUml7xUFyOPjfTEZ-vXSzobYprhY'})
+# drivefile.GetContentFile('../data/downloaded_table.csv',mimetype='text/csv')
 
 # Generates HTML files that look (a bit) like the resources and workshops pages
 # on the Cardiff Physics Engagement blog
@@ -24,17 +24,17 @@ drivefile.GetContentFile('downloaded_table.csv',mimetype='text/csv')
 # File can be downloaded (in CSV format) from https://docs.google.com/spreadsheets/d/18w3dbA3lga8So5sCUml7xUFyOPjfTEZ-vXSzobYprhY/edit?usp=sharing
 # You *may* need to remove commas (as astropy.table may not like them...
 
-fileIn="downloaded_table.csv"
+fileIn="../data/downloaded_table.csv"
 tabIn=Table.read(fileIn)
 
 # main websites
-fOutRes=open('testHtml_resources.html','w')
-fOutWorkshops=open('testHtml_workshops.html','w')
+fOutRes=open('../html/testHtml_resources.html','w')
+fOutWorkshops=open('../html/testHtml_workshops.html','w')
 
 # snippets of html (won't work properly as a standalone html file)
-fOutGrav=open('testHtml_gw.html','w')
-fOutPhys=open('testHtml_phys.html','w')
-fOutAstro=open('testHtml_astro.html','w')
+fOutGrav=open('../html/testHtml_gw.html','w')
+fOutPhys=open('../html/testHtml_phys.html','w')
+fOutAstro=open('../html/testHtml_astro.html','w')
 
 # set up lists
 astroHtml=[]
