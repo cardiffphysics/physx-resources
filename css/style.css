@@ -1,0 +1,512 @@
+/*
+Welcome to Custom CSS!
+
+CSS (Cascading Style Sheets) is a kind of code that tells the browser how
+to render a web page. You may delete these comments and get started with
+your customizations.
+
+By default, your stylesheet will be loaded after the theme stylesheets,
+which means that your rules can take precedence and override the theme CSS
+rules. Just write here what you want to change, you don't need to copy all
+your theme's stylesheet content.
+*/
+.site {
+/*
+	opacity: .95;
+	box-shadow: 0 2px 6px rgba(0,0,0,1) !important;
+	*/
+}
+
+img.no-shadow {
+/*Don't add box-shadow to an imabe*/
+/*Corrects http://blogs.cardiff.ac.uk/physicsoutreach/wp-content/themes/twentytwelve/style.css?ver=3.7.1 */
+	box-shadow: none;
+}/*##############
+HIDDEN CONTENT
+##############*/
+
+}
+
+/*##############
+LINK STYLING
+##############*/
+a {
+/*Remove underline from all links*/
+/*
+	text-decoration: none;
+	*/
+}
+
+.widget-area .widget a {
+/*Links in widgets are bold and blue*/
+/* REMOVED
+	font-weight: bold;
+	color: #21759b;
+	*/
+}
+
+.template-front-page .widget-area .widget li a {
+/*Links in front-page widgets are bold and blue
+	(e.g. recent post titles etc.*/
+/* REMOVED
+	font-weight: bold;
+	color: #21759b;
+*/
+}
+
+/*##############
+By-lines (old)
+##############*/
+div.byline {
+	color: #757575;
+	margin-top: -1rem;
+	margin-left: 2rem;
+	margin-bottom: 1rem;
+	border-bottom: 3px solid #efefef;
+	padding-right: .35rem;
+	float: left;
+	width: 50%;
+	margin-right: 50%;
+}
+
+div.byline:before {
+	content: "Posted by ";
+}
+
+/*##############
+By-lines (new)
+##############*/
+div.byline-new {
+	color: #757575;
+	margin-top: -1rem;
+	margin-left: 2rem;
+	margin-bottom: 1rem;
+	border-bottom: 3px solid #efefef;
+	padding-right: .35rem;
+	float: left;
+	width: 50%;
+	margin-right: 50%;
+}
+
+div.byline-new:before {
+	content: "Posted by ";
+}
+
+div.byline-new:after {
+	content: attr(id);
+}
+
+/*###############
+Compact paragraphs etc.
+###############*/
+p.compact, ul.compact {
+	margin-bottom: 0;
+}
+
+/*###############
+Quoted code
+###############*/
+blockquote.compact {
+	padding-top: 0;
+	padding-bottom: 0;
+	margin: 0;
+	background-color: #efefef;
+}
+
+code {
+	font-style: normal;
+	background-color: #efefef;
+}
+
+/*###############
+LISTS OF BLOCKS (e.g. For Teacher and Schools)
+LISTS OF TALKS (e.g. Free School Talks)
+###############*/
+/*Make the item full-width*/
+div.block-item {
+	width: 100%;
+	display: block;
+	min-height: 11rem;
+	vertical-align: top;
+}
+
+div.block-item.block-50 {
+	width: 45%;
+	min-height: 11em;
+	display: inline-block;
+	padding-right: 2%;
+}
+
+div.block-outline {
+	border: 1px solid black;
+}
+
+div.block-img {
+/*smaller images*/
+	float: left;
+	width: 11rem;
+}
+
+div.block-item.talk .block-img, div.block-item.block-50 .block-img {
+/*smaller images*/
+	width: 3.5rem;
+}
+
+.block-img img {
+	width: 95%;
+	height: auto;
+}
+
+/*Position the text properly*/
+div.block-item p, div.block-item h3, div.block-item h4, div.block-item h5, div.block-item h6, div.block-item ul {
+/*block-img width + an extra 20px*/
+	margin-left: 12rem;
+/*stop it wrapping below the image*/
+	clear: none;
+/*reduce the spacing slightly*/
+	margin-bottom: .5rem;
+}
+div.block-item h3{
+	margin-left:0;
+}
+div.block-item.talk p, div.block-item.talk h3, div.block-item.talk h4, div.block-item.talk h5, div.block-item.talk h6, div.block-item.talk ul,
+div.block-item.block-50 p, div.block-item.block-50 h3, div.block-item.block-50 h4, div.block-item.block-50 h5, div.block-item.block-50 h6, div.block-item.block-50 ul {
+/*Smaller images: talk-img width + an extra 10px*/
+	margin-left: 4rem;
+	margin-bottom: 10px;
+}
+/*Styling for resource/workshop descriptions*/
+p.res {
+	margin-top: 0;
+}
+p.res-url, p.res-url a{
+	font-weight: bold;
+}
+p.res-desc:before {
+}
+
+p.res-age:before {
+	content: "Age range: ";
+	font-weight: bold;
+}
+
+p.res-type:before {
+	content: "Type: ";
+	font-weight: bold;
+}
+
+p.res-clink:before {
+	content: "Curriculum links: ";
+	font-weight: bold;
+}
+
+p.res-author:before {
+	content: "Authors: ";
+	font-weight: bold;
+}
+
+p.res-duration:before {
+	content: "Workshop Duration: ";
+	font-weight: bold;
+}
+
+div.block-item h3.block-white, div.block-item h3.block-white a {
+	padding-left: 5px;
+	color: #ffffff;
+	font: verdana;
+	font-family: sans-serif;
+	font-style: normal;
+	font-weight: bold;
+}
+
+div.block-item.dom-gravitational-waves h3 {
+	background-color: #75c223;
+}
+
+div.block-item.dom-astronomy h3 {
+	background-color: #469bca;
+}
+
+div.block-item.dom-physics h3 {
+	background-color: #e13851;
+}
+
+span.res-age-item {
+	color: #ffffff;
+	font-weight: bold;
+	padding-left: .5em;
+	padding-right: .5em;
+	margin-right: .25em;
+	margin-right: .25em;
+	font-family: sans-serif;
+}
+
+span.res-age-item {
+	background-color: #d1d1d1;
+}
+
+span.res-age-item.age-4-7 {
+	background-color: #ed4239;
+}
+
+span.res-age-item.age-7-9 {
+	background-color: #f48831;
+}
+
+span.res-age-item.age-9-11 {
+	background-color: #feca30;
+}
+
+span.res-age-item.age-11-14 {
+	background-color: #18a14f;
+}
+
+span.res-age-item.age-14-16 {
+	background-color: #08a3d1;
+}
+
+span.res-age-item.age-16-18 {
+	background-color: #4f4e98;
+}
+
+span.res-age-item.age-gt18 {
+	background-color: #b52768;
+}
+
+@media (max-width: 767px){
+	div.block-img{
+		width:100%;
+		clear:both;
+		text-align:center;
+	}
+	div.block-img img{
+		width:75%
+	}
+	div.block-item h3{
+		display:block;
+		clear:both;
+	}
+	div.block-item p, div.block-item h3{
+		margin-left: 0;
+	}
+}
+/*div.block-item.dom-physics {
+	background: rgba(255,255,255,1);
+	background: -moz-linear-gradient(bottom left,rgba(255,0,0,0.05) 0%,rgba(255,0,0,0.1) 95%,rgba(255,0,0,0.5) 100%);
+	background: -webkit-gradient(left bottom,right top,color-stop(0%,rgba(255,0,0,0.05)),color-stop(95%,rgba(255,0,0,0.1)),color-stop(100%,rgba(255,0,0,0.5)));
+	background: -webkit-linear-gradient(bottom left,rgba(255,0,0,0.05) 0%,rgba(255,0,0,0.1) 95%,rgba(255,0,0,0.5) 100%);
+	background: -o-linear-gradient(bottom left,rgba(255,0,0,0.05) 0%,rgba(255,0,0,0.1) 95%,rgba(255,0,0,0.5) 100%);
+	background: -ms-linear-gradient(bottom left,rgba(255,0,0,0.05) 0%,rgba(255,0,0,0.1) 95%,rgba(255,0,0,0.5) 100%);
+	background: linear-gradient(to top right,rgba(255,0,0,0.05) 0%,rgba(255,0,0,0.1) 95%,rgba(255,0,0,0.5)) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff',endColorstr='#ff0000',GradientType=1);
+}
+
+div.block-item.dom-astronomy {
+	background: rgba(255,255,255,1);
+	background: -moz-linear-gradient(bottom left,rgba(0,0,255,0.05) 0%,rgba(0,0,255,0.1) 95%,rgba(0,0,255,0.5) 100%);
+	background: -webkit-gradient(left bottom,right top,color-stop(0%,rgba(0,0,255,0.05)),color-stop(95%,rgba(0,0,255,0.1)),color-stop(100%,rgba(255,0,0,0.5)));
+	background: -webkit-linear-gradient(bottom left,rgba(0,0,255,0.05) 0%,rgba(0,0,255,0.1) 95%,rgba(0,0,255,0.5) 100%);
+	background: -o-linear-gradient(bottom left,rgba(0,0,255,0.05) 0%,rgba(0,0,255,0.1) 95%,rgba(0,0,255,0.5) 100%);
+	background: -ms-linear-gradient(bottom left,rgba(0,0,255,0.05) 0%,rgba(0,0,255,0.1) 95%,rgba(0,0,255,0.5) 100%);
+	background: linear-gradient(to top right,rgba(0,0,255,0.05) 0%,rgba(0,0,255,0.1) 95%,rgba(0,0,255,0.5)) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff',endColorstr='#0000ff',GradientType=1);
+}
+
+div.block-item.dom-gravitational-waves {
+	background: rgba(255,255,255,1);
+	background: -moz-linear-gradient(bottom left,rgba(0,255,0,0.05) 0%,rgba(0,255,0,0.1) 95%,rgba(0,255,0,0.5) 100%);
+	background: -webkit-gradient(left bottom,right top,color-stop(0%,rgba(0,255,0,0.05)),color-stop(95%,rgba(0,255,0,0.1)),color-stop(100%,rgba(255,0,0,0.5)));
+	background: -webkit-linear-gradient(bottom left,rgba(0,255,0,0.05) 0%,rgba(0,255,0,0.1) 95%,rgba(0,255,0,0.5) 100%);
+	background: -o-linear-gradient(bottom left,rgba(0,255,0,0.05) 0%,rgba(0,255,0,0.1) 95%,rgba(0,255,0,0.5) 100%);
+	background: -ms-linear-gradient(bottom left,rgba(0,255,0,0.05) 0%,rgba(0,255,0,0.1) 95%,rgba(0,255,0,0.5) 100%);
+	background: linear-gradient(to top right,rgba(0,255,0,0.05) 0%,rgba(0,255,0,0.1) 95%,rgba(0,255,0,0.5)) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff',endColorstr='#00ff00',GradientType=1);
+}*/
+/*##############
+Larger blocks
+##############*/
+div.box {
+	float: left;
+	margin: 10px;
+	border-radius: 10px;
+}
+
+div.boxleft {
+	float: left;
+	margin-left: 5%;
+}
+
+div.boxright {
+	float: right;
+	margin-right: 5%;
+}
+
+div.box.sq-bottom {
+	border-bottom-left-radius: 0;
+	border-bottom-right-radius: 0;
+	margin-bottom: 0;
+}
+
+div.box.sq-top {
+	border-top-left-radius: 0;
+	border-top-right-radius: 0;
+	margin-top: 0;
+}
+
+div.box p {
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+div.box.box25 {
+	width: 23%;
+}
+
+div.box.box30 {
+	width: 28%;
+}
+
+div.box.box50 {
+	width: 40%;
+}
+
+div.box.box100 {
+	width: 90%;
+	margin-left: 5%;
+	margin-right: 5%;
+}
+
+div.box h3 {
+	margin-top: 0;
+	margin-bottom: 0;
+/*padding-left: 10px;*/
+	text-align: center;
+	font-family: sans-serif;
+	font-style: normal;
+	font-weight: bold;
+}
+
+div.box.blue {
+	border: 5px solid #0000ff;
+}
+
+div.box.blue h3 {
+	background-color: #0000ff;
+	color: #ffffff;
+}
+
+div.box.red {
+	border: 5px solid #ff0000;
+}
+
+div.box.red h3 {
+	background-color: #ff0000;
+	color: #ffffff;
+}
+
+div.box.cardiffred {
+	border: 5px solid #d73347;
+}
+
+div.box.cardiffred h3 {
+	background-color: #d73347;
+	color: #ffffff;
+}
+
+div.box.green {
+	border: 5px solid #009600;
+}
+
+div.box.green h3 {
+	background-color: #009600;
+	color: #ffffff;
+}
+
+div.box.yellow {
+	border: 5px solid #ffff00;
+}
+
+div.box.yellow h3 {
+	background-color: #ffff00;
+	color: #000000;
+}
+
+div.box.grey {
+	border: 5px solid #555555;
+}
+
+div.box.grey h3 {
+	background-color: #555555;
+	color: #ffffff;
+}
+
+div.box a {
+	color: #555555;
+}
+
+div.box h3 a, div.box h3 a:visited {
+	color: #ffffff;
+	display: inline-block;
+	width: 100%;
+}
+
+/*##############
+SCHOOL TALKS COLUMNS (e.g. Christmas Lecture)
+##############*/
+div.talk-col {
+	width: 46%;
+	padding: 0 1%;
+	border-width: 1px;
+	border-style: solid;
+}
+
+div.talk-col.left {
+	float: left;
+}
+
+div.talk-col.right {
+	float: right;
+}
+
+/*###############
+TINTS
+###############*/
+div.tint1 {
+	border-color: #12c8bc;
+	background-color: #d1e4de;
+}
+
+div.tint2 {
+	border-color: #FBF5E7;
+	background-color: #F4E1B5;
+}
+
+/*##############
+TABLES (e.g. Christmas Lecture)
+##############*/
+table.agenda td, table.agenda th {
+	padding-left: .7rem;
+	padding-bottom: .7rem;
+	vertical-align: top;
+}
+
+table.agenda tr.hdr {
+	background-color: #c5c5c5;
+}
+
+table.agenda tr.borderbottom {
+	border-bottom: 1px solid black;
+}
+
+table.agenda tr.bordertop {
+	border-top: 1px solid black;
+}
+
+.single-post figure.image:first-of-type {
+	display: none;
+}
+
+/*
+.single-post figure.image.override:first-of-type {
+	display: block;
+}*/
