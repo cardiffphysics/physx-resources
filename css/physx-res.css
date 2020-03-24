@@ -1,47 +1,299 @@
 .filter{
     display:inline-block;
-    margin-left:10px;
-    margin-right:10px;
+    background-color:#f2f6d5;
+    margin-top:1em;
+    padding-bottom:1em;
+    width:100%;
+    height:auto;
+    border-radius:0.5em;
+    overflow:hidden;
+    max-height:5em;
+    transition: max-height .5s;
+    /* cursor:pointer; */
+}
+.filter.closed{
+    max-height:1.5em;
+}
+
+h3.filter-name{
+    margin-bottom:0.5em;
+    margin-top:0;
+    padding-bottom:0.5em;
+    padding-left:2em;
+    padding-top:0.5em;
+    background-color:#dce57d;
+    color:#000000;
+    border-radius:0.5em 0.5em 0 0;
+    position:relative;
+    width:auto;
+}
+.filter.closed h3.filter-name::before{
+    content: '';
+    position: absolute;
+    left: .5em;
+    top: 1em;
+    width: 0;
+    height: 0;
+    border-left: .5em solid transparent;
+    border-right: .5em solid transparent;
+    border-top: .5em solid black;
+    clear: both;
+}
+.filter.open h3.filter-name::before{
+    content: '';
+    position: absolute;
+    left: .5em;
+    top: 1em;
+    width: 0;
+    height: 0;
+    border-left: .5em solid transparent;
+    border-right: .5em solid transparent;
+    border-bottom: .5em solid black;
+    clear: both;
+}
+.filt-option{
+    display:inline-block;
+    margin-left:.5em;
+    margin-right:.5em;
+    margin-top:.5em;
+    width:auto;
 }
 
 .filt-item{
-    color: #ffffff;
     font-weight: bold;
     padding-left: .5em;
     padding-right: .5em;
-    margin-right: .25em;
+    /* margin-left: .25em; */
     margin-right: .25em;
     font-family: sans-serif;
+    padding-top: .25em;
+    padding-bottom: .25em;
+    border-radius:.25em;
 }
-
+.filt-item.age, .filt-item.dom{
+    color: #ffffff;
+}
+span.res-age-item {
+	color: #ffffff;
+	font-weight: bold;
+	padding-left: .5em;
+	padding-right: .5em;
+    padding-top: .25em;
+    padding-bottom: .25em;
+    border-radius:.25em;
+	margin-left: .25em;
+	margin-right: .25em;
+	font-family: sans-serif;
+}
 .block-item.hidden{
     display:none;
 }
 
+div.block-item h3.block-white, div.block-item h3.block-white a {
+	padding-left: 5px;
+	color: #ffffff;
+	font: verdana;
+	font-family: sans-serif;
+	font-style: normal;
+	font-weight: bold;
+}
+
+.filt-item.dom-astronomy, .block-item.dom-astronomy h3 {
+    background-color: #4f4c9a;
+}
+.filt-item.dom-physics, .block-item.dom-physics h3 {
+    background-color: #57b7aa;
+}
+.filt-item.dom-gravitational-waves, .block-item.dom-gravitational-waves h3 {
+    background-color: #b6c727;
+}
+.filt-item.dom-maths, .block-item.dom-maths h3 {
+    background-color: #f04031;
+}
+
 .res-age-item.age-4-7, .filt-item.age-4-7 {
-	background-color: #ed4239;
+	background-color: #f04031;
 }
 
 .res-age-item.age-7-9, .filt-item.age-7-9 {
-	background-color: #f48831;
+	background-color: #f6881f;
 }
 
 .res-age-item.age-9-11, .filt-item.age-9-11 {
-	background-color: #feca30;
+	background-color: #ffcb06;
 }
 
 .res-age-item.age-11-14, .filt-item.age-11-14 {
-	background-color: #18a14f;
+	background-color: #02a24b;
 }
 
 .res-age-item.age-14-16, .filt-item.age-14-16 {
-	background-color: #08a3d1;
+	background-color: #00a2d3;
 }
 
 .res-age-item.age-16-18, .filt-item.age-16-18 {
-	background-color: #4f4e98;
+	background-color: #662d8f;
 }
 
 .res-age-item.age-gt18, .filt-item.age-gt18 {
-	background-color: #b52768;
+	background-color: #b72268;
+}
+
+/*Make the item full-width*/
+div.block-item {
+	width: 100%;
+	display: block;
+	min-height: 11rem;
+	vertical-align: top;
+}
+
+div.block-item.block-50 {
+	width: 45%;
+	min-height: 11em;
+	display: inline-block;
+	padding-right: 2%;
+}
+
+div.block-outline {
+	border: 1px solid black;
+}
+
+div.block-img {
+/*smaller images*/
+	float: left;
+	width: 11rem;
+}
+
+div.block-item.talk .block-img, div.block-item.block-50 .block-img {
+/*smaller images*/
+	width: 3.5rem;
+}
+
+.block-img img {
+	width: 95%;
+	height: auto;
+}
+
+/*Position the text properly*/
+div.block-item p, div.block-item h3, div.block-item h4, div.block-item h5, div.block-item h6, div.block-item ul {
+/*block-img width + an extra 20px*/
+	margin-left: 12rem;
+/*stop it wrapping below the image*/
+	clear: none;
+/*reduce the spacing slightly*/
+	margin-bottom: .5rem;
+}
+div.block-item h3{
+	margin-left:0;
+}
+div.block-item.talk p, div.block-item.talk h3, div.block-item.talk h4, div.block-item.talk h5, div.block-item.talk h6, div.block-item.talk ul,
+div.block-item.block-50 p, div.block-item.block-50 h3, div.block-item.block-50 h4, div.block-item.block-50 h5, div.block-item.block-50 h6, div.block-item.block-50 ul {
+/*Smaller images: talk-img width + an extra 10px*/
+	margin-left: 4rem;
+	margin-bottom: 10px;
+}
+/*Styling for resource/workshop descriptions*/
+p.res {
+	margin-top: 0;
+}
+p.res-url, p.res-url a{
+	font-weight: bold;
+}
+p.res-desc:before {
+}
+
+p.res-age:before {
+	content: "Age range: ";
+	font-weight: bold;
+}
+
+p.res-type:before {
+	content: "Type: ";
+	font-weight: bold;
+}
+
+p.res-clink:before {
+	content: "Curriculum links: ";
+	font-weight: bold;
+}
+
+p.res-author:before {
+	content: "Authors: ";
+	font-weight: bold;
+}
+
+p.res-duration:before {
+	content: "Workshop Duration: ";
+	font-weight: bold;
+}
+
+div.block-item h3.block-white, div.block-item h3.block-white a {
+	padding-left: 5px;
+	color: #ffffff;
+	font: verdana;
+	font-family: sans-serif;
+	font-style: normal;
+	font-weight: bold;
+}
+
+/* div.block-item.dom-gravitational-waves h3 {
+	background-color: #75c223;
+}
+
+div.block-item.dom-astronomy h3 {
+	background-color: #469bca;
+}
+
+div.block-item.dom-physics h3 {
+	background-color: #e13851;
+}
+
+span.res-age-item {
+	background-color: #d1d1d1;
+}
+
+span.res-age-item.age-4-7 {
+	background-color: #f04031;
+}
+
+span.res-age-item.age-7-9 {
+	background-color: #f6881f;
+}
+
+span.res-age-item.age-9-11 {
+	background-color: #ffcb06;
+}
+
+span.res-age-item.age-11-14 {
+	background-color: #02a24b;
+}
+
+span.res-age-item.age-14-16 {
+	background-color: #00a2d3;
+}
+
+span.res-age-item.age-16-18 {
+	background-color: #662d8f;
+}
+
+span.res-age-item.age-gt18 {
+	background-color: #b72268;
+} */
+
+@media (max-width: 767px){
+	div.block-img{
+		width:100%;
+		clear:both;
+		text-align:center;
+	}
+	div.block-img img{
+		width:75%
+	}
+	div.block-item h3{
+		display:block;
+		clear:both;
+	}
+	div.block-item p, div.block-item h3{
+		margin-left: 0;
+	}
 }

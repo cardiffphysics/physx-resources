@@ -9,7 +9,17 @@ var filters={
             'age1114':{'tag':'age-11-14',name:"11-14"},
             'age1416':{'tag':'age-14-16',name:"14-16"},
             'age1618':{'tag':'age-16-18',name:"16-18"},
-            'agegt18':{'tag':'age-gt18',name:"&gt;18"}}
+            'agegt18':{'tag':'age-gt18',name:"&gt;18"}
+        },
+    },'domain':{
+        tag:'dom',
+        title:'Subject Area',
+        select:{
+            'Astronomy':{'tag':'dom-astronomy',name:"Astronomy"},
+            'GravWaves':{'tag':'dom-gravitational-waves',name:"Gravitational Waves"},
+            'Physics':{'tag':'dom-physics',name:"Physics"},
+            'Maths':{'tag':'dom-maths',name:"Maths"}
+        }
     }
 }
 function makeFilters(){
@@ -18,31 +28,52 @@ function makeFilters(){
     for (filt in filters){
         console.log(filt);
         var ftag=filters[filt].tag;
-        $('#filter-holder').append('<div class="filter" id="filter-'+ftag+'"><h3 class="filter-name">'+filters[filt].title+'</h3></div>')
+        $('#filter-holder').append('<div class="filter closed" id="filter-'+ftag+'"><h3 class="filter-name">'+filters[filt].title+'</h3></div>')
         for (s in filters[filt].select){
             var stag=filters[filt].select[s].tag;
             console.log(s);
-            $('#filter-'+ftag+'.filter').append('<input type="checkbox" id="filt-'+stag+'" name="filt-'+stag+'" checked=true>');
-            $('#filter-'+ftag+'.filter').append('<label class="filt-item '+stag+'" for="filt-'+stag+'" id="filt-'+stag+'_label">'+filters[filt].select[s].name+'</label>');
+            $('#filter-'+ftag+'.filter').append('<div class="filt-option '+stag+'" id="filt-'+stag+'_option"></div>')
+            $('#filt-'+stag+'_option').append('<input type="checkbox" id="filt-'+stag+'" name="filt-'+stag+'" checked=true>');
+            $('#filt-'+stag+'_option').append('<label class="filt-item '+ftag+' '+stag+'" for="filt-'+stag+'" id="filt-'+stag+'_label">'+filters[filt].select[s].name+'</label>');
+            $('#filt-'+stag).change(function(){
+                updateFilters();
+            })
         }
     }
+    $('.filter-name').each(function(){
+        $(this).click(function(){
+            if ($(this).parent().hasClass("open")){
+                $(this).parent().removeClass("open");
+                $(this).parent().addClass("closed");
+            }else{
+                $(this).parent().removeClass("closed");
+                $(this).parent().addClass("open");
+            }
+        })
+    })
 }
 
 function updateFilters(){
     $('.block-item').each(function(){
-        $(this).addClass('hidden');
-    });
-    for (filt in filters){
-        for (s in filters[filt].select){
-            var stag=filters[filt].select[s].tag;
-            var isvis=$('input#filt-'+stag).prop('checked');
-            console.log(stag,isvis);
-            if (isvis){
-                $('.block-item.'+stag).each(function(){
-                    $(this).removeClass('hidden');
-                })
+        var filtTotal=1;
+        var filtSub={};
+        for (filt in filters){
+            filtSub[filt]=0;
+            for (s in filters[filt].select){
+                var stag=filters[filt].select[s].tag;
+                if($('input#filt-'+stag).prop('checked')){
+                    if ($(this).hasClass(stag)){
+                        filtSub[filt]+=1;
+                    }
+                }
             }
-
+            filtTotal*=filtSub[filt]
         }
-    }
+        console.log($(this).find('h3 > a').html(),filtSub,filtTotal)
+        if (filtTotal==0){
+            $(this).addClass('hidden');
+        }else{
+            $(this).removeClass('hidden');
+        }
+    });
 }
