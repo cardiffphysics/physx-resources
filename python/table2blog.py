@@ -46,10 +46,12 @@ workHtml=[]
 hdr="""<!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" media="all" href="core.min.4.4.8_snippet.css" type="text/css"/>
-<link rel="stylesheet" media="all" href="style.css" type="text/css"/>
+<link rel="stylesheet" media="all" href="../css/physx-res.css" type="text/css"/>
+<script type="text/javascript" src="../js/jquery-3.4.1.min.js"></script>
+<script src="../js/physx-res.js" type="text/javascript"/></script>
 </head>
-<body class="span6">
+<body class="main">
+<div id="filter-holder"></div>
 """
 # Write header to HTML files
 fOutRes.write(hdr)
@@ -72,7 +74,7 @@ for row in tabIn:
             cltxt=a.lower().strip().replace(' ','-').replace('>','gt')
             if cltxt!='': classlist='%s age-%s'%(classlist,cltxt)
     except:
-        print('age error: ',row['Resource Name'])
+        print('age error: ',row['Resource Name'],row['Age Range'])
         pass
     desc=row['Description']
     clink=row['Curriculum Links']
@@ -82,7 +84,7 @@ for row in tabIn:
             cltxt=cl.lower().strip().replace(' ','-')
             if cltxt!='': classlist='%s clink-%s'%(classlist,cltxt)
     except:
-        print('curriculum error: ',row['Resource Name'])
+        print('curriculum error: ',row['Resource Name'],row['Curriculum Links'])
         pass
     author=row['Author/Originator']
     url=row['URL']
@@ -95,7 +97,7 @@ for row in tabIn:
             cltxt=dom.lower().strip().replace(' ','-')
             if cltxt!='': classlist='%s dom-%s'%(classlist,cltxt)
     except:
-        print('domain error: ',row['Resource Name'])
+        print('domain error: ',row['Resource Name'],row['Domain'])
         pass
     rtype=row['Type of Resource']
     try:
@@ -104,7 +106,7 @@ for row in tabIn:
             cltxt=rt.lower().strip().replace(' ','-')
             if cltxt!='': classlist='%s type-%s'%(classlist,cltxt)
     except:
-        print('type error: ',row['Resource Name'])
+        print('type error: ',row['Resource Name'],row['Type of Resource'])
         pass
     dur=row['Workshop Duration']
     img=row['Image']
@@ -179,6 +181,7 @@ for t in workHtml:
 
 # HTML footer
 ftr="""
+<script type="text/javascript"/>makeFilters();</script>
 </body>
 </html>
 """
