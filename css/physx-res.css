@@ -4,18 +4,18 @@ body{
     line-height: 20px;
 }
 .main {
-    width: 460px;
+    width: 750px;
+    margin-left: auto;
+    margin-right: auto;
 }
 a{
     color: #045bc6;
     text-decoration: none;
 }
 [class*="main"] {
-    float: left;
     min-height: 1px;
-    margin-left: 20px;
 }
-@media (max-width: 767px){
+@media (max-width: 750px){
     [class*="main"]{
         float: none;
         display: block;
@@ -26,25 +26,26 @@ a{
         box-sizing: border-box;
     }
 }
-@media (min-width:768px) and (max-width:979px){
+@media (min-width:751px) and (max-width:979px){
     [class*="main"]{
-        float:left;
         min-height:1px;
-        margin-left:20px}
+        margin-left:auto;
+        margin-right:auto;
+    }
     .main{
-        width:352px
+        width:750px
     }
 }
 @media (min-width: 1200px){
     .main {
-        width: 570px;
+        width: 750px;
     }
 }
 @media (min-width: 1200px){
     [class*="span"] {
-        float: left;
         min-height: 1px;
-        margin-left: 30px;
+        margin-left: auto;
+        margin-right: auto;
         }
 }
 .filter{
@@ -52,12 +53,15 @@ a{
     background-color:#f2f6d5;
     margin-top:1em;
     padding-bottom:1em;
-    width:100%;
+    width:45%;
+    margin-left:2%;
+    margin-right:2%;
     height:auto;
     border-radius:0.5em;
     overflow:hidden;
-    max-height:5em;
+    max-height:15em;
     transition: max-height .5s;
+    vertical-align: top;
     /* cursor:pointer; */
 }
 .filter.closed{
@@ -106,8 +110,16 @@ h3.filter-name{
     margin-right:.5em;
     margin-top:.5em;
     width:auto;
+    border-radius:.25em;
+    padding-left:0.5em;
 }
-
+.filt-option input, .filt-option div .filt-option label{
+    display:unset;
+    float:left;
+}
+.filt-option input{
+    margin-top:0.75em;
+}
 .filt-item{
     font-weight: bold;
     padding-left: .5em;
@@ -117,7 +129,7 @@ h3.filter-name{
     font-family: sans-serif;
     padding-top: .25em;
     padding-bottom: .25em;
-    border-radius:.25em;
+    float:left
 }
 .filt-item.age, .filt-item.dom{
     color: #ffffff;
@@ -140,54 +152,90 @@ span.res-age-item {
 
 div.block-item h3.block-white, div.block-item h3.block-white a {
 	padding-left: 5px;
+    display: inline-block;
 	color: #ffffff;
 	font: verdana;
 	font-family: sans-serif;
 	font-style: normal;
 	font-weight: bold;
 }
-
-.filt-item.dom-astronomy, .block-item.dom-astronomy h3 {
+div.block-item .block-title{
+    width:100%;
+    border-radius:0.5em;
+    height:2.5em;
+    margin-bottom: 0.5em;
+}
+.filt-option.dom-astronomy, .block-item.dom-astronomy .block-title {
     background-color: #4f4c9a;
 }
-.filt-item.dom-physics, .block-item.dom-physics h3 {
+.filt-option.dom-physics, .block-item.dom-physics .block-title {
     background-color: #57b7aa;
 }
-.filt-item.dom-gravitational-waves, .block-item.dom-gravitational-waves h3 {
+.filt-option.dom-gravitational-waves, .block-item.dom-gravitational-waves .block-title {
     background-color: #b6c727;
 }
-.filt-item.dom-maths, .block-item.dom-maths h3 {
+.filt-option.dom-maths, .block-item.dom-maths .block-title {
     background-color: #f04031;
 }
 
-.res-age-item.age-4-7, .filt-item.age-4-7 {
+.res-age-item.age-4-7, .filt-option.age-4-7 {
 	background-color: #f04031;
 }
 
-.res-age-item.age-7-9, .filt-item.age-7-9 {
+.res-age-item.age-7-9, .filt-option.age-7-9 {
 	background-color: #f6881f;
 }
 
-.res-age-item.age-9-11, .filt-item.age-9-11 {
+.res-age-item.age-9-11, .filt-option.age-9-11 {
 	background-color: #ffcb06;
 }
 
-.res-age-item.age-11-14, .filt-item.age-11-14 {
+.res-age-item.age-11-14, .filt-option.age-11-14 {
 	background-color: #02a24b;
 }
 
-.res-age-item.age-14-16, .filt-item.age-14-16 {
+.res-age-item.age-14-16, .filt-option.age-14-16 {
 	background-color: #00a2d3;
 }
 
-.res-age-item.age-16-18, .filt-item.age-16-18 {
+.res-age-item.age-16-18, .filt-option.age-16-18 {
 	background-color: #662d8f;
 }
 
-.res-age-item.age-gt18, .filt-item.age-gt18 {
+.res-age-item.age-gt18, .filt-option.age-gt18 {
 	background-color: #b72268;
 }
-
+.filter .icon, .block-title .icon{
+    float:left;
+    width:20px;
+    height:20px;
+    margin:.25em;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.block-title .icon{
+    float:right;
+}
+.icon.icon-dom-maths{
+    background:url('../img/maths.svg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.icon.icon-dom-astronomy{
+    background:url('../img/astro.svg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.icon.icon-dom-physics{
+    background:url('../img/phys.svg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.icon.icon-dom-gravitational-waves{
+    background:url('../img/gw.svg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
 /*Make the item full-width*/
 div.block-item {
 	width: 100%;
@@ -212,7 +260,6 @@ div.block-img {
 	float: left;
 	width: 11rem;
 }
-
 div.block-item.talk .block-img, div.block-item.block-50 .block-img {
 /*smaller images*/
 	width: 3.5rem;
@@ -231,6 +278,7 @@ div.block-item p, div.block-item h3, div.block-item h4, div.block-item h5, div.b
 	clear: none;
 /*reduce the spacing slightly*/
 	margin-bottom: .5rem;
+    margin-top:.5em;
 }
 div.block-item h3{
 	margin-left:0;

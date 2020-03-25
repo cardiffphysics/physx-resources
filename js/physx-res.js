@@ -15,12 +15,15 @@ var filters={
         tag:'dom',
         title:'Subject Area',
         select:{
-            'Astronomy':{'tag':'dom-astronomy',name:"Astronomy"},
-            'GravWaves':{'tag':'dom-gravitational-waves',name:"Gravitational Waves"},
-            'Physics':{'tag':'dom-physics',name:"Physics"},
-            'Maths':{'tag':'dom-maths',name:"Maths"}
+            'Astronomy':{'tag':'dom-astronomy',name:"Astronomy",icon:'astro.svg'},
+            'GravWaves':{'tag':'dom-gravitational-waves',name:"Gravitational Waves",icon:'gw.svg'},
+            'Physics':{'tag':'dom-physics',name:"Physics",icon:'phys.svg'},
+            'Maths':{'tag':'dom-maths',name:"Maths",icon:'maths.svg'}
         }
     }
+}
+var dirs={
+    img:'../img'
 }
 function makeFilters(){
     fH=$('#filter-holder');
@@ -28,12 +31,15 @@ function makeFilters(){
     for (filt in filters){
         console.log(filt);
         var ftag=filters[filt].tag;
-        $('#filter-holder').append('<div class="filter closed" id="filter-'+ftag+'"><h3 class="filter-name">'+filters[filt].title+'</h3></div>')
+        $('#filter-holder').append('<div class="filter open" id="filter-'+ftag+'"><h3 class="filter-name">'+filters[filt].title+'</h3></div>')
         for (s in filters[filt].select){
             var stag=filters[filt].select[s].tag;
             console.log(s);
             $('#filter-'+ftag+'.filter').append('<div class="filt-option '+stag+'" id="filt-'+stag+'_option"></div>')
             $('#filt-'+stag+'_option').append('<input type="checkbox" id="filt-'+stag+'" name="filt-'+stag+'" checked=true>');
+            if (filters[filt].select[s].icon){
+                $('#filt-'+stag+'_option').append('<div class="icon icon-'+stag+'"></div>');
+            }
             $('#filt-'+stag+'_option').append('<label class="filt-item '+ftag+' '+stag+'" for="filt-'+stag+'" id="filt-'+stag+'_label">'+filters[filt].select[s].name+'</label>');
             $('#filt-'+stag).change(function(){
                 updateFilters();

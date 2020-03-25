@@ -42,6 +42,7 @@ imgdir='../img/'
 astroHtml=[]
 physHtml=[]
 gravHtml=[]
+resHtml=[]
 workHtml=[]
 
 # HTML header
@@ -52,7 +53,8 @@ hdr="""<!DOCTYPE html>
 <script type="text/javascript" src="../js/jquery-3.4.1.min.js"></script>
 <script src="../js/physx-res.js" type="text/javascript"/></script>
 </head>
-<body class="main">
+<body>
+<div class="main">
 <div id="filter-holder"></div>
 """
 # Write header to HTML files
@@ -93,11 +95,14 @@ for row in tabIn:
     # print(url,tabIn['URL'][row.index],tabIn['URL'].mask[row.index])
     name=row['Resource Name']
     domain=row['Domain']
+    iconclass=''
     try:
         # add domain to classlist
         for dom in domain.split(';'):
             cltxt=dom.lower().strip().replace(' ','-')
-            if cltxt!='': classlist='%s dom-%s'%(classlist,cltxt)
+            if cltxt!='':
+                classlist='%s dom-%s'%(classlist,cltxt)
+                iconclass='{} icon-dom-{}'.format(iconclass,cltxt)
     except:
         print('domain error: ',row['Resource Name'],row['Domain'])
         pass
@@ -118,10 +123,10 @@ for row in tabIn:
     # generate text for divs
     txt='<div class="block-item %s">\n'%(classlist)
     if tabIn['URL'].mask[row.index]:
-        txt=txt+'<h3 class="block-white">%s</h3>\n'%(name)
+        txt=txt+'<div class="block-title"><h3 class="block-white">%s</h3><div class="icon %s"></div></div></div>\n'%(name,iconclass)
         txt=txt+'<div class="block-img">\n<img src="%s" alt="image" />\n</div>'%(img)
     else:
-        txt=txt+'<h3 class="block-white"><a title="%s" href="%s">%s</a></h3>\n'%(name,url,name)
+        txt=txt+'<div class="block-title"><h3 class="block-white"><a title="%s" href="%s">%s</a></h3><div class="icon %s"></div></div>\n'%(name,url,name,iconclass)
         txt=txt+'<div class="block-img">\n<a title="%s" href="%s"><img src="%s" alt="image" /></a>\n</div>'%(name,url,img)
     txt=txt+'    <p class="res res-desc">%s</p>\n'%(desc)
     txt=txt+'    <p class="res res-type">%s</p>\n'%(rtype)
@@ -155,27 +160,28 @@ for row in tabIn:
         gravHtml.append(txt)
     elif rw=='Workshop':
         workHtml.append(txt)
+    if rw=='Resource':
+        resHtml.append(txt)
 
 # write out to HTML files
 fOutRes.write('<p>The School of Physics and Astronomy has produced a number of resources in collaboration with <a href="http://www.sciencemadesimple.co.uk/">science made simple</a>, <a href="http://www.lco.global/">Las Cumbres Observatory</a> (LCO), <a href="http://www.stfc.ac.uk/">STFC</a> and others. Here are a few which are particularly designed for use in the classroom.</p><p>You can jump to <a href="#astro">Astronomy</a>, <a href="#gravwaves">Gravitational waves</a> or <a href="#physics">Physics</a> resources.</p>\n')
 
+for t in resHtml:
+    fOutRes.write(t)
 
-fOutRes.write('\n<a id="astro"></a><h2>Astronomy</h2>\n')
+# fOutRes.write('\n<a id="astro"></a><h2>Astronomy</h2>\n')
 fOutAstro.write('\n<h2>Astronomy</h2>\n')
 for t in astroHtml:
-    fOutRes.write(t)
     fOutAstro.write(t)
 
-fOutRes.write('\n<a id="gravwaves"></a><h2>Gravitational Waves</h2>\n')
+# fOutRes.write('\n<a id="gravwaves"></a><h2>Gravitational Waves</h2>\n')
 fOutGrav.write('\n<h2>Gravitational Waves</h2>\n')
 for t in gravHtml:
-    fOutRes.write(t)
     fOutGrav.write(t)
 
-fOutRes.write('\n<a id="physics"></a><h2>Physics</h2>\n')
+# fOutRes.write('\n<a id="physics"></a><h2>Physics</h2>\n')
 fOutPhys.write('\n<h2>Physics</h2>\n')
 for t in physHtml:
-    fOutRes.write(t)
     fOutPhys.write(t)
 
 fOutWorkshops.write('<ul>\n<li><strong>Looking for a special event for your science class or astronomy club?</strong></li>\n<li><strong>Want to get your group fired up about physics...?</strong></li>\n<li><strong>...or hear about cutting edge research from those working in the field?</strong></li>\n</ul><p>We offer a range of free physics and astronomy presentations to school groups within an hour\'s drive-time of Cardiff. Staff are sometimes available for schools further afield, but there may be small travel costs involved.</p><p>For more information, please email <a href="mailto:schools@astro.cf.ac.uk">schools@astro.cf.ac.uk</a></p>\n')
@@ -185,6 +191,7 @@ for t in workHtml:
 
 # HTML footer
 ftr="""
+</div>
 <script type="text/javascript"/>makeFilters();</script>
 </body>
 </html>
