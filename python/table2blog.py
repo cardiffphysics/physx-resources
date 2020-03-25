@@ -36,6 +36,8 @@ fOutGrav=open('../html/testHtml_gw.html','w')
 fOutPhys=open('../html/testHtml_phys.html','w')
 fOutAstro=open('../html/testHtml_astro.html','w')
 
+imgdir='../img/'
+
 # set up lists
 astroHtml=[]
 physHtml=[]
@@ -110,7 +112,9 @@ for row in tabIn:
         pass
     dur=row['Workshop Duration']
     img=row['Image']
-
+    if (img!=''):
+        if img[0:4]!='http':
+            img='{}{}'.format(imgdir,img)
     # generate text for divs
     txt='<div class="block-item %s">\n'%(classlist)
     if tabIn['URL'].mask[row.index]:
