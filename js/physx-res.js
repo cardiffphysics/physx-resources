@@ -25,22 +25,37 @@ var filters={
 var dirs={
     img:'../img'
 }
+function initPage(){
+    $('#filter-button').click(function(){
+        console.log('filter-button clicked');
+        if ($(this).hasClass('closed')){
+            $(this).removeClass('closed')
+            $('#filter-holder').removeClass('closed')
+        }else{
+            $(this).addClass('closed')
+            $('#filter-holder').addClass('closed')
+        }
+    })
+    makeFilters();
+    updateFilters();
+}
+
 function makeFilters(){
     fH=$('#filter-holder');
     fH.append('<h2 class="filter-title">Filters</h2>');
     for (filt in filters){
-        console.log(filt);
+        // console.log(filt);
         var ftag=filters[filt].tag;
         $('#filter-holder').append('<div class="filter open" id="filter-'+ftag+'"><h3 class="filter-name">'+filters[filt].title+'</h3></div>')
         for (s in filters[filt].select){
             var stag=filters[filt].select[s].tag;
-            console.log(s);
+            // console.log(s);
             $('#filter-'+ftag+'.filter').append('<div class="filt-option '+stag+'" id="filt-'+stag+'_option"></div>')
             $('#filt-'+stag+'_option').append('<input type="checkbox" id="filt-'+stag+'" name="filt-'+stag+'" checked=true>');
             if (filters[filt].select[s].icon){
                 $('#filt-'+stag+'_option').append('<div class="icon icon-'+stag+'"></div>');
             }
-            $('#filt-'+stag+'_option').append('<label class="filt-item '+ftag+' '+stag+'" for="filt-'+stag+'" id="filt-'+stag+'_label">'+filters[filt].select[s].name+'</label>');
+            $('#filt-'+stag+'_option').append('<label class="filt-item '+ftag+' '+stag+'" for="filt-'+stag+'" id="filt-'+stag+'_label"><span class="filt-name">'+filters[filt].select[s].name+'</span> (<span class="filt-count"></span>)</label>');
             $('#filt-'+stag).change(function(){
                 updateFilters();
             })
@@ -57,9 +72,15 @@ function makeFilters(){
             }
         })
     })
+    // updateFilters();
 }
 
 function updateFilters(){
+    for (filt in filters){
+        for (s in filters[filt].select){
+            filters[filt].select[s].nactive=0;
+        }
+    }
     $('.block-item').each(function(){
         var filtTotal=1;
         var filtSub={};
@@ -70,16 +91,23 @@ function updateFilters(){
                 if($('input#filt-'+stag).prop('checked')){
                     if ($(this).hasClass(stag)){
                         filtSub[filt]+=1;
+                        filters[filt].select[s].nactive+=1;
                     }
                 }
             }
             filtTotal*=filtSub[filt]
         }
-        console.log($(this).find('h3 > a').html(),filtSub,filtTotal)
+        // console.log($(this).find('h3 > a').html(),filtSub,filtTotal)
         if (filtTotal==0){
             $(this).addClass('hidden');
         }else{
             $(this).removeClass('hidden');
         }
     });
+    for (filt in filters){
+        for (s in filters[filt].select){
+            var stag=filters[filt].select[s].tag;
+            $('#filt-'+stag+'_label > .filt-count').html(filters[filt].select[s].nactive);
+        }
+    }
 }

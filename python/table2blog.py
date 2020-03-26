@@ -54,8 +54,13 @@ hdr="""<!DOCTYPE html>
 <script src="../js/physx-res.js" type="text/javascript"/></script>
 </head>
 <body>
-<div class="main">
+<div id="main" class="main">
+<div id="title-bar" class="main">
+<div class="title-item left" id="filter-button">F</div>
+<div class="title-item right" id="title">Physics Resources</div>
+</div>
 <div id="filter-holder"></div>
+<div id="content">
 """
 # Write header to HTML files
 fOutRes.write(hdr)
@@ -103,6 +108,7 @@ for row in tabIn:
             if cltxt!='':
                 classlist='%s dom-%s'%(classlist,cltxt)
                 iconclass='{} icon-dom-{}'.format(iconclass,cltxt)
+        print('domain: ',row['Resource Name'],row['Domain'],iconclass)
     except:
         print('domain error: ',row['Resource Name'],row['Domain'])
         pass
@@ -115,7 +121,16 @@ for row in tabIn:
     except:
         print('type error: ',row['Resource Name'],row['Type of Resource'])
         pass
-    dur=row['Workshop Duration']
+    req=row['Requirements']
+    try:
+        # add resource type to classlist
+        for rq in req.split(';'):
+            cltxt=rq.lower().strip().replace(' ','-')
+            if cltxt!='': classlist='%s req-%s'%(classlist,cltxt)
+    except:
+        print('requirement error: ',row['Resource Name'],row['Requirements'])
+        pass
+    dur=row['Duration']
     img=row['Image']
     if (img!=''):
         if img[0:4]!='http':
@@ -123,10 +138,22 @@ for row in tabIn:
     # generate text for divs
     txt='<div class="block-item %s">\n'%(classlist)
     if tabIn['URL'].mask[row.index]:
-        txt=txt+'<div class="block-title"><h3 class="block-white">%s</h3><div class="icon %s"></div></div></div>\n'%(name,iconclass)
+        txt=txt+'<div class="block-title"><h3 class="block-white">{}</h3>'.format(name)
+        print(name,iconclass)
+        for ic in iconclass.split(' '):
+            if len(ic)>0:
+                print('icon',ic)
+                txt=txt+'<div class="icon {}"></div>'.format(ic)
+        txt=txt+'</div>\n'
         txt=txt+'<div class="block-img">\n<img src="%s" alt="image" />\n</div>'%(img)
     else:
-        txt=txt+'<div class="block-title"><h3 class="block-white"><a title="%s" href="%s">%s</a></h3><div class="icon %s"></div></div>\n'%(name,url,name,iconclass)
+        txt=txt+'<div class="block-title"><h3 class="block-white"><a title="{}" href="{}">{}</a></h3>'.format(name,url,name)
+        print(name,iconclass)
+        for ic in iconclass.split(' '):
+            if len(ic)>0:
+                print('icon',ic)
+                txt=txt+'<div class="icon {}"></div>'.format(ic)
+        txt=txt+'</div>\n'
         txt=txt+'<div class="block-img">\n<a title="%s" href="%s"><img src="%s" alt="image" /></a>\n</div>'%(name,url,img)
     txt=txt+'    <p class="res res-desc">%s</p>\n'%(desc)
     txt=txt+'    <p class="res res-type">%s</p>\n'%(rtype)
@@ -138,9 +165,19 @@ for row in tabIn:
     except:
         pass
     txt=txt+'</p>\n'
+    txt=txt+'    <p class="res res-req">'
+    try:
+        for r in req.split(';'):
+            rcl=r.lower().strip().replace(' ','-').replace('>','gt')
+            txt=txt+'<span class="res-req-item req-%s">%s</span>'%(rcl,r)
+    except:
+        pass
+    txt=txt+'</p>\n'
     txt=txt+'    <p class="res res-clink">%s</p>\n'%(clink)
     if rw=='Resource':
         txt=txt+'    <p class="res res-author">%s</p>\n'%(author)
+        if dur!='':
+            txt=txt+'    <p class="res res-duration">%s</p>\n'%(dur)
     if rw=='Workshop':
         txt=txt+'    <p class="res res-duration">%s</p>\n'%(dur)
     if tabIn['URL'].mask[row.index]==False:
@@ -164,7 +201,7 @@ for row in tabIn:
         resHtml.append(txt)
 
 # write out to HTML files
-fOutRes.write('<p>The School of Physics and Astronomy has produced a number of resources in collaboration with <a href="http://www.sciencemadesimple.co.uk/">science made simple</a>, <a href="http://www.lco.global/">Las Cumbres Observatory</a> (LCO), <a href="http://www.stfc.ac.uk/">STFC</a> and others. Here are a few which are particularly designed for use in the classroom.</p><p>You can jump to <a href="#astro">Astronomy</a>, <a href="#gravwaves">Gravitational waves</a> or <a href="#physics">Physics</a> resources.</p>\n')
+fOutRes.write('<div class="intro"><p>The School of Physics and Astronomy has produced a number of resources in collaboration with <a href="http://www.sciencemadesimple.co.uk/">science made simple</a>, <a href="http://www.lco.global/">Las Cumbres Observatory</a> (LCO), <a href="http://www.stfc.ac.uk/">STFC</a> and others. Here are a few which are particularly designed for use in the classroom.</p><p>You can jump to <a href="#astro">Astronomy</a>, <a href="#gravwaves">Gravitational waves</a> or <a href="#physics">Physics</a> resources.</p></div>\n')
 
 for t in resHtml:
     fOutRes.write(t)
@@ -191,8 +228,8 @@ for t in workHtml:
 
 # HTML footer
 ftr="""
-</div>
-<script type="text/javascript"/>makeFilters();</script>
+</div></div>
+<script type="text/javascript"/>initPage();</script>
 </body>
 </html>
 """

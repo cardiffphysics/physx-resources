@@ -3,59 +3,75 @@ body{
     font-size: 14px;
     line-height: 20px;
 }
-.main {
-    width: 750px;
-    margin-left: auto;
-    margin-right: auto;
-}
 a{
     color: #045bc6;
     text-decoration: none;
 }
+.main {
+    width: 750px;
+    margin-left: auto;
+    margin-right: auto;
+    position:relative;
+}
 [class*="main"] {
     min-height: 1px;
 }
-@media (max-width: 750px){
-    [class*="main"]{
-        float: none;
-        display: block;
-        width: 100%;
-        margin-left: 0;
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        box-sizing: border-box;
-    }
+#content{
+    margin-top:3.5em;
+    background-color:#eee;
 }
-@media (min-width:751px) and (max-width:979px){
-    [class*="main"]{
-        min-height:1px;
-        margin-left:auto;
-        margin-right:auto;
-    }
-    .main{
-        width:750px
-    }
+#title-bar{
+    position:fixed;
+    height:3em;
+    top:0;
+    padding-top:0.5em;
+    background-color:#ddd;
 }
-@media (min-width: 1200px){
-    .main {
-        width: 750px;
-    }
+/* .title-item{
+    display:inline-block;
+} */
+.title-item.left{
+    float:left;
 }
-@media (min-width: 1200px){
-    [class*="span"] {
-        min-height: 1px;
-        margin-left: auto;
-        margin-right: auto;
-        }
+.title-item.right{
+    float:right;
+}
+#filter-button{
+    width:2.5em;
+    height:2.5em;
+    border:solid black 1px;
+    background-color:#ddd;
+}
+#filter-holder{
+    position:fixed;
+    width:20em;
+    height:90%;
+    background-color:#fff;
+    top:3em;
+    /* margin-left:1em; */
+    transition:width 1s ease;
+    transition:height 1s ease;
+    border:solid black 1px;
+    border-radius:0 0.5em 0.5em 0;
+    padding-left:1em;
+    padding-right:1em;
+}
+#filter-holder.closed{
+    /* left:20em; */
+    height:0em;
+    overflow-x:hidden;
+    overflow-y:hidden;
+    border:none;
 }
 .filter{
     display:inline-block;
     background-color:#f2f6d5;
     margin-top:1em;
     padding-bottom:1em;
-    width:45%;
-    margin-left:2%;
-    margin-right:2%;
+    /* width:45%; */
+    width:100%;
+    /* margin-left:2%; */
+    /* margin-right:2%; */
     height:auto;
     border-radius:0.5em;
     overflow:hidden;
@@ -121,7 +137,7 @@ h3.filter-name{
     margin-top:0.75em;
 }
 .filt-item{
-    font-weight: bold;
+    /* font-weight: bold; */
     padding-left: .5em;
     padding-right: .5em;
     /* margin-left: .25em; */
@@ -131,12 +147,27 @@ h3.filter-name{
     padding-bottom: .25em;
     float:left
 }
+.filt-item .filt-name{
+    font-weight: bold;
+}
 .filt-item.age, .filt-item.dom{
     color: #ffffff;
 }
 span.res-age-item {
 	color: #ffffff;
 	font-weight: bold;
+	padding-left: .5em;
+	padding-right: .5em;
+    padding-top: .25em;
+    padding-bottom: .25em;
+    border-radius:.25em;
+	margin-left: .25em;
+	margin-right: .25em;
+	font-family: sans-serif;
+}
+span.res-req-item {
+	/* color: #000000; */
+	/* font-weight: bold; */
 	padding-left: .5em;
 	padding-right: .5em;
     padding-top: .25em;
@@ -215,6 +246,10 @@ div.block-item .block-title{
 }
 .block-title .icon{
     float:right;
+    width:2em;
+    height:2em;
+    margin-right:.5em;
+    margin-top:.25em;
 }
 .icon.icon-dom-maths{
     background:url('../img/maths.svg');
@@ -304,6 +339,11 @@ p.res-age:before {
 	font-weight: bold;
 }
 
+p.res-req:before {
+	content: "Requirements: ";
+	font-weight: bold;
+}
+
 p.res-type:before {
 	content: "Type: ";
 	font-weight: bold;
@@ -333,52 +373,17 @@ div.block-item h3.block-white, div.block-item h3.block-white a {
 	font-weight: bold;
 }
 
-/* div.block-item.dom-gravitational-waves h3 {
-	background-color: #75c223;
-}
-
-div.block-item.dom-astronomy h3 {
-	background-color: #469bca;
-}
-
-div.block-item.dom-physics h3 {
-	background-color: #e13851;
-}
-
-span.res-age-item {
-	background-color: #d1d1d1;
-}
-
-span.res-age-item.age-4-7 {
-	background-color: #f04031;
-}
-
-span.res-age-item.age-7-9 {
-	background-color: #f6881f;
-}
-
-span.res-age-item.age-9-11 {
-	background-color: #ffcb06;
-}
-
-span.res-age-item.age-11-14 {
-	background-color: #02a24b;
-}
-
-span.res-age-item.age-14-16 {
-	background-color: #00a2d3;
-}
-
-span.res-age-item.age-16-18 {
-	background-color: #662d8f;
-}
-
-span.res-age-item.age-gt18 {
-	background-color: #b72268;
-} */
-
 @media (max-width: 767px){
-	div.block-img{
+    [class*="main"]{
+        float: none;
+        display: block;
+        width: 100%;
+        margin-left: 0;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+    div.block-img{
 		width:100%;
 		clear:both;
 		text-align:center;
@@ -393,4 +398,26 @@ span.res-age-item.age-gt18 {
 	div.block-item p, div.block-item h3{
 		margin-left: 0;
 	}
+}
+@media (min-width:768px) and (max-width:979px){
+    [class*="main"]{
+        min-height:1px;
+        margin-left:auto;
+        margin-right:auto;
+    }
+    .main{
+        width:750px
+    }
+}
+@media (min-width: 1200px){
+    .main {
+        width: 750px;
+    }
+}
+@media (min-width: 1200px){
+    [class*="span"] {
+        min-height: 1px;
+        margin-left: auto;
+        margin-right: auto;
+        }
 }
