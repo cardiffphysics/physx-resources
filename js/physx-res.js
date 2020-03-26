@@ -31,10 +31,19 @@ function initPage(){
         if ($(this).hasClass('closed')){
             $(this).removeClass('closed')
             $('#filter-holder').removeClass('closed')
+            // var filtleft=$('#main').css('marginLeft');
+            // var lableft=320-40-$('#filter-label').width()-48;
+            // $('#filter-label').css({'margin-left':lableft})
+            // $('#filter-holder').css({'left':filtleft})
         }else{
             $(this).addClass('closed')
             $('#filter-holder').addClass('closed')
+            // var filtleft=$('#main').css('marginLeft')-$('#filter-holder').width()-50;
+            // $('#filter-holder').css({'left':filtleft})
+            // // var left=$('filter-holder').offsetWidth-$('filter-label').offsetWidth
+            // $('#filter-label').css({'margin-left':0})
         }
+
     })
     makeFilters();
     updateFilters();
@@ -42,7 +51,7 @@ function initPage(){
 
 function makeFilters(){
     fH=$('#filter-holder');
-    fH.append('<h2 class="filter-title">Filters</h2>');
+    // fH.append('<h2 class="filter-title">Filters</h2>');
     for (filt in filters){
         // console.log(filt);
         var ftag=filters[filt].tag;

@@ -56,10 +56,12 @@ hdr="""<!DOCTYPE html>
 <body>
 <div id="main" class="main">
 <div id="title-bar" class="main">
-<div class="title-item left" id="filter-button">F</div>
-<div class="title-item right" id="title">Physics Resources</div>
-</div>
-<div id="filter-holder"></div>
+<div id="title-cont">
+<div class="title-item left closed" id="filter-button"><img src="../img/menu.svg"/ title="Filter"><div id="filter-label" class="title-item left">Filter</div></div>
+<div class="title-item right" id="logo"><img src="../img/cardiffuni_white.png"></div>
+<div class="title-item right" id="title">Physics &amp; Astronomy Resources</div>
+</div></div>
+<div id="filter-holder" class="closed"></div>
 <div id="content">
 """
 # Write header to HTML files
@@ -154,7 +156,7 @@ for row in tabIn:
                 print('icon',ic)
                 txt=txt+'<div class="icon {}"></div>'.format(ic)
         txt=txt+'</div>\n'
-        txt=txt+'<div class="block-img">\n<a title="%s" href="%s"><img src="%s" alt="image" /></a>\n</div>'%(name,url,img)
+        txt=txt+'<div class="block-img">\n<a title="%s" href="%s"><img src="%s" alt="image" /><div class="block-link">Click here</div></a>\n</div>'%(name,url,img)
     txt=txt+'    <p class="res res-desc">%s</p>\n'%(desc)
     txt=txt+'    <p class="res res-type">%s</p>\n'%(rtype)
     txt=txt+'    <p class="res res-age">'
