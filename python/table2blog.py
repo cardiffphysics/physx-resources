@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 
 from astropy.table import Table,Column
+import json
 # from pydrive.auth import GoogleAuth
 # from pydrive.drive import GoogleDrive
 #
@@ -26,6 +27,24 @@ from astropy.table import Table,Column
 
 fileIn="../data/downloaded_table.csv"
 tabIn=Table.read(fileIn)
+
+jsonOut=[]
+for row in tabIn:
+    entry={}
+    for col in tabIn.colnames:
+        if not tabIn[col].mask[row.index]:
+            entry[col]=row[col]
+    jsonOut.append(entry)
+json.dump(jsonOut,open('../data/data.json','w'),indent=2)
+fIn=open('../data/data.json','r')
+fOut=open('../data/data.jsonp','w')
+lines=fIn.readlines()
+lines[0]='data('+lines[0]
+lines[-1]=lines[-1]+');'
+for l in lines:
+    fOut.write(l)
+fOut.close()
+fIn.close()
 
 # main websites
 fOutRes=open('../html/testHtml_resources.html','w')
