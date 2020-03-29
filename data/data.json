@@ -1,10 +1,4 @@
-[
-  {
-    "Resource Name": "Black Hole Hunter",
-    "Domain": "Gravitational Waves",
-    "Resource/Workshop": "Resource",
-    "Type of Resource": "Online activity",
-    "URL": "http://www.blackholehunter.org/",
+[{"Resource Name": "Black Hole Hunter", "Domain": "Gravitational Waves", "Resource/Workshop": "Resource", "Type of Resource": "Online activity", "Other language(s)":    "URL": "http://www.blackholehunter.org/",
     "Image": "blackholehunter_logo.jpg",
     "Description": "Can you detect a gravitational wave? In Black Hole Hunter, your objective is to listen to gravitational wave detector data and determine whether or not you can hear the given gravitational wave signal in the sound file, or whether it is just noise.",
     "Author/Originator": "LIGO/Cardiff University",
