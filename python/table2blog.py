@@ -25,7 +25,7 @@ import json
 # File can be downloaded (in CSV format) from https://docs.google.com/spreadsheets/d/18w3dbA3lga8So5sCUml7xUFyOPjfTEZ-vXSzobYprhY/edit?usp=sharing
 # You *may* need to remove commas (as astropy.table may not like them...
 
-fileIn="../data/downloaded_table.csv"
+fileIn="../data/data.csv"
 tabIn=Table.read(fileIn)
 
 jsonOut=[]
