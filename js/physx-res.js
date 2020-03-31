@@ -17,10 +17,11 @@ var filters={
         title:'Subject Area',
         type:'normal',
         select:{
-            'Astronomy':{'tag':'dom-astronomy',name:"Astronomy",icon:'astro.svg'},
-            'GravWaves':{'tag':'dom-gravitational-waves',name:"Gravitational Waves",icon:'gw.svg'},
-            'Physics':{'tag':'dom-physics',name:"Physics",icon:'phys.svg'},
-            'Maths':{'tag':'dom-maths',name:"Maths",icon:'maths.svg'}
+            'Astronomy':{'tag':'dom-astronomy',name:"Astronomy",icon:'dom-astro.svg'},
+            'GravWaves':{'tag':'dom-gravitational-waves',name:"Gravitational Waves",icon:'dom-gw.svg'},
+            'Physics':{'tag':'dom-physics',name:"Physics",icon:'dom-phys.svg'},
+            'Maths':{'tag':'dom-maths',name:"Maths",icon:'dom-maths.svg'},
+            'Coding':{'tag':'dom-coding',name:"Coding",icon:'dom-coding.svg'}
         }
     },'requirements':{
         tag:'req',
@@ -30,6 +31,23 @@ var filters={
             'Any-device':{'tag':'req-any-device',name:"Any device",icon:'astro.svg'},
             'Web-access':{'tag':'req-web-access',name:"Web access",icon:'gw.svg'}
         }
+    },'types':{
+        tag:'type',
+        title:'Activity types',
+        type:'normal',
+        select:{
+            'Printable':{'tag':'type-printable-activity',name:"Printable Activity",icon:'svg'},
+            'Book':{'tag':'type-book',name:"Book",icon:'svg'},
+            'Online':{'tag':'type-online',name:"Online",icon:'svg'},
+            'Interactive':{'tag':'type-interactive',name:"Interactive",icon:'svg'},
+            'Coding':{'tag':'type-coding',name:"Coding",icon:'svg'},
+            'Reading':{'tag':'type-reading',name:"Reading",icon:'svg'},
+            'Degree prep':{'tag':'type-degree-prep',name:"Degree-prep",icon:'svg'},
+            'Craft':{'tag':'type-craft',name:"Craft",icon:'svg'},
+            'Worksheet':{'tag':'type-worksheet',name:"Worksheet",icon:'svg'},
+            'Video':{'tag':'type-video',name:"Video",icon:'svg'},
+            'Podcast':{'tag':'type-podcast',name:"Podcast",icon:'svg'}
+        }
     }
 }
 var dirs={
@@ -38,9 +56,9 @@ var dirs={
 var hid='content';
 function initPage(fileIn='../data/data.jsonp',pop=false){
     var pop;
-    console.log(fileIn,pop);
+    // console.log(fileIn,pop);
     $('#filter-button').click(function(){
-        console.log('filter-button clicked');
+        // console.log('filter-button clicked');
         if ($(this).hasClass('closed')){
             $(this).removeClass('closed');
             $('#filter-holder').removeClass('closed');
@@ -79,7 +97,7 @@ function initPage(fileIn='../data/data.jsonp',pop=false){
 }
 
 function populateData(){
-    console.log(hid);
+    // console.log(hid);
     var _h=hid;
     for (d in this.data){
         _dx=this.data[d];
@@ -90,11 +108,11 @@ function populateData(){
         _i='item-'+d;
         // console.log($('#'+_h));
         $('#'+_h).append('<div class="block-item" id="'+_i+'"></div>');
-        console.log($('#'+_i));
+        // console.log($('#'+_i));
         $('#'+_i).append('<div class="block-title"><h3 class="block-white"></h3></div>');
         $('#'+_i).append('<div class="block-img"><img src="img/'+_dx.Image+'" alt="image"></div>');
         $('#'+_i).append('<p class="res res-desc">'+_dx['Description']+'</p>');
-        $('#'+_i).append('<p class="res res-type">'+_dx['Type of Resource']+'</p>');
+        $('#'+_i).append('<p class="res res-type"></p>');
         $('#'+_i).append('<p class="res res-age"></p>');
         $('#'+_i).append('<p class="res res-req"></p>');
         $('#'+_i).append('<p class="res res-clink">'+_dx['Curriculum Links']+'</p>');
@@ -140,6 +158,17 @@ function populateData(){
                 $('#'+_i+' .block-title').append('<div class="icon icon-dom-'+dm+'"></div>');
             }
         }
+        if (_dx['Type of Resource']){
+            _dx.types={};
+            types=_dx['Type of Resource'].split(';');
+            for (t in types){
+                tp=types[t].trim().toLowerCase().replace(' ','-');
+                _dx.types[tp]=types[t];
+                $('#'+_i).addClass('type-'+tp);
+                $('#'+_i+' .res-type').append('<div class="res-type-item type-'+tp+'"><div class="res-type-icon"></div><span class="res-type-label">'+types[t]+'</div></div>');
+                $('#'+_i+' .block-title').append('<div class="icon icon-type-'+tp+'"></div>');
+            }
+        }
     }
 }
 
@@ -175,6 +204,10 @@ function makeFilters(){
             }
         })
     })
+    fH=window.innerHeight;
+    // -$('#title-bar').height()-parseFloat($('#title-bar').css('paddingTop'));
+    console.log(window.innerHeight,$('#title-bar').height(),parseFloat($('#title-bar').css('paddingTop')),fH)
+    $('#filter-holder').height(fH-8);
     // updateFilters();
 }
 
@@ -202,18 +235,18 @@ function updateFilters(){
                     if ($(this).hasClass(stag)){
                         filters[filt].select[s].nactive+=1;
                     }
-                    console.log(stag,$('input#filt-'+stag).prop('checked'),$(this).hasClass(stag),filtSub[filt])
+                    // console.log(stag,$('input#filt-'+stag).prop('checked'),$(this).hasClass(stag),filtSub[filt])
                     if(!$('input#filt-'+stag).prop('checked')){
                         if ($(this).hasClass(stag)){
                             filtSub[filt]=0;
-                            console.log(filtSub[filt]);
+                            // console.log(filtSub[filt]);
                         }
                     }
                 }
             }
             filtTotal*=filtSub[filt]
         }
-        console.log($(this).find('h3 > a').html(),filtSub,filtTotal)
+        // console.log($(this).find('h3 > a').html(),filtSub,filtTotal)
         if (filtTotal==0){
             $(this).addClass('hidden');
         }else{
