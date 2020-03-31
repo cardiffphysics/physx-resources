@@ -391,8 +391,8 @@ div.block-img {
 	width: 11rem;
 }
 .block-img img {
-	width: 95%;
-    margin-left:2%;
+	width: 90%;
+    margin-left:5%;
 	height: auto;
     border-radius: 1em;
 }
@@ -444,6 +444,8 @@ div.block-item .block-title{
 .res-type-item{
     display:inline-block;
     vertical-align: middle;
+    margin-left:.5em;
+    margin-right:.5em;
 }
 .res-type-item .res-type-icon{
     display:none;
@@ -457,67 +459,67 @@ div.block-item .block-title{
 }
 .res-type-item.type-online .res-type-icon{
     display:inline-block;
-    background:url('../img/type-online.svg');
+    background:url('../icon/type-online.svg');
     background-size: 100% 100%;
 }
 .res-type-item.type-interactive .res-type-icon{
     display:inline-block;
-    background:url('../img/type-interact.svg');
+    background:url('../icon/type-interact.svg');
     background-size: 100% 100%;
 }
 .res-type-item.type-reading .res-type-icon{
     display:inline-block;
-    background:url('../img/type-read.svg');
+    background:url('../icon/type-read.svg');
     background-size: 100% 100%;
 }
 .res-type-item.type-degree-prep .res-type-icon{
     display:inline-block;
-    background:url('../img/type-prep.svg');
+    background:url('../icon/type-prep.svg');
     background-size: 100% 100%;
 }
 .res-type-item.type-craft .res-type-icon{
     display:inline-block;
-    background:url('../img/type-craft.svg');
+    background:url('../icon/type-craft.svg');
     background-size: 100% 100%;
 }
 .res-type-item.type-book .res-type-icon{
     display:inline-block;
-    background:url('../img/type-book.svg');
+    background:url('../icon/type-book.svg');
     background-size: 100% 100%;
 }
 .res-type-item.type-worksheet .res-type-icon{
     display:inline-block;
-    background:url('../img/type-create.svg');
+    background:url('../icon/type-create.svg');
     background-size: 100% 100%;
 }
 .res-type-item.type-printable-activity .res-type-icon{
     display:inline-block;
-    background:url('../img/type-print.svg');
+    background:url('../icon/type-print.svg');
     background-size: 100% 100%;
 }
 .res-type-item.type-video .res-type-icon{
     display:inline-block;
-    background:url('../img/type-video.svg');
+    background:url('../icon/type-video.svg');
     background-size: 100% 100%;
 }
 .res-type-item.type-audio .res-type-icon{
     display:inline-block;
-    background:url('../img/type-audio.svg');
+    background:url('../icon/type-audio.svg');
     background-size: 100% 100%;
 }
 .res-type-item.type-podcast .res-type-icon{
     display:inline-block;
-    background:url('../img/type-audio.svg');
+    background:url('../icon/type-audio.svg');
     background-size: 100% 100%;
 }
 .res-type-item.type-coding .res-type-icon{
     display:inline-block;
-    background:url('../img/type-coding.svg');
+    background:url('../icon/type-coding.svg');
     background-size: 100% 100%;
 }
 .res-type-item.type-app .res-type-icon{
     display:inline-block;
-    background:url('../img/type-app.svg');
+    background:url('../icon/type-app.svg');
     background-size: 100% 100%;
 }
 .res-age-item.age-4-7, .filt-option.age-4-7 {
@@ -563,27 +565,27 @@ div.block-item .block-title{
     margin-top:.25em;
 }
 .icon.icon-dom-maths{
-    background:url('../img/dom-maths.svg');
+    background:url('../icon/dom-maths.svg');
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
 .icon.icon-dom-astronomy{
-    background:url('../img/dom-astro.svg');
+    background:url('../icon/dom-astro.svg');
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
 .icon.icon-dom-physics{
-    background:url('../img/dom-phys.svg');
+    background:url('../icon/dom-phys.svg');
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
 .icon.icon-dom-gravitational-waves{
-    background:url('../img/dom-gw.svg');
+    background:url('../icon/dom-gw.svg');
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
 .icon.icon-dom-coding{
-    background:url('../img/dom-coding.svg');
+    background:url('../icon/dom-coding.svg');
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
