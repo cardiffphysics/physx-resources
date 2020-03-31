@@ -27,9 +27,16 @@ var filters={
         tag:'req',
         title:'Requirements',
         type:'req',
+        desc:'Deselect any that are unavailable',
         select:{
-            'Any-device':{'tag':'req-any-device',name:"Any device",icon:'astro.svg'},
-            'Web-access':{'tag':'req-web-access',name:"Web access",icon:'gw.svg'}
+            // 'Any-device':{'tag':'req-any-device',name:"Any device",icon:'astro.svg'},
+            'Web-access':{'tag':'req-web-access',name:"Web access",icon:'svg'},
+            'Craft':{'tag':'req-craft',name:"Craft",icon:'svg'},
+            'Printer':{'tag':'req-printer',name:"Printer",icon:'svg'},
+            'Computer':{'tag':'req-computer',name:"Computer",icon:'svg'},
+            'Phone':{'tag':'req-phone',name:"Phone/Tablet",icon:'svg'},
+            'Audio':{'tag':'req-audio',name:"Audio",icon:'svg'},
+            'Group':{'tag':'req-groups',name:"Groups",icon:'svg'}
         }
     },'types':{
         tag:'type',
@@ -111,17 +118,17 @@ function populateData(){
         // console.log($('#'+_i));
         $('#'+_i).append('<div class="block-title"><h3 class="block-white"></h3></div>');
         $('#'+_i).append('<div class="block-img"><img src="img/'+_dx.Image+'" alt="image"></div>');
-        $('#'+_i).append('<p class="res res-desc">'+_dx['Description']+'</p>');
         $('#'+_i).append('<p class="res res-type"></p>');
         $('#'+_i).append('<p class="res res-age"></p>');
         $('#'+_i).append('<p class="res res-req"></p>');
         $('#'+_i).append('<p class="res res-clink">'+_dx['Curriculum Links']+'</p>');
         $('#'+_i).append('<p class="res res-author">'+_dx['Author/Originator']+'</p>');
+        $('#'+_i).append('<p class="res res-desc">'+_dx['Description']+'</p>');
         if (_dx.URL){
             urltxt='<span class="res-url"><a title="'+_dx['Resource Name']+'" href="'+_dx.URL_+'">More info</a></span>';
-            $('#'+_i).append('<p class="res res-url">'+urltxt+'</p>');
+            // $('#'+_i).append('<p class="res res-url">'+urltxt+'</p>');
             $('#'+_i+' .block-title h3').append('<a href="'+_dx.URL+'">'+_dx['Resource Name']+'</a>');
-            $('#'+_i+' .block-img').append('<div class="block-link"><a href="'+_dx.URL+'">Click here</a>');
+            $('#'+_i+' .block-img').append('<a href="'+_dx.URL+'"><div class="block-link">Click here</div></a>');
         }else{
             $('#'+_i+' .block-title h3').append(_dx['Resource Name']);
         }
@@ -142,10 +149,13 @@ function populateData(){
             reqs=_dx['Requirements'].split(';');
             for (r in reqs){
                 rq=reqs[r].trim().toLowerCase().replace(' ','-');
-                _dx.reqs[rq]=reqs[r];
+                _dx.reqs[rq]=reqs[r].trim();
                 $('#'+_i).addClass('req-'+rq);
-                $('#'+_i+' .res-req').append('<span class="res-req-item req-'+rq+'">'+reqs[r]+'</span>');
+                $('#'+_i+' .res-req').append('<div class="res-req-item req-'+rq+'"><div class="icon icon-req-'+rq+'"></div><span class="res-req-label">'+reqs[r].trim()+'</div></div>');
+                // $('#'+_i+' .res-req').append('<span class="res-req-item req-'+rq+'">'+reqs[r]+'</span>');
             }
+        }else{
+            $('#'+_i+' .res-req').addClass('hidden')
         }
         if (_dx['Domain']){
             _dx.doms={};
@@ -154,7 +164,7 @@ function populateData(){
                 dm=doms[o].trim().toLowerCase().replace(' ','-');
                 _dx.doms[dm]=doms[o];
                 $('#'+_i).addClass('dom-'+dm);
-                $('#'+_i+' .res-dom').append('<span class="res-dom-item dom-'+dm+'">'+doms[o]+'</span>');
+                $('#'+_i+' .res-dom').append('<span class="res-dom-item dom-'+dm+'">'+doms[o].trim()+'</span>');
                 $('#'+_i+' .block-title').append('<div class="icon icon-dom-'+dm+'"></div>');
             }
         }
@@ -163,10 +173,10 @@ function populateData(){
             types=_dx['Type of Resource'].split(';');
             for (t in types){
                 tp=types[t].trim().toLowerCase().replace(' ','-');
-                _dx.types[tp]=types[t];
+                _dx.types[tp]=types[t].trim();
                 $('#'+_i).addClass('type-'+tp);
-                $('#'+_i+' .res-type').append('<div class="res-type-item type-'+tp+'"><div class="res-type-icon"></div><span class="res-type-label">'+types[t]+'</div></div>');
-                $('#'+_i+' .block-title').append('<div class="icon icon-type-'+tp+'"></div>');
+                $('#'+_i+' .res-type').append('<div class="res-type-item type-'+tp+'"><div class="icon icon-type-'+tp+'"></div><span class="res-type-label">'+types[t].trim()+'</div></div>');
+                // $('#'+_i+' .block-title').append('<div class="icon icon-type-'+tp+'"></div>');
             }
         }
     }
@@ -179,6 +189,26 @@ function makeFilters(){
         // console.log(filt);
         var ftag=filters[filt].tag;
         $('#filter-holder').append('<div class="filter open" id="filter-'+ftag+'"><h3 class="filter-name">'+filters[filt].title+'</h3></div>')
+        $('#filter-'+ftag+'.filter').append('<div class="select"><div class="select-none">Select None</div><div class="select-all">Select All</div></div>');
+        $('.select-none').each(function(){
+            $(this).click(function(){
+                $(this).parent().siblings('.filt-option').each(function(){
+                    $(this).find('input').prop('checked',false);
+                });
+                updateFilters();
+            });
+        });
+        $('.select-all').each(function(){
+            $(this).click(function(){
+                $(this).parent().siblings('.filt-option').each(function(){
+                    $(this).find('input').prop('checked',true);
+                });
+                updateFilters();
+            });
+        });
+        if (filters[filt].desc){
+            $('#filter-'+ftag+'.filter').append('<div class="filt-desc">'+filters[filt].desc+'</div>');
+        }
         for (s in filters[filt].select){
             var stag=filters[filt].select[s].tag;
             // console.log(s);
@@ -207,7 +237,7 @@ function makeFilters(){
     fH=window.innerHeight;
     // -$('#title-bar').height()-parseFloat($('#title-bar').css('paddingTop'));
     console.log(window.innerHeight,$('#title-bar').height(),parseFloat($('#title-bar').css('paddingTop')),fH)
-    $('#filter-holder').height(fH-8);
+    // $('#filter-holder').height(fH-8);
     // updateFilters();
 }
 
