@@ -280,7 +280,7 @@ h3.filter-name{
     padding-left:2em;
     padding-top:0.5em;
     background-color:#d42a3f;
-    color:#000000;
+    color:#ffffff;
     border-radius:0.5em 0.5em 0 0;
     position:relative;
     width:auto;
@@ -606,6 +606,11 @@ div.block-item .block-title{
 .icon.icon-type-coding{
     display:inline-block;
     background:url('../icon/type-coding.svg');
+    background-size: 100% 100%;
+}
+.icon.icon-type-research{
+    display:inline-block;
+    background:url('../icon/type-research.svg');
     background-size: 100% 100%;
 }
 .icon.icon-type-app{
