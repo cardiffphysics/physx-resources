@@ -567,5 +567,17 @@
     "Author/Originator": "LaserLabs/University of Birmingham",
     "Curriculum Links": "Gravitational Waves",
     "Age Range": "7-9; 9-11; 11-14; 14-16; 16-18; >18"
+  },
+  {
+    "Resource Name": "Spot the Space Station",
+    "Domain": "Astronomy",
+    "Resource/Workshop": "Resource",
+    "Type of Resource": "Observing",
+    "URL": "https://spotthestation.nasa.gov/",
+    "Image": "spotthestation.png",
+    "Description": "The International Space Station orbits 400km above the Earth's surface, completing a cycle every 90 minutes. Near dawn and dusk it can sometimes be seen whizzing across the sky as a bright, moving light. If you see it, you can even check out <a href=\"https://www.howmanypeopleareinspacerightnow.com/\">who's onboard</a>!.",
+    "Author/Originator": "NASA",
+    "Curriculum Links": "Space Exploration",
+    "Age Range": "7-9; 9-11; 11-14; 14-16; 16-18; >18"
   }
 ]
