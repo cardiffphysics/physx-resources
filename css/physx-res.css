@@ -329,6 +329,9 @@ h3.filter-name{
     margin-top:-.25em;
     float:right;
 }
+.filter p{
+    padding-left:1em;
+}
 .filt-option, .filt-desc{
     display:inline-block;
     margin-left:.5em;
@@ -431,6 +434,8 @@ div.block-item {
 	vertical-align: top;
     background-color:white;
     border-radius: .5em;
+    padding-bottom:.5em;
+    margin-bottom:.5em;
 }
 .block-item.hidden{
     display:none;
@@ -584,6 +589,11 @@ div.block-item .block-title{
     background:url('../icon/type-app.svg');
     background-size: 100% 100%;
 }
+.icon.icon-type-observing{
+    display:inline-block;
+    background:url('../icon/type-observing.svg');
+    background-size: 100% 100%;
+}
 .icon.icon-req-phone{
     display:inline-block;
     background:url('../icon/req-phone.svg');
@@ -706,6 +716,7 @@ div.block-item p, div.block-item h3, div.block-item h4, div.block-item h5, div.b
 /*reduce the spacing slightly*/
 	margin-bottom: .5rem;
     margin-top:.5em;
+    margin-right: 1em;
 }
 div.block-item h3{
 	margin-left:0;
@@ -769,7 +780,9 @@ div.block-item h3.block-white, div.block-item h3.block-white a {
 	font-style: normal;
 	font-weight: bold;
 }
+.filter p{
 
+}
 /* @media (min-width:768px) and (max-width:979px){
     [class*="main"]{
         min-height:1px;

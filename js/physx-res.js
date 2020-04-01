@@ -53,7 +53,8 @@ var filters={
             'Craft':{'tag':'type-craft',name:"Craft",icon:'svg'},
             'Worksheet':{'tag':'type-worksheet',name:"Worksheet",icon:'svg'},
             'Video':{'tag':'type-video',name:"Video",icon:'svg'},
-            'Podcast':{'tag':'type-podcast',name:"Podcast",icon:'svg'}
+            'Podcast':{'tag':'type-podcast',name:"Podcast",icon:'svg'},
+            'Observing':{'tag':'type-observing',name:"Observing",icon:'svg'}
         }
     }
 }
@@ -239,6 +240,7 @@ function makeFilters(){
     console.log(window.innerHeight,$('#title-bar').height(),parseFloat($('#title-bar').css('paddingTop')),fH)
     // $('#filter-holder').height(fH-8);
     // updateFilters();
+    $('#filter-holder').append($('#after'));
 }
 
 function updateFilters(){
