@@ -132,7 +132,7 @@ function initPage(fileIn='../data/data.jsonp'){
     			"success": function(dataIn){
                     // this.data=dataIn;
                     this.data=dataIn.sort(function(a,b){
-                        return b['Resource Name'] > a['Resource Name'];
+                        return (b['Resource Name'] > a['Resource Name'])?-1:1;
                     })
                     populateData();
                     whenLoaded();
