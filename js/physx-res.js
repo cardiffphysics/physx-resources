@@ -39,7 +39,10 @@ var filters={
             'Worksheet':{'tag':'type-worksheet',name:"Worksheet",icon:'svg'},
             'Video':{'tag':'type-video',name:"Video",icon:'svg'},
             'Podcast':{'tag':'type-podcast',name:"Podcast",icon:'svg'},
-            'Observing':{'tag':'type-observing',name:"Observing",icon:'svg'}
+            'Observing':{'tag':'type-observing',name:"Observing",icon:'svg'},
+            'AR':{'tag':'type-augmented-reality',name:"Augmented Reality",icon:'svg'},
+            'VR':{'tag':'type-virtual-reality',name:"Virtual Reality",icon:'svg'},
+            'App':{'tag':'type-app',name:"App",icon:'svg'}
         }
     },'requirements':{
         tag:'req',
@@ -53,8 +56,11 @@ var filters={
             'Printer':{'tag':'req-printer',name:"Printer",icon:'svg'},
             'Computer':{'tag':'req-computer',name:"Computer",icon:'svg'},
             'Phone':{'tag':'req-phone',name:"Phone/Tablet",icon:'svg'},
+            'Android':{'tag':'req-android',name:"Android Device",icon:'svg'},
+            'Apple':{'tag':'req-apple',name:"Apple Device",icon:'svg'},
             'Audio':{'tag':'req-audio',name:"Audio",icon:'svg'},
-            'Group':{'tag':'req-groups',name:"Groups",icon:'svg'}
+            'Group':{'tag':'req-groups',name:"Groups",icon:'svg'},
+            'VR:':{'tag':'req-vr-headset',name:"VR Headset",icon:'svg'}
         }
     }
 }

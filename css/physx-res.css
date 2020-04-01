@@ -618,9 +618,29 @@ div.block-item .block-title{
     background:url('../icon/type-observing.svg');
     background-size: 100% 100%;
 }
+.icon.icon-type-app{
+    display:inline-block;
+    background:url('../icon/type-app.svg');
+    background-size: 100% 100%;
+}
+.icon.icon-type-virtual-reality{
+    display:inline-block;
+    background:url('../icon/type-vr.svg');
+    background-size: 100% 100%;
+}
+.icon.icon-type-augmented-reality{
+    display:inline-block;
+    background:url('../icon/type-ar.svg');
+    background-size: 100% 100%;
+}
 .icon.icon-req-phone{
     display:inline-block;
     background:url('../icon/req-phone.svg');
+    background-size: 100% 100%;
+}
+.icon.icon-req-vr-headset{
+    display:inline-block;
+    background:url('../icon/req-vr.svg');
     background-size: 100% 100%;
 }
 .icon.icon-req-computer{

@@ -547,7 +547,7 @@ data([
     "Resource Name": "AR Advenure in Space App",
     "Domain": "Astronomy",
     "Resource/Workshop": "Resource",
-    "Type of Resource": "App; Interactive",
+    "Type of Resource": "Augmented Reality; App; Interactive",
     "URL": "https://octagon.studio/portfolio/ar-adventure-in-space/",
     "Image": "AR-adventures.png",
     "Description": "Explore the International Space Station in Augmented Reality! AR Adventure in Space is here to give you an experience of being an intern on the ISS! Create your badge, choose your avatar and you're ready to go! As you explore, you will have access to plenty of information about each module and apparatus on board, videos showing the daily lives of the ISS crews courtesy of the European Space Agency, as well as some mini games to give you an idea of how eating and drinking in microgravity could be a bit tricky sometimes.",
@@ -579,5 +579,33 @@ data([
     "Author/Originator": "NASA",
     "Curriculum Links": "Space Exploration",
     "Age Range": "7-9; 9-11; 11-14; 14-16; 16-18; >18"
+  },
+  {
+    "Resource Name": "Virtual Reality Physics Experiences",
+    "Domain": "Astronomy",
+    "Resource/Workshop": "Resource",
+    "Type of Resource": "Virtual Reality; App; Interactive",
+    "URL": "https://play.google.com/store/apps/developer?id=Faulkes+Telescope&hl=en",
+    "Image": "iss_vr.png",
+    "Description": "Virtual Reality allows us to explore incredible places and experience amazing things, in an immersive way. You can explore the international space station, as you walk around it, interact with equipment inside and find out more about how astronauts like in space. Or maybe you want to explore Diamond Light Source, a particle collider based here in the UK, which is normally inaccessible to the public. All you need is an Android Smartphone and a VR headset to put your phone into.",
+    "Author/Originator": "Matthew Allen (Cardiff University)",
+    "Curriculum Links": "Physics, Astronomy, Technology",
+    "Age Range": "9-11;11-14;14-16;16-18",
+    "Duration": "10-30mins",
+    "Requirements": "Android; Phone; VR Headset"
+  },
+  {
+    "Resource Name": "Augmented Reality Physics Resources",
+    "Domain": "Astronomy",
+    "Resource/Workshop": "Resource",
+    "Type of Resource": "Augmented Reality; App; Interactive",
+    "URL": "https://play.google.com/store/apps/developer?id=Faulkes+Telescope&hl=en",
+    "Image": "allen_ar.png",
+    "Description": "Augmented Reality inserts 3D objects in to the real world. Just like the popular Pokemon Go, you can explore planets in our solar system, black holes, supernovae and much more, which appear on the table in front of you. All you need is an android smartphone or tablet to get started.",
+    "Author/Originator": "Matthew Allen (Cardiff University)",
+    "Curriculum Links": "Physics, Astronomy",
+    "Age Range": "7-9; 9-11;11-14;14-16",
+    "Duration": "10-30mins",
+    "Requirements": "Android; Phone"
   }
 ]);
