@@ -329,6 +329,30 @@ h3.filter-name{
     margin-top:-.25em;
     float:right;
 }
+#presets{
+    font-size:1em;
+    font-weight:normal;
+    margin-bottom:1em;
+}
+#presets::before{
+    content:'Presets:';
+    font-weight:bold;
+    font-size:1.2em;
+}
+.preset{
+    font-size:1.2em;
+    line-height: 1.2em;
+    padding:.25em .5em .25em .5em;
+    display: inline-block;
+    cursor:pointer;
+    background-color:#00a2d3;
+    color:white;
+    font-weight: bold;
+    border-radius: .25em;
+    margin-top:-.25em;
+    margin-left:.5em;
+    /* float:right; */
+}
 .filter p{
     padding-left:1em;
 }

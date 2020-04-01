@@ -23,21 +23,6 @@ var filters={
             'Maths':{'tag':'dom-maths',name:"Maths",icon:'dom-maths.svg'},
             'Coding':{'tag':'dom-coding',name:"Coding",icon:'dom-coding.svg'}
         }
-    },'requirements':{
-        tag:'req',
-        title:'Requirements',
-        type:'req',
-        desc:'Deselect any that are unavailable',
-        select:{
-            // 'Any-device':{'tag':'req-any-device',name:"Any device",icon:'astro.svg'},
-            'Web-access':{'tag':'req-web-access',name:"Web access",icon:'svg'},
-            'Craft':{'tag':'req-craft',name:"Craft",icon:'svg'},
-            'Printer':{'tag':'req-printer',name:"Printer",icon:'svg'},
-            'Computer':{'tag':'req-computer',name:"Computer",icon:'svg'},
-            'Phone':{'tag':'req-phone',name:"Phone/Tablet",icon:'svg'},
-            'Audio':{'tag':'req-audio',name:"Audio",icon:'svg'},
-            'Group':{'tag':'req-groups',name:"Groups",icon:'svg'}
-        }
     },'types':{
         tag:'type',
         title:'Activity types',
@@ -56,14 +41,56 @@ var filters={
             'Podcast':{'tag':'type-podcast',name:"Podcast",icon:'svg'},
             'Observing':{'tag':'type-observing',name:"Observing",icon:'svg'}
         }
+    },'requirements':{
+        tag:'req',
+        title:'Requirements',
+        type:'req',
+        desc:'Deselect any that are unavailable',
+        select:{
+            // 'Any-device':{'tag':'req-any-device',name:"Any device",icon:'astro.svg'},
+            'Web-access':{'tag':'req-web-access',name:"Web access",icon:'svg'},
+            'Craft':{'tag':'req-craft',name:"Craft",icon:'svg'},
+            'Printer':{'tag':'req-printer',name:"Printer",icon:'svg'},
+            'Computer':{'tag':'req-computer',name:"Computer",icon:'svg'},
+            'Phone':{'tag':'req-phone',name:"Phone/Tablet",icon:'svg'},
+            'Audio':{'tag':'req-audio',name:"Audio",icon:'svg'},
+            'Group':{'tag':'req-groups',name:"Groups",icon:'svg'}
+        }
     }
+}
+var presets={
+    'primary':{
+        button:true,
+        title:'Primary School',
+        selected:{age:['age-4-7','age-7-9','age-9-11']}
+    },
+    'secondary':{
+        button:true,
+        title:'Secondary School',
+        selected:{age:['age-11-14','age-14-16','age-16-18']}
+    },
+    'degree':{
+        button:true,
+        title:'Degree Prep',
+        selected:{age:['age-16-18','age-gt18'],type:['type-degree-prep']}
+    },
+    'all':{
+        button:true,
+        title:'All',
+        unselected:{age:[],type:[],dom:[],req:[]}
+    },
+    'noweb':{
+        button:false,
+        title:'No web-access',
+        unselected:{req:['req-web-access']}
+    }
+
 }
 var dirs={
     img:'../img'
 }
 var hid='content';
-function initPage(fileIn='../data/data.jsonp',pop=false){
-    var pop;
+function initPage(fileIn='../data/data.jsonp'){
     // console.log(fileIn,pop);
     $('#filter-button').click(function(){
         // console.log('filter-button clicked');
@@ -87,6 +114,7 @@ function initPage(fileIn='../data/data.jsonp',pop=false){
 
     })
     makeFilters();
+    makePresets();
     console.log('loading data from',fileIn)
     ajax(fileIn,{
     			"dataType": "jsonp",
@@ -96,14 +124,37 @@ function initPage(fileIn='../data/data.jsonp',pop=false){
     				console.log('events error:',error);
     			},
     			"success": function(dataIn){
-                    this.data=dataIn;
-                    if (pop){populateData()};
-                    updateFilters();
+                    // this.data=dataIn;
+                    this.data=dataIn.sort(function(a,b){
+                        return b['Resource Name'] > a['Resource Name'];
+                    })
+                    populateData();
+                    whenLoaded();
     			}
     		});
-    updateFilters();
+    // updateFilters();
 }
-
+function whenLoaded(){
+    updateFilters();
+    getUrlVars();
+    if (this.vars.preset){
+        // console.log('preset',this.vars.preset);
+        applyPreset(this.vars.preset);
+    }
+}
+function getUrlVars(){
+    this.vars={};
+    var hash,url = window.location.href;
+    if (window.location.href.indexOf('?')!=-1){
+        var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+        url = window.location.href.slice(0,window.location.href.indexOf('?'));
+        for(var i = 0; i < hashes.length; i++){
+            hash = hashes[i].split('=');
+            // vars.push(hash[0]);
+            this.vars[hash[0]] = hash[1];
+        }
+    }
+}
 function populateData(){
     // console.log(hid);
     var _h=hid;
@@ -235,14 +286,50 @@ function makeFilters(){
             }
         })
     })
-    fH=window.innerHeight;
+    // fH=window.innerHeight;
     // -$('#title-bar').height()-parseFloat($('#title-bar').css('paddingTop'));
-    console.log(window.innerHeight,$('#title-bar').height(),parseFloat($('#title-bar').css('paddingTop')),fH)
+    // console.log(window.innerHeight,$('#title-bar').height(),parseFloat($('#title-bar').css('paddingTop')),fH)
     // $('#filter-holder').height(fH-8);
     // updateFilters();
-    $('#filter-holder').append($('#after'));
+    $('#filter-holder').append($('#about'));
 }
 
+function makePresets(){
+    for (pre in presets){
+        if (presets[pre].button){
+            $('#presets').append('<div class="preset" id="preset-'+pre+'">'+presets[pre].title+'</div>')
+            $('#preset-'+pre).click(function(){
+                pid=$(this).prop('id').replace('preset-','');
+                applyPreset(pid);
+            })
+        }
+    }
+}
+function applyPreset(pid){
+    if (!presets[pid]){console.log('invalid preset',pid);return;}
+    px=presets[pid];
+    console.log(pid,px);
+    if (px.selected){
+        for (filt in px.selected){
+            $('#filter-'+filt).find('input').each(function(){$(this).prop('checked',false)})
+            for (s in px.selected[filt]){
+                console.log(px.selected[filt][s]);
+                $('#filt-'+px.selected[filt][s]).prop('checked',true);
+            }
+        }
+    }
+    if (px.unselected){
+        for (filt in px.unselected){
+            $('#filter-'+filt).find('input').each(function(){$(this).prop('checked',true)})
+            for (s in px.unselected[filt]){
+                // console.log(px.unselected[filt][s]);
+                $('#filt-'+px.unselected[filt][s]).prop('checked',false);
+            }
+        }
+    }
+    updateFilters();
+    return;
+}
 function updateFilters(){
     for (filt in filters){
         for (s in filters[filt].select){
