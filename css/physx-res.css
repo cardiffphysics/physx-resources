@@ -352,7 +352,21 @@ h3.filter-name{
     border-radius: .25em;
     margin-top:-.25em;
     margin-left:.5em;
+    margin-bottom:1em;
     /* float:right; */
+}
+.preset.hideable.hidden{
+    display:none;
+}
+#preset-more{
+    font-weight:bold;
+}
+#preset-more.less::before{
+    content:'\A0\A0\232A';
+    text-align
+}
+#preset-more.more::before{
+    content:'\2329\A0\A0';
 }
 .filter p{
     padding-left:1em;
@@ -773,6 +787,11 @@ div.block-item .block-title{
 }
 .icon.icon-dom-gravitational-waves{
     background:url('../icon/dom-gw.svg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.icon.icon-author-cardiff{
+    background:url('../img/cardiffuni_white.png');
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }

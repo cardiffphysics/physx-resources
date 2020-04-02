@@ -66,33 +66,50 @@ var filters={
             'Group':{'tag':'req-groups',name:"Groups",icon:'svg'},
             'VR:':{'tag':'req-vr-headset',name:"VR Headset",icon:'svg'}
         }
+    },'author':{
+        tag:'author',
+        title:'Author',
+        type:'normal',
+        select:{
+            'cardiff':{'tag':'author-cardiff',name:"Cardiff University"},
+            'collaboration':{'tag':'author-collaboration',name:"Collaboration"},
+            'external':{'tag':'author-external',name:"External provider"}
+        }
     }
 }
 var presets={
     'primary':{
         button:true,
         title:'Primary School',
-        selected:{age:['age-4-7','age-7-9','age-9-11']}
+        selected:{age:['age-4-7','age-7-9','age-9-11']},
+        unselected:{type:[],dom:[],req:[],author:[]}
     },
     'secondary':{
         button:true,
         title:'Secondary School',
-        selected:{age:['age-11-14','age-14-16','age-16-18']}
+        selected:{age:['age-11-14','age-14-16','age-16-18']},
+        unselected:{type:[],dom:[],req:[],author:[]}
     },
     'degree':{
         button:true,
         title:'Degree Prep',
-        selected:{age:['age-16-18','age-gt18'],type:['type-degree-prep']}
+        selected:{age:['age-16-18','age-gt18'],type:['type-degree-prep']},
+        unselected:{dom:[],req:[],author:[]}
     },
     'all':{
         button:true,
         title:'All',
-        unselected:{age:[],type:[],dom:[],req:[]}
+        unselected:{age:[],type:[],dom:[],req:[],author:[]}
     },
     'noweb':{
         button:false,
         title:'No web-access',
-        unselected:{req:['req-web-access']}
+        unselected:{req:['req-web-access'],age:[],type:[],dom:[],author:[]}
+    },
+    'cardiff-only':{
+        button:false,
+        title:'Cardiff-only',
+        selected:{author:['author-cardiff'],age:[],type:[],dom:[],req:[]}
     }
 
 }
@@ -241,6 +258,20 @@ function populateData(){
                 // $('#'+_i+' .block-title').append('<div class="icon icon-type-'+tp+'"></div>');
             }
         }
+        if (_dx['Cardiff?']){
+            console.log(_dx['Resource Name'],_dx['Cardiff?'].toLowerCase);
+            if (_dx['Cardiff?'].toLowerCase()=='cardiff-only'){
+                $('#'+_i).addClass('author-cardiff');
+                $('#'+_i+' .block-title').append('<div class="icon icon-author-cardiff"></div>');
+            }else if (_dx['Cardiff?'].toLowerCase()=='collaboration'){
+                $('#'+_i).addClass('author-collaboration');
+                $('#'+_i+' .block-title').append('<div class="icon icon-author-cardiff"></div>');
+            }else{
+                $('#'+_i).addClass('author-external');
+            }
+        }else{
+            $('#'+_i).addClass('author-external');
+        }
     }
 }
 
@@ -317,15 +348,31 @@ function makeFilters(){
 }
 
 function makePresets(){
+    $('#presets').append('<div class="preset less" id="preset-more"></div>');
     for (pre in presets){
         if (presets[pre].button){
-            $('#presets').append('<div class="preset" id="preset-'+pre+'">'+presets[pre].title+'</div>')
-            $('#preset-'+pre).click(function(){
-                pid=$(this).prop('id').replace('preset-','');
-                applyPreset(pid);
-            })
+            $('#preset-more').before('<div class="preset" id="preset-'+pre+'">'+presets[pre].title+'</div>');
+        }else{
+            $('#preset-more').after('<div class="preset hideable hidden" id="preset-'+pre+'">'+presets[pre].title+'</div>');
         }
+        // preclass=(presets[pre].button)?'preset':'preset hideable hidden';
+        // $('#presets').append('<div class="'+preclass+'" id="preset-'+pre+'">'+presets[pre].title+'</div>');
+        $('#preset-'+pre).click(function(){
+            pid=$(this).prop('id').replace('preset-','');
+            applyPreset(pid);
+        })
     }
+    $('#preset-more').click(function(){
+        if ($(this).hasClass('less')){
+            $(this).removeClass('less');
+            $(this).addClass('more');
+            $('.preset.hideable').removeClass('hidden');
+        }else{
+            $(this).removeClass('more');
+            $(this).addClass('less');
+            $('.preset.hideable').addClass('hidden');
+        }
+    })
 }
 function applyPreset(pid){
     if (!presets[pid]){console.log('invalid preset',pid);return;}
