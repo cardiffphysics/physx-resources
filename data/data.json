@@ -8,6 +8,7 @@
     "Image": "blackholehunter_logo.jpg",
     "Description": "Can you detect a gravitational wave? In Black Hole Hunter, your objective is to listen to gravitational wave detector data and determine whether or not you can hear the given gravitational wave signal in the sound file, or whether it is just noise.",
     "Author/Originator": "Cardiff University; LIGO/Virgo Collaboration",
+    "Cardiff?": "Collaboration",
     "Curriculum Links": "Black Holes; Gravitational Waves; Fun Learning",
     "Age Range": "11-14; 14-16; 16-18; >18",
     "Requirements": "Any device; web-access; audio"
@@ -20,6 +21,7 @@
     "Image": "bhbubble_logo.png",
     "Description": "LIGO is by no means the first experiment to detect black holes, with x-ray measurements suggesting their presence. This simple web-tool compares the sizes and masses of known black holes.",
     "Author/Originator": "Cardiff University (Chris North); LIGO/Virgo Collaboration",
+    "Cardiff?": "Collaboration",
     "Curriculum Links": "Black Holes; Gravitational Waves; Scientific Data",
     "Age Range": "14-16; 16-18; >18",
     "Requirements": "Any device; web-access"
@@ -33,6 +35,7 @@
     "Image": "plotgw_logo.png",
     "Description": "The LIGO measurements reveal an awful lot about the black holes in the detected systems. This web-tool allows you to explore what we know in the form of an interactive graph.",
     "Author/Originator": "Cardiff University (Chris North); LIGO/Virgo Collaboration",
+    "Cardiff?": "Collaboration",
     "Curriculum Links": "Gravitational Waves; Topical Science",
     "Age Range": "14-16; 16-18; >18",
     "Requirements": "Any device; web-access"
@@ -45,6 +48,7 @@
     "Image": "gravoscope_logo.png",
     "Description": "Based on Chromoscope, Gravoscope shows the locations on the sky that detected gravitational waves originated.",
     "Author/Originator": "Cardiff University (Chris North); LIGO/Virgo Collaboration",
+    "Cardiff?": "Collaboration",
     "Curriculum Links": "Gravitational Waves",
     "Age Range": "14-16; 16-18; >18",
     "Requirements": "Any device; web-access"
@@ -99,9 +103,10 @@
     "Resource/Workshop": "Resource",
     "Type of Resource": "Craft",
     "URL": "http://blogs.cardiff.ac.uk/physicsoutreach/resources/star-in-a-box/",
-    "Image": "SIAB_logo.png",
-    "Description": "Explore the lifecycle of stars in an interactive Hertzsprung-Russell diagram.",
-    "Author/Originator": "Las Cumbres Observatory (Edward Gomez)",
+    "Image": "hr-diagram.png",
+    "Description": "Make your own HR diagram using nothing but paper and scissors",
+    "Author/Originator": "Cardiff University",
+    "Cardiff?": "Cardiff-only",
     "Curriculum Links": "Life cycle of stars; Digital Literacy; Numeracy",
     "Age Range": "14-16; 16-18",
     "Requirements": "Craft"
@@ -128,6 +133,7 @@
     "Image": "SIAB_logo.png",
     "Description": "Explore stars as examples of black body emitters, using real data about stars and simulated data from Star in a Box",
     "Author/Originator": "Cardiff University (Chris North)",
+    "Cardiff?": "Cardiff-only",
     "Curriculum Links": "Black Body Radiation; Numeracy; Digital Literacy",
     "Age Range": "16-18; >18"
   },
@@ -139,7 +145,8 @@
     "URL": "http://blogs.cardiff.ac.uk/physicsoutreach/resources/chromoscope/",
     "Image": "Chromoscope_logo.png",
     "Description": "Chromoscope lets you explore our Galaxy (the Milky Way) and the distant Universe in a range of wavelengths from gamma-rays to the longest radio waves.",
-    "Author/Originator": "Chris North; Stuart Lowe; Rob Simpson",
+    "Author/Originator": "Cardiff University (Chris North);Stuart Lowe; Rob Simpson",
+    "Cardiff?": "Collaboration",
     "Curriculum Links": "Electromagnetic Spectrum",
     "Age Range": "11-14; 14-16; 16-18; >18",
     "Requirements": "Any device; web-access"
@@ -153,6 +160,7 @@
     "Image": "spacetel-icon1.jpg",
     "Description": "Design your own space telescope, based on a range of \"mission scenarios\". You need to select the size of the mirror, the instruments, from where it will be launched, where it will orbit, and even the rocket you'll use.",
     "Author/Originator": "Cardiff University (Chris North); Stuart Lowe",
+    "Cardiff?": "Collaboration",
     "Curriculum Links": "Electromagnetic Spectrum; Satellite; Literacy ; Digital Literacy",
     "Age Range": "14-16; 16-18; >18",
     "Requirements": "Any device; web-access"
@@ -166,6 +174,7 @@
     "Image": "satellite-screenshot.png",
     "Description": "The UK Space Agency is planning its next satellite mission. They've asked you to help design it! Your role is to design and launch a satellite that can perform a specific role related to communications, navigation or earth observation. You'll need to select the size of your satellite along with its instruments and power supply. Once it's completed, you'll need to design a rocket capable of launching your satellite into orbit - will you succeed? This app provides a range of difficulty levels depending on the age and/or ability of the students.",
     "Author/Originator": "Cardiff University (Chris North, Sarah Eve Roberts); Stuart Lowe",
+    "Cardiff?": "Collaboration",
     "Curriculum Links": "Astronomy; Space; Satellites; Digital Literacy",
     "Age Range": "7-9; 9-11; 11-14",
     "Requirements": "Any device; web-access"
@@ -179,6 +188,7 @@
     "Image": "cmbsim-logo3.png",
     "Description": "Adjust the parameters of your similated Universe and see their effects on the Cosmic Microwave Background. Can you recreate our real Universe, as measured by the Planck Satellite?",
     "Author/Originator": "Cardiff University (Chris North); Stuart Lowe",
+    "Cardiff?": "Collaboration",
     "Curriculum Links": "Cosmic Microwave Background; Dark Energy; Dark Matter",
     "Age Range": "14-16; 16-18; >18",
     "Requirements": "Any device; web-access"
@@ -192,6 +202,7 @@
     "Image": "Chromoscope_faded_thumbnail.png",
     "Description": "What do different astronomical objects look like when seen in different parts of the electromagnetic spectrum? Match them up and explore the differences using this online activity.",
     "Author/Originator": "Cardiff University (Chris North); Stuart Lowe",
+    "Cardiff?": "Collaboration",
     "Curriculum Links": "Electromagnetic Spectrum; Literacy; Digital Competancy",
     "Age Range": "7-9; 9-11; 11-14; 14-16; 16-18",
     "Requirements": "Any device; web-access"
@@ -205,6 +216,7 @@
     "Image": "Chromoscope_faded_thumbnail.png",
     "Description": "What do different astronomical objects look like when seen in different parts of the electromagnetic spectrum? Match them up and explore the differences using these printed resources.",
     "Author/Originator": "Cardiff University (Chris North)",
+    "Cardiff?": "Cardiff-only",
     "Curriculum Links": "Electromagnetic Spectrum; Literacy; Digital Competancy",
     "Age Range": "7-9; 9-11; 11-14; 14-16; 16-18",
     "Requirements": "Printer"
@@ -258,6 +270,7 @@
     "Image": "pythag_logo.png",
     "Description": "A monthly astronomy podcast covering astronomy news from around the world",
     "Author/Originator": "Chris North; Edward Gomez",
+    "Cardiff?": "Collaboration",
     "Curriculum Links": "Topical Science",
     "Age Range": "11-14; 14-16; 16-18",
     "Requirements": "web-access; audio"
@@ -285,6 +298,7 @@
     "Image": "cosmos_pocket_square.jpg",
     "Description": "A little activity book that includes all sorts of creative, artsy activities related to our night sky; design your own constellations, write an ode to your favourite planet or draw a portrait of the Moon. Alternately, just learn some fun facts about the Universe that will impress your friends!",
     "Author/Originator": "Cardiff University (Sarah Eve Roberts, Haley Gomez), Las Cumbres Observatory (Edward Gomez)",
+    "Cardiff?": "Collaboration",
     "Curriculum Links": "Science, Space, English, Literacy",
     "Age Range": "7-9;9-11",
     "Requirements": "Printer"
@@ -299,6 +313,7 @@
     "Image": "tiyp_image_square.png",
     "Description": "This activity book includes all range of fun astronomy activities based on the exciting topics of robotic telescopes and exotic astronomical objects. Students are invited to learn how telescopes work, design a comic that takes them on a trip to outer space and play a game of galactic spot-the-difference.",
     "Author/Originator": "Cardiff University (Sarah Eve Roberts, Haley Gomez), Las Cumbres Observatory (Edward Gomez)",
+    "Cardiff?": "Collaboration",
     "Curriculum Links": "Science, Space, English, Literacy, Robotics, Geography",
     "Age Range": "7-9;9-11",
     "Requirements": "Printer"
@@ -311,6 +326,7 @@
     "Image": "nstasq-scrn.png",
     "Description": "This comic aims to empower kids to see themselves as scientists, and the key to making that happen is to encourage them to ask questions. The idea behind this comic is to show children that questions which seem like they might be 'stupid' can lead to real scientific discoveries, and are not stupid at all!",
     "Author/Originator": "Cardiff University, Las Cumbres Observatory",
+    "Cardiff?": "Collaboration",
     "Curriculum Links": "Science, Equality & Diversity, Literacy",
     "Age Range": "7-9;9-11;11-14;14-18",
     "Requirements": "Any device"
@@ -337,6 +353,7 @@
     "Image": "Gaia_Sticker_Fairing_wo_frame_500px.jpg",
     "Description": "This activity involves using observations of Type Ia supernovae to calculate how quickly the Universe is expanding and how old it is using Hubble's Law. Students are able to analyse pre-packaged data sets of can even open their own telescope account with us to perform their own observations.",
     "Author/Originator": "Cardiff University/Faulkes Telescope Project (Sophie Bartlett)",
+    "Cardiff?": "Collaboration",
     "Curriculum Links": "Space, Physics, Redshift, Universe Expansion, IT, Numeracy, Graph Plotting",
     "Age Range": "14-16; 16-18",
     "Duration": "1-2 hours",
@@ -362,6 +379,7 @@
     "Image": "uni_classroom-colorCMYK_logo.png",
     "Description": "To help you inspire and educate young students with the wonders of the cosmos, Universe in the classroom offers a series of educational activities. The teacher guides include a step-by-step walk through and all necessary scientific information so that you can implement the activities without carrying out any background research.",
     "Author/Originator": "Cardiff University (Sarah Eve Roberts)",
+    "Cardiff?": "Cardiff-only",
     "Curriculum Links": "Space, Science, Literacy, Numeracy, Geography, Technology, ICT",
     "Age Range": "7-9;9-11",
     "Duration": "1-2 hours"
@@ -376,6 +394,7 @@
     "Image": "uni_classroomWELSH-01.png",
     "Description": "To help you inspire and educate young students with the wonders of the cosmos, Universe in the classroom offers a series of welsh language educational activities. The teacher guides include a step-by-step walk through and all necessary scientific information so that you can implement the activities without carrying out any background research.",
     "Author/Originator": "Cardiff University (Sarah Eve Roberts)",
+    "Cardiff?": "Cardiff-only",
     "Curriculum Links": "Space, Science, Literacy, Numeracy, Geography, Technology, ICT",
     "Age Range": "7-9;9-11",
     "Duration": "1-2 hours"
@@ -389,6 +408,7 @@
     "Image": "whirlpool-galaxy.png",
     "Description": "A collection of resources to help students improve their skills in certain statistics topics via application, as well as hoping to inspire an interest in astronomy in the process. Students classify galaxies according to their shape and/or colour and then to investigate certain statistical properties, to draw conclusions about the nature of galaxies, as well as the relationship between sample size and the accuracy of results",
     "Author/Originator": "Cardiff University (Victoria Ayley)",
+    "Cardiff?": "Cardiff-only",
     "Curriculum Links": "Maths, Statistics, Astronomy, Galaxies.",
     "Age Range": "11-14; 14-16",
     "Duration": "40-90 mins"
@@ -402,6 +422,7 @@
     "Image": "SN1006.png",
     "Description": "A collection of resources to help students improve their lab skills (particularly graphical analysis) via application, as well as hoping to inspire an interest in astronomy in the process. Students investigate Hubble's Law using Type Ia supernovae data, to draw conclusions about the expanding Universe, as well as the inaccuracy of Hubble's Law and the relationship between sample size and the accuracy of results.",
     "Author/Originator": "Cardiff University (Victoria Ayley)",
+    "Cardiff?": "Cardiff-only",
     "Curriculum Links": "Physics, Lab, Astronomy, Cosmology, Supernovae, Graphical Analysis",
     "Age Range": "16-18",
     "Duration": "40-90 mins"
@@ -414,8 +435,24 @@
     "URL": "http://herschel.cf.ac.uk/education/model",
     "Image": "herschelmodel.png",
     "Description": "This simple model of the Herschel telescope should take around 30 minutes to make. It is available in colour, or you can colour it in yourself. A more complicated model is also available, with 7 pages of cut-out shapes. The pages come with suggestions for the colours, or you can colour them in yourself. This version will take around one hour or so to complete.",
-    "Author/Originator": "ESA/Herschel",
+    "Author/Originator": "Cardiff University; ESA/Herschel",
+    "Cardiff?": "Collaboration",
     "Curriculum Links": "Astronomy; Space",
+    "Age Range": "7-9; 9-11; 11-14; 14-16",
+    "Duration": "36-60 mins",
+    "Requirements": "Craft; Printer"
+  },
+  {
+    "Resource Name": "Planck Satellite models",
+    "Domain": "Astronomy",
+    "Resource/Workshop": "Resource",
+    "Type of Resource": "Craft",
+    "URL": "http://planck.cf.ac.uk/education",
+    "Image": "planckmodel.png",
+    "Description": "This simple model of the Planck Satellite should take around 30 minutes to make. There are also models to make of the sky as seen by Planck.",
+    "Author/Originator": "Cardiff University; Stuart Lowe; ESA/Planck",
+    "Cardiff?": "Collaboration",
+    "Curriculum Links": "Astronomy; Space; Cosmology",
     "Age Range": "7-9; 9-11; 11-14; 14-16",
     "Duration": "36-60 mins",
     "Requirements": "Craft; Printer"
@@ -480,6 +517,7 @@
     "Image": "preiodic_table.png",
     "Description": "Research the periodic table and its interpretation from a physicist's perspective. Researching how atoms are put together will quickly lead to the requirement to invoke some very deep physics concepts e.g.: wave particle duality; quantum confinement; Heisenberg uncertainty principle. If you understand (in general terms) how this physics is behind the form of the Periodic Table of the elements you will be well placed to understand the physics of the materials around you and the stars above you.",
     "Author/Originator": "Cardiff University",
+    "Cardiff?": "Cardiff-only",
     "Curriculum Links": "Periodic Table",
     "Age Range": "16-18; >18",
     "Requirements": "Any device; web-access"
@@ -532,6 +570,7 @@
     "Image": "glitch.png",
     "Description": "Launched as part of the <a href=\"http://www.cardiffsciencefestival.co.uk/event/cardiff-kids-hackathon/\">Cardiff Kids Hackathon</a>, this how to create games with MakeCode. During this workshop you're going to learn how to recreate a classic arcade puzzle game Sokoban. We've collected and prepared a set of tutorials for you, to help you learn the game development skills you need to recreate Sokoban. At each step you'll use your new skills to create a new game. You can come back to the website to complete the rest anytime.",
     "Author/Originator": "Cardiff University",
+    "Cardiff?": "Cardiff-only",
     "Curriculum Links": "Computer Coding",
     "Age Range": "7-9; 9-11; 11-14; 14-16; 16-18; >18",
     "Requirements": "web-access"
@@ -545,6 +584,7 @@
     "Image": "kipthorne.png",
     "Description": "Professor Kip Thorne is a theoretical physicist and Nobel laureate. In this talk, delivered at Cardiff University in October 2009, he discusses \"My Romance with the Warped Side of the Universe: from Black Holes and Wormholes to Time Travel and Gravitational Waves\".",
     "Author/Originator": "Kip Thorne/Cardiff University",
+    "Cardiff?": "Collaboration",
     "Curriculum Links": "Gravitational Waves; Topical Science",
     "Age Range": "14-16; 16-18; >18",
     "Requirements": "web-access"
@@ -596,6 +636,7 @@
     "Image": "iss_vr.png",
     "Description": "Virtual Reality allows us to explore incredible places and experience amazing things, in an immersive way. You can explore the international space station, as you walk around it, interact with equipment inside and find out more about how astronauts like in space. Or maybe you want to explore Diamond Light Source, a particle collider based here in the UK, which is normally inaccessible to the public. All you need is an Android Smartphone and a VR headset to put your phone into.",
     "Author/Originator": "Cardiff University (Matthew Allen)",
+    "Cardiff?": "Cardiff-only",
     "Curriculum Links": "Physics, Astronomy, Technology",
     "Age Range": "9-11;11-14;14-16;16-18",
     "Duration": "10-30mins",
@@ -610,6 +651,7 @@
     "Image": "allen_ar.png",
     "Description": "Augmented Reality inserts 3D objects in to the real world. Just like the popular Pokemon Go, you can explore planets in our solar system, black holes, supernovae and much more, which appear on the table in front of you. All you need is an android smartphone or tablet to get started.",
     "Author/Originator": "Cardiff University (Matthew Allen)",
+    "Cardiff?": "Cardiff-only",
     "Curriculum Links": "Physics, Astronomy",
     "Age Range": "7-9; 9-11;11-14;14-16",
     "Duration": "10-30mins",
@@ -651,6 +693,19 @@
     "Author/Originator": "Zooniverse.org & partners",
     "Curriculum Links": "Various",
     "Age Range": "7-9; 9-11; 11-14; 14-16; 16-18; >18",
+    "Requirements": "Any device; web-access"
+  },
+  {
+    "Resource Name": "CoolCosmos",
+    "Domain": "Astronomy",
+    "Resource/Workshop": "Resource",
+    "Type of Resource": "Online; Collection",
+    "URL": "http://coolcosmos.ipac.caltech.edu/",
+    "Image": "coolcosmos.png",
+    "Description": "Your infrared guide to the world and the Universe beyond. Cool Cosmos is a NASA education and outreach website for infrared astronomy and related topics, with information on all NASA-involved infrared missions, including the Spitzer Space Telescope, WISE, Herschel, Planck, 2MASS, SOFIA, JWST, WFIRST/AFTA and Euclid.",
+    "Author/Originator": "NASA/IPAC",
+    "Curriculum Links": "Astronomy; Electromagnetic Spectrum",
+    "Age Range": "11-14; 14-16; 16-18; >18",
     "Requirements": "Any device; web-access"
   }
 ]
