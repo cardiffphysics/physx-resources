@@ -45,7 +45,7 @@ var filters={
             'VR':{'tag':'type-virtual-reality',name:"Virtual Reality",icon:'svg'},
             'App':{'tag':'type-app',name:"App",icon:'svg'},
             'Collection':{'tag':'type-collection',name:"Collection",icon:'svg'},
-            'Research':{'tag':'type-research',name:"Research",icon:'svg'}
+            'Research':{'tag':'type-independent-research',name:"Independent Research",icon:'svg'}
         }
     },'requirements':{
         sort:true,
@@ -54,7 +54,7 @@ var filters={
         type:'req',
         desc:'Deselect any that are unavailable',
         select:{
-            // 'Any-device':{'tag':'req-any-device',name:"Any device",icon:'astro.svg'},
+            'Any-device':{'tag':'req-any-device',name:"Any device",icon:'svg'},
             'Web-access':{'tag':'req-web-access',name:"Web access",icon:'svg'},
             'Craft':{'tag':'req-craft',name:"Craft",icon:'svg'},
             'Printer':{'tag':'req-printer',name:"Printer",icon:'svg'},

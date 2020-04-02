@@ -548,9 +548,9 @@ div.block-item .block-title{
     height:2em;
     padding-right:.25em;
 }
-.res-req-item.req-any-device{
+/* .res-req-item.req-any-device{
     display:none;
-}
+} */
 .res-type-item .res-type-label, .res-req-item .res-req-label{
     vertical-align: middle;
 }
@@ -619,7 +619,7 @@ div.block-item .block-title{
     background:url('../icon/type-coding.svg');
     background-size: 100% 100%;
 }
-.icon.icon-type-research{
+.icon.icon-type-independent-research{
     display:inline-block;
     background:url('../icon/type-research.svg');
     background-size: 100% 100%;
@@ -666,7 +666,7 @@ div.block-item .block-title{
 }
 .icon.icon-req-computer{
     display:inline-block;
-    background:url('../icon/req-phone.svg');
+    background:url('../icon/req-computer.svg');
     background-size: 100% 100%;
 }
 .icon.icon-req-web-access{
@@ -697,6 +697,16 @@ div.block-item .block-title{
 .icon.icon-req-audio{
     display:inline-block;
     background:url('../icon/req-audio.svg');
+    background-size: 100% 100%;
+}
+.icon.icon-req-apple{
+    display:inline-block;
+    background:url('../icon/req-apple.svg');
+    background-size: 100% 100%;
+}
+.icon.icon-req-any-device{
+    display:inline-block;
+    background:url('../icon/req-device.svg');
     background-size: 100% 100%;
 }
 .icon.icon-req-craft{

@@ -233,7 +233,7 @@
     "Author/Originator": "Las Cumbres Observatory (Edward Gomez)",
     "Curriculum Links": "Astronomy; Fun Learning",
     "Age Range": "7-9; 9-11; 11-14; 14-16; 16-18",
-    "Requirements": "Printer; groups"
+    "Requirements": "Printer; Groups; web-access"
   },
   {
     "Resource Name": "Space Scoop",
@@ -250,7 +250,7 @@
     "Requirements": "web-access"
   },
   {
-    "Resource Name": "Pythagorean Astronomy",
+    "Resource Name": "Pythagorean Astronomy Podcast",
     "Domain": "Astronomy",
     "Resource/Workshop": "Resource",
     "Type of Resource": "Podcast",
@@ -431,7 +431,7 @@
     "Author/Originator": "Perimeter Institute",
     "Curriculum Links": "Physics",
     "Age Range": "16-18; >18",
-    "Requirements": "web-access",
+    "Requirements": "Any device; web-access",
     "Review": "I attended ISSYP in 2012 and it remains one of the most exciting events of my career. The topics covered were pretty advanced but put across in a way we could follow."
   },
   {
@@ -476,12 +476,13 @@
     "Resource Name": "Research Activity: Explaining the periodic table - from a physicist's perspective",
     "Domain": "Physics",
     "Resource/Workshop": "Resource",
-    "Type of Resource": "Degree Prep; Research",
+    "Type of Resource": "Degree Prep; Independent Research",
     "Image": "preiodic_table.png",
     "Description": "Research the periodic table and its interpretation from a physicist's perspective. Researching how atoms are put together will quickly lead to the requirement to invoke some very deep physics concepts e.g.: wave particle duality; quantum confinement; Heisenberg uncertainty principle. If you understand (in general terms) how this physics is behind the form of the Periodic Table of the elements you will be well placed to understand the physics of the materials around you and the stars above you.",
     "Author/Originator": "Cardiff University",
     "Curriculum Links": "Periodic Table",
-    "Age Range": "16-18; >18"
+    "Age Range": "16-18; >18",
+    "Requirements": "Any device; web-access"
   },
   {
     "Resource Name": "Openstax: Astronomy Textbook",
@@ -493,7 +494,8 @@
     "Description": "This open-access textbook is designed to meet the scope and sequence requirements of one- or two-semester introductory astronomy courses. The book begins with relevant scientific fundamentals and progresses through an exploration of the solar system, stars, galaxies, and cosmology. The Astronomy textbook builds student understanding through the use of relevant analogies, clear and non-technical explanations, and rich illustrations. Mathematics is included in a flexible manner to meet the needs of individual instructors.",
     "Author/Originator": "Fraknoi, Morrison, Wolff & others",
     "Curriculum Links": "Astronomy",
-    "Age Range": "16-18; >18"
+    "Age Range": "16-18; >18",
+    "Requirements": "Any device; web-access"
   },
   {
     "Resource Name": "Openstax: College Physics Textbook",
@@ -505,7 +507,8 @@
     "Description": "This open-access textbook meets standard scope and sequence requirements for a two-semester introductory algebra-based physics course. The text is grounded in real-world examples to help students grasp fundamental physics concepts. It requires knowledge of algebra and some trigonometry, but not calculus. College Physics includes learning objectives, concept questions, links to labs and simulations, and ample practice opportunities for traditional physics application problems.",
     "Author/Originator": "Urone, Hinrichs & more",
     "Curriculum Links": "Physics",
-    "Age Range": "16-18; >18"
+    "Age Range": "16-18; >18",
+    "Requirements": "Any device; web-access"
   },
   {
     "Resource Name": "Sustainable Energy: Without the Hot Air",
@@ -517,7 +520,8 @@
     "Description": "Addressing the sustainable energy crisis in an objective manner, this enlightening book analyzes the relevant numbers and organizes a plan for change on both a personal level and an international scale--for Europe, the United States, and the world. In case study format, this informative reference answers questions surrounding nuclear energy, the potential of sustainable fossil fuels, and the possibilities of sharing renewable power with foreign countries. The book is freely available online for personal and educational use",
     "Author/Originator": "David MacKay",
     "Curriculum Links": "Renewable Energy; Estimation",
-    "Age Range": "14-16; 16-18; >18"
+    "Age Range": "14-16; 16-18; >18",
+    "Requirements": "Any device"
   },
   {
     "Resource Name": "Game Hack Tutorials",
@@ -568,7 +572,8 @@
     "Description": "A range of apps designed and built by gravitational wave researchers to explore the science and technology of gravitational wave detection:<ul><li>Pocket Black Hole (play with the light-bending effect of a black hole)</li><li>Stretch and Squeeze (explore how a passing gravitational wave would stretch and squash the distances between objects)</li><li>Space Time Quest (A game putting you in charge of designing your own gravitational wave detector)</li><li>Black Hole Master (a light-hearted remake of the old classic \"Pong\", except with a cosmic twist!)</li></ul>",
     "Author/Originator": "LaserLabs/University of Birmingham",
     "Curriculum Links": "Gravitational Waves",
-    "Age Range": "7-9; 9-11; 11-14; 14-16; 16-18; >18"
+    "Age Range": "7-9; 9-11; 11-14; 14-16; 16-18; >18",
+    "Requirements": "Any device"
   },
   {
     "Resource Name": "Spot the Space Station",
@@ -620,7 +625,8 @@
     "Description": "A collection of resources from the Institute of Physics, who are looking at how to help when most students, teachers and technicians will be at home. Scroll down for more info.",
     "Author/Originator": "IOP",
     "Curriculum Links": "Physics",
-    "Age Range": "4-7; 7-9; 9-11;11-14;14-16; 16-18"
+    "Age Range": "4-7; 7-9; 9-11;11-14;14-16; 16-18",
+    "Requirements": "Various"
   },
   {
     "Resource Name": "Ogden Trust Resource Collection",
@@ -631,6 +637,20 @@
     "Image": "ogdentrust.jpg",
     "Description": "A collection of educational resources from the Ogden Trust. The primary science curriculum resources have been written by primary experts and physics specialists and are aimed at supporting your delivery of hands-on science in the classroom. The secondary resources are provided by partners and associates of the Trust and we are pleased to signpost you to these excellent teaching and learning aids.",
     "Curriculum Links": "Physics",
-    "Age Range": "4-7; 7-9; 9-11;11-14;14-16; 16-18"
+    "Age Range": "4-7; 7-9; 9-11;11-14;14-16; 16-18",
+    "Requirements": "Various"
+  },
+  {
+    "Resource Name": "Zooniverse.org",
+    "Domain": "Physics; Astronomy",
+    "Resource/Workshop": "Resource",
+    "Type of Resource": "Collection; Independent Research; Online",
+    "URL": "www.zooniverse.org",
+    "Image": "zooniverse.png",
+    "Description": "The Zooniverse enables everyone to take part in real cutting edge research in many fields across the sciences, humanities, and more. The Zooniverse creates opportunities for you to unlock answers and contribute to real discoveries. Notable repositories include:<ul><li><a href=\"https://www.zooniverse.org/projects/zooniverse/gravity-spy\">Gravity Spy</a>: Help scientists at LIGO search for gravitational waves, the elusive ripples of spacetime.</li><li><a href=\"https://www.zooniverse.org/projects/ianc2/exoplanet-explorers\">Exoplanet Explorers</a>: Discover new planets orbiting other stars in our galaxy!</li><li><a>Radio Galaxy Zoo: LOFAR</a>: Help astronomers locate and identify supermassive black holes and starforming galaxies!</li><li><a href=\"https://www.zooniverse.org/projects/shannon-/solar-stormwatch-ii\">Solar Stormwatch II</a>: Help us track Solar Storms through space to improve space weather forecasts.</li></ul>",
+    "Author/Originator": "Zooniverse.org & partners",
+    "Curriculum Links": "Various",
+    "Age Range": "7-9; 9-11; 11-14; 14-16; 16-18; >18",
+    "Requirements": "Any device; web-access"
   }
 ]
