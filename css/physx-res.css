@@ -315,6 +315,7 @@ h3.filter-name{
     width:100%;
     font-size:1em;
     font-weight:normal;
+    margin-bottom: .25em;
 }
 .select-all, .select-none{
     font-size:1em;
@@ -326,7 +327,7 @@ h3.filter-name{
     color:white;
     font-weight: bold;
     border-radius: .25em;
-    margin-top:-.25em;
+    /* margin-top:-.25em; */
     float:right;
 }
 #presets{
@@ -357,13 +358,18 @@ h3.filter-name{
     padding-left:1em;
 }
 .filt-option, .filt-desc{
-    display:inline-block;
+    display:block;
     margin-left:.5em;
     margin-right:.5em;
-    margin-top:.5em;
+    margin-bottom:.5em;
     width:auto;
-    border-radius:.25em;
+    height:2em;
+    border-radius:.5em;
     padding-left:0.5em;
+}
+#filter-age .filt-option{
+    display:inline-block;
+    width:40%;
 }
 .filt-option input, .filt-option div .filt-option label{
     display:unset;
@@ -523,7 +529,12 @@ div.block-item .block-title{
 .filt-option.dom-coding, .block-item.dom-coding .block-title {
     background-color: #b72268;
 }
-
+/* #filter-type .filt-option{
+    width:100%;
+}
+#filter-type .filt-option{
+    width:100%;
+} */
 .res-type-item, .res-req-item{
     display:inline-block;
     vertical-align: middle;
@@ -636,6 +647,11 @@ div.block-item .block-title{
 .icon.icon-type-augmented-reality{
     display:inline-block;
     background:url('../icon/type-ar.svg');
+    background-size: 100% 100%;
+}
+.icon.icon-type-collection{
+    display:inline-block;
+    background:url('../icon/type-collection.svg');
     background-size: 100% 100%;
 }
 .icon.icon-req-phone{

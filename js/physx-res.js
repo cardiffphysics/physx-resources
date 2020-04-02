@@ -24,6 +24,7 @@ var filters={
             'Coding':{'tag':'dom-coding',name:"Coding",icon:'dom-coding.svg'}
         }
     },'types':{
+        sort:true,
         tag:'type',
         title:'Activity types',
         type:'normal',
@@ -42,9 +43,12 @@ var filters={
             'Observing':{'tag':'type-observing',name:"Observing",icon:'svg'},
             'AR':{'tag':'type-augmented-reality',name:"Augmented Reality",icon:'svg'},
             'VR':{'tag':'type-virtual-reality',name:"Virtual Reality",icon:'svg'},
-            'App':{'tag':'type-app',name:"App",icon:'svg'}
+            'App':{'tag':'type-app',name:"App",icon:'svg'},
+            'Collection':{'tag':'type-collection',name:"Collection",icon:'svg'},
+            'Research':{'tag':'type-research',name:"Research",icon:'svg'}
         }
     },'requirements':{
+        sort:true,
         tag:'req',
         title:'Requirements',
         type:'req',
@@ -267,7 +271,19 @@ function makeFilters(){
         if (filters[filt].desc){
             $('#filter-'+ftag+'.filter').append('<div class="filt-desc">'+filters[filt].desc+'</div>');
         }
-        for (s in filters[filt].select){
+        // sort filter order
+        var filtOrder=[];
+        for (s in filters[filt].select){filtOrder.push(s)}
+        console.log('unordered',filt,filtOrder);
+        var fsel=filters[filt].select;
+        if (filters[filt].sort){
+            filtOrder=filtOrder.sort(function(a,b){
+                return (fsel[a].name > fsel[b].name)?1:-1;
+            })
+            console.log('ordered',filt,filtOrder);
+        }
+        for (sx in filtOrder){
+            var s=filtOrder[sx];
             var stag=filters[filt].select[s].tag;
             // console.log(s);
             $('#filter-'+ftag+'.filter').append('<div class="filt-option '+stag+'" id="filt-'+stag+'_option"></div>')

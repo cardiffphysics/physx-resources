@@ -3,7 +3,7 @@ data([
     "Resource Name": "Black Hole Hunter",
     "Domain": "Gravitational Waves",
     "Resource/Workshop": "Resource",
-    "Type of Resource": "Online",
+    "Type of Resource": "Online; Audio",
     "URL": "http://www.blackholehunter.org/",
     "Image": "blackholehunter_logo.jpg",
     "Description": "Can you detect a gravitational wave? In Black Hole Hunter, your objective is to listen to gravitational wave detector data and determine whether or not you can hear the given gravitational wave signal in the sound file, or whether it is just noise.",
@@ -609,5 +609,28 @@ data([
     "Age Range": "7-9; 9-11;11-14;14-16",
     "Duration": "10-30mins",
     "Requirements": "Android; Phone"
+  },
+  {
+    "Resource Name": "IOP Spark Collection",
+    "Domain": "Physics",
+    "Resource/Workshop": "Resource",
+    "Type of Resource": "Collection",
+    "URL": "https://spark.iop.org/",
+    "Image": "iop.png",
+    "Description": "A collection of resources from the Institute of Physics, who are looking at how to help when most students, teachers and technicians will be at home. Scroll down for more info.",
+    "Author/Originator": "IOP",
+    "Curriculum Links": "Physics",
+    "Age Range": "4-7; 7-9; 9-11;11-14;14-16; 16-18"
+  },
+  {
+    "Resource Name": "Ogden Trust Resource Collection",
+    "Domain": "Physics",
+    "Resource/Workshop": "Resource",
+    "Type of Resource": "Collection",
+    "URL": "https://www.ogdentrust.com/resources-cpd",
+    "Image": "ogdentrust.jpg",
+    "Description": "A collection of educational resources from the Ogden Trust. The primary science curriculum resources have been written by primary experts and physics specialists and are aimed at supporting your delivery of hands-on science in the classroom. The secondary resources are provided by partners and associates of the Trust and we are pleased to signpost you to these excellent teaching and learning aids.",
+    "Curriculum Links": "Physics",
+    "Age Range": "4-7; 7-9; 9-11;11-14;14-16; 16-18"
   }
 ]);
