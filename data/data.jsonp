@@ -59,6 +59,7 @@ data([
     "Resource/Workshop": "Resource",
     "Type of Resource": "Printable activity",
     "URL": "http://cgwp.gravity.psu.edu/outreach/activities/template_activity/",
+    "Image": "ligologo.png",
     "Description": "A range of educational resources relating to gravitational waves:<ul><li><a href=\"http://cgwp.gravity.psu.edu/outreach/activities/template_activity/\">Searching for Gravitational Waves in Noisy Data</a> (PSU)</li><li><a href=\"http://cgwp.gravity.psu.edu/outreach/activities/handson_activity/\">Hands-on Gravitational Wave Astronomy: Extraction of Astrophysical Information from Simulated Signals</a> (PSU)</li><li><a href=\"https://www.ligo.caltech.edu/page/classroom-activities\">Various other LIGO Classroom Activities</a></li></ul>",
     "Author/Originator": "LIGO/Virgo Collaboration; Penn State University",
     "Curriculum Links": "Gravitational Waves; Digital Literacy",
@@ -69,6 +70,7 @@ data([
     "Domain": "Gravitational Waves",
     "Type of Resource": "Printable activity",
     "URL": "http://cgwp.gravity.psu.edu/outreach/activities/handson_activity/",
+    "Image": "ligologo.png",
     "Author/Originator": "Penn State University",
     "Curriculum Links": "Gravitational Waves; Digital Literacy",
     "Age Range": "14-16; 16-18; >18"
@@ -152,16 +154,30 @@ data([
     "Requirements": "Any device; web-access"
   },
   {
-    "Resource Name": "Space Telescope Designer",
+    "Resource Name": "Space Telescope Designer - Group Activity",
+    "Domain": "Astronomy",
+    "Resource/Workshop": "Resource",
+    "Type of Resource": "Printable activity; Degree-prep; Independent Research",
+    "URL": "http://blogs.cardiff.ac.uk/physicsoutreach/resources/space-telescope-designer-group-activity/",
+    "Image": "spacetel-icon1.jpg",
+    "Description": "A group activity to design a space telescope, based on a range of \"mission scenarios\". Groups need to select the size of the mirror, the instruments, from where it will be launched, where it will orbit, and even the rocket you'll use. All information is provided in a \"student guide\", for Intermediate, Advanced and Expert levels of complexity",
+    "Author/Originator": "Cardiff University (Chris North); Stuart Lowe",
+    "Cardiff?": "Collaboration",
+    "Curriculum Links": "Electromagnetic Spectrum; Optics; Satellites; Literacy ; Digital Literacy",
+    "Age Range": "14-16; 16-18; >18",
+    "Requirements": "Groups"
+  },
+  {
+    "Resource Name": "Space Telescope Designer - Online",
     "Domain": "Astronomy",
     "Resource/Workshop": "Resource",
     "Type of Resource": "Online; Interactive",
     "URL": "http://herschel.cf.ac.uk/activity/space-telescope",
     "Image": "spacetel-icon1.jpg",
-    "Description": "Design your own space telescope, based on a range of \"mission scenarios\". You need to select the size of the mirror, the instruments, from where it will be launched, where it will orbit, and even the rocket you'll use.",
+    "Description": "An online interactive app to design your own space telescope, based on a range of \"mission scenarios\". You need to select the size of the mirror, the instruments, from where it will be launched, where it will orbit, and even the rocket you'll use.",
     "Author/Originator": "Cardiff University (Chris North); Stuart Lowe",
     "Cardiff?": "Collaboration",
-    "Curriculum Links": "Electromagnetic Spectrum; Satellite; Literacy ; Digital Literacy",
+    "Curriculum Links": "Electromagnetic Spectrum; Optics; Satellites; Literacy ; Digital Literacy",
     "Age Range": "14-16; 16-18; >18",
     "Requirements": "Any device; web-access"
   },
@@ -514,7 +530,7 @@ data([
     "Domain": "Physics",
     "Resource/Workshop": "Resource",
     "Type of Resource": "Degree Prep; Independent Research",
-    "Image": "preiodic_table.png",
+    "Image": "periodic-table.png",
     "Description": "Research the periodic table and its interpretation from a physicist's perspective. Researching how atoms are put together will quickly lead to the requirement to invoke some very deep physics concepts e.g.: wave particle duality; quantum confinement; Heisenberg uncertainty principle. If you understand (in general terms) how this physics is behind the form of the Periodic Table of the elements you will be well placed to understand the physics of the materials around you and the stars above you.",
     "Author/Originator": "Cardiff University",
     "Cardiff?": "Cardiff-only",
@@ -707,5 +723,12 @@ data([
     "Curriculum Links": "Astronomy; Electromagnetic Spectrum",
     "Age Range": "11-14; 14-16; 16-18; >18",
     "Requirements": "Any device; web-access"
+  },
+  {
+    "Resource Name": "Serol's Cosmic Explorers",
+    "Domain": "Astronomy",
+    "Type of Resource": "Online",
+    "Image": "https://serol.lco.global",
+    "Requirements": "Web access"
   }
 ]);
