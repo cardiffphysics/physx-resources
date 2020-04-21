@@ -196,7 +196,7 @@ function populateData(){
         $('#'+_h).append('<div class="block-item" id="'+_i+'"></div>');
         // console.log($('#'+_i));
         $('#'+_i).append('<div class="block-title"><h3 class="block-white"></h3></div>');
-        $('#'+_i).append('<div class="block-img"><img src="img/'+_dx.Image+'" alt="image"></div>');
+        $('#'+_i).append('<div class="block-img"><img src="'+((_dx.Image.substring(0,4)=='http')?_dx.Image:'img/'+_dx.Image)+'" alt="image"></div>');
         $('#'+_i).append('<p class="res res-type"></p>');
         $('#'+_i).append('<p class="res res-age"></p>');
         $('#'+_i).append('<p class="res res-req"></p>');

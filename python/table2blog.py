@@ -3,6 +3,7 @@
 
 from astropy.table import Table,Column
 import json
+import os
 # from pydrive.auth import GoogleAuth
 # from pydrive.drive import GoogleDrive
 #
@@ -25,19 +26,26 @@ import json
 # File can be downloaded (in CSV format) from https://docs.google.com/spreadsheets/d/18w3dbA3lga8So5sCUml7xUFyOPjfTEZ-vXSzobYprhY/edit?usp=sharing
 # You *may* need to remove commas (as astropy.table may not like them...
 
-fileIn="../data/data.csv"
+if os.getcwd().split('/')[-1]=='python':
+    relDir='../'
+else:
+    relDir='./'
+fileIn=os.path.join(relDir,"data/data.csv")
 tabIn=Table.read(fileIn)
 
 jsonOut=[]
 for row in tabIn:
     entry={}
     for col in tabIn.colnames:
-        if not tabIn[col].mask[row.index]:
+        if type(tabIn[col])==type(Table.MaskedColumn()):
+            if not tabIn[col].mask[row.index]:
+                entry[col]=row[col]
+        else:
             entry[col]=row[col]
     jsonOut.append(entry)
-json.dump(jsonOut,open('../data/data.json','w'),indent=2)
-fIn=open('../data/data.json','r')
-fOut=open('../data/data.jsonp','w')
+json.dump(jsonOut,open(os.path.join(relDir,'data/data.json'),'w'),indent=2)
+fIn=open(os.path.join(relDir,'data/data.json'),'r')
+fOut=open(os.path.join(relDir,'data/data.jsonp'),'w')
 lines=fIn.readlines()
 lines[0]='data('+lines[0]
 lines[-1]=lines[-1]+');'
@@ -50,13 +58,13 @@ writeHtml=False
 
 if writeHtml:
     # main websites
-    fOutRes=open('../html/testHtml_resources.html','w')
-    fOutWorkshops=open('../html/testHtml_workshops.html','w')
+    fOutRes=open(os.path.join(relDir,'html/testHtml_resources.html'),'w')
+    fOutWorkshops=open(os.path.join(relDir,'html/testHtml_workshops.html'),'w')
 
     # snippets of html (won't work properly as a standalone html file)
-    fOutGrav=open('../html/testHtml_gw.html','w')
-    fOutPhys=open('../html/testHtml_phys.html','w')
-    fOutAstro=open('../html/testHtml_astro.html','w')
+    fOutGrav=open(os.path.join(relDir,'html/testHtml_gw.html'),'w')
+    fOutPhys=open(os.path.join(relDir,'html/testHtml_phys.html'),'w')
+    fOutAstro=open(os.path.join(relDir,'html/testHtml_astro.html'),'w')
 
     imgdir='../img/'
 
@@ -157,7 +165,7 @@ if writeHtml:
         dur=row['Duration']
         img=row['Image']
         if (img!=''):
-            if img[0:4]!='http':
+            if img[0:5]!='http':
                 img='{}{}'.format(imgdir,img)
         # generate text for divs
         txt='<div class="block-item %s">\n'%(classlist)
