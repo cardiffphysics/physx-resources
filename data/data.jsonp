@@ -783,9 +783,8 @@ data([
     "Author/Originator": "and explore the effects of gravity",
     "Cardiff?": "air resistance and friction on movement.\"",
     "Curriculum Links": "Las Cumbres Observatory",
-    "Curriculum Support Link?": "Space Exploration; Forces; Working Scientifically",
     "Duration": "7-9, 9-11",
-    "col16": "Craft"
+    "col15": "Craft"
   },
   {
     "Resource Name": "How Big is the Solar System",
@@ -929,5 +928,18 @@ data([
     "Curriculum Links": "Cosmology; Data Analysis; Digital Literacy",
     "Age Range": "16-18",
     "Requirements": "computer; web access"
+  },
+  {
+    "Resource Name": "Gravitational Waves Online Workshop",
+    "Domain": "Gravitational Waves",
+    "Resource/Workshop": "Resource",
+    "Type of Resource": "Online; Independent Research; Degree Prep",
+    "URL": "http://workshops.cardiffgravity.org/online",
+    "Image": "gw_online.png",
+    "Description": "This workshop gives students the opportunity to analyse and interpret gravitational wave data. The activity is in two parts, one calculating the distance to the source, and the other determining the redshift. These results are then combined to determine the Hubble constant - the rate of expansion of the Universe.There are 8 sets of data, so that allows for the possibility of 16 \"teams\", with pairs of teams using the same dataset.",
+    "Author/Originator": "Cardiff University",
+    "Curriculum Links": "Gravitational Waves; Data Anlysis; Waves; Black Holes",
+    "Age Range": "14-16; 16-19; >18",
+    "Requirements": "Computer; Web-access; Groups"
   }
 ]);
