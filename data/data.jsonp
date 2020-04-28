@@ -31,7 +31,7 @@ data([
     "Domain": "Gravitational Waves",
     "Resource/Workshop": "Resource",
     "Type of Resource": "Online",
-    "URL": "http://chrisnorth.github.io/plotgw",
+    "URL": "http://catalog.gardiffgravity.org",
     "Image": "plotgw_logo.png",
     "Description": "The LIGO measurements reveal an awful lot about the black holes in the detected systems. This web-tool allows you to explore what we know in the form of an interactive graph.",
     "Author/Originator": "Cardiff University (Chris North); LIGO/Virgo Collaboration",
@@ -938,8 +938,23 @@ data([
     "Image": "gw_online.png",
     "Description": "This workshop gives students the opportunity to analyse and interpret gravitational wave data. The activity is in two parts, one calculating the distance to the source, and the other determining the redshift. These results are then combined to determine the Hubble constant - the rate of expansion of the Universe.There are 8 sets of data, so that allows for the possibility of 16 \"teams\", with pairs of teams using the same dataset.",
     "Author/Originator": "Cardiff University",
+    "Cardiff?": "Cardiff-only",
     "Curriculum Links": "Gravitational Waves; Data Anlysis; Waves; Black Holes",
-    "Age Range": "14-16; 16-19; >18",
+    "Age Range": "14-16; 16-18; >18",
     "Requirements": "Computer; Web-access; Groups"
+  },
+  {
+    "Resource Name": "UniverseLab",
+    "Domain": "Astronomy",
+    "Resource/Workshop": "Resource",
+    "Type of Resource": "Collection",
+    "URL": "https://www.trioscicardiff.co.uk/courses/universelab/",
+    "Image": "Rover_TSC.jpg",
+    "Description": "If you want to explore our mysterious neighbour Mars, study the Solar System's spare parts or discover some of the Universe's largest and most exciting objects, check out this UniverseLab course. Each resource is accompanied by full instructions, making them ready to go for teachers or learning at home",
+    "Author/Originator": "Cardiff University",
+    "Cardiff?": "Cardiff-only",
+    "Curriculum Links": "Space exploration",
+    "Age Range": "11-14;",
+    "Requirements": "Any device; Web-access; Printer"
   }
 ]);
