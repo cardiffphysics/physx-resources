@@ -298,7 +298,7 @@ data([
     "Type of Resource": "Online; Interactive",
     "URL": "http://cosmos-book.github.io/contents",
     "Image": "cosmos-book_logo.png",
-    "Description": "A series of interactive infographics exploring a wide range of space topics, from interplanetary missions to the planetary atmospheres.",
+    "Description": "A series of interactive infographics exploring a wide range of space topics, from interplanetary missions to the planetary atmospheres. There's even a <a href=\"http://cosmos-book.github.io/quiz\">quiz</a> to test your knowledge, with answers hidden in the online infographics.",
     "Author/Originator": "Chris North; Stuart Lowe",
     "Curriculum Links": "Astronomy; Digital Literacy; Topical Science",
     "Age Range": "9-11; 11-14; 14-16; 16-18; >18",
