@@ -335,12 +335,11 @@ h3.filter-name{
     font-weight:normal;
     margin-bottom:1em;
 }
-#presets::before{
-    content:'Presets:';
+#presets .heading{
     font-weight:bold;
     font-size:1.2em;
 }
-.preset{
+.preset, .search-opt{
     font-size:1.2em;
     line-height: 1.2em;
     padding:.25em .5em .25em .5em;
@@ -352,10 +351,10 @@ h3.filter-name{
     border-radius: .25em;
     margin-top:-.25em;
     margin-left:.5em;
-    margin-bottom:1em;
+    margin-bottom:.5em;
     /* float:right; */
 }
-.preset.hideable.hidden{
+.preset.hideable.hidden, .search-opt.hideable.hidden{
     display:none;
 }
 #preset-more{
@@ -367,6 +366,64 @@ h3.filter-name{
 }
 #preset-more.more::before{
     content:'\2329\A0\A0';
+}
+#search, #search-options{
+    font-size:1em;
+    line-height:1em;
+}
+#search .heading{
+    font-weight:bold;
+    font-size:1.2em;
+}
+#search-options .heading{
+    font-weight:bold;
+    font-size:1.2em;
+}
+#search-opt-toggle.less .arrow{
+    content: '';
+    /* top: 1em; */
+    border-top: .8em solid white;
+    border-bottom: 0 solid transparent;
+    border-left: .4em solid transparent;
+    border-right: .4em solid transparent;
+    display: inline-block;
+    margin-left:.5em;
+}
+#search-opt-toggle.more .arrow{
+    content: '';
+    /* top: 1em; */
+    border-top: 0em solid transparent;
+    border-bottom: .8em solid white;
+    border-right: .4em solid transparent;
+    border-left: .4em solid transparent;
+    display: inline-block;
+    margin-left:.5em;
+}
+#search-opt-toggle.less::before{
+    content:'Show Options';
+}
+#search-opt-toggle.more::before{
+    content:'Hide Options';
+}
+#search-input{
+    width: 15em; /* Full-width */
+    font-size: 1.2em; /* Increase font-size */
+    padding:.25em .5em .25em .5em; /* Add some padding */
+    border: 1px solid #ddd; /* Add a grey border */
+    border-radius: .25em;
+    margin-bottom: 1em; /* Add some space below the input */
+    margin-left:.5em;
+}
+#search-options{
+    max-height:5em;
+    overflow: auto;
+    opacity: 1;
+    transition:max-height .5s ease;
+}
+#search-options.hidden{
+    max-height:0px;
+    opacity:0;
+    overflow:hidden;
 }
 .filter p{
     padding-left:1em;
@@ -482,6 +539,9 @@ div.block-item {
     margin-bottom:.5em;
 }
 .block-item.hidden{
+    display:none;
+}
+.block-item.search-hidden{
     display:none;
 }
 /* div.block-outline {

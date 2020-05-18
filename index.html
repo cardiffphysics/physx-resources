@@ -18,7 +18,28 @@
 <div id="filter-holder" class="closed"><div class="filter-top"></div></div>
 <div id="content">
 <div class="intro"><p>If you're after resources for your children, your students, or even yourself, there's a lot on offer from a wide range of sources.</p><p>Below you will find links to some suggested resources put together by staff and students at <a href="http://cardiff.ac.uk/physics">Cardiff University School of Physics and Astronomy</a>. Some have been created by us, but many are from external organisations - though they all come recommended!</p><p>Hopefully there'll be something there of interest for you, your children, or your students. If there's something you'd like added, then raise it as a <a href-"https://github.com/cardiffphysics/physx-resources/issues">Github issue</a>. You can find activities for a broader range of subjects on the <a href="https://www.cardiff.ac.uk/study/undergraduate/teachers-and-careers-advisers/search-activities">Cardiff University resource search page</a>.</p><p>You can filter your selections using the menus on the left, or use the presets below:</p></div>
-<div class="intro" id="presets"></div>
+<div class="intro" id="presets"><span class="heading">Presets:</span></div>
+<div class="intro" id="search">
+    <span class="heading">Search:</span>
+    <input type="text" id="search-input" onkeyup="searchList()" placeholder="Search resources...">
+    <div class="search-opt" id="search-clear">Clear</div>
+    <div class="search-opt less" id="search-opt-toggle"><div class="arrow"></div></div>
+</div>
+<div class="intro hidden" id="search-options">
+    <span class="heading">Search fields:</span>
+    <div class="search-opt" id="search-desc">
+        <input id="search-title-input" type="checkbox" checked="true" name="search-title-input"/>
+        <label id="search-title-label" for="search-title-input">Title</label>
+    </div>
+    <div class="search-opt" id="search-desc">
+        <input id="search-desc-input" type="checkbox" name="search-desc-input"/>
+        <label id="search-desc-label" for="search-desc-input">Description</label>
+    </div>
+    <div class="search-opt" id="search-author">
+        <input id="search-author-input" type="checkbox" name="search-author-input"/>
+        <label id="search-author-label" for="search-desc-input">Author</label>
+    </div>
+</div>
 </div>
 <div class="about filter closed" id="about"><h3 class="filter-name">About</h3><p>Created by Chris North (Cardiff University School of Physics and Astronomy). Hosted on <a href="http://github.com/cardiffphysics/physx-resources/">GitHub</a>.</p><p>Suggest additions/changes on <a href="https://github.com/cardiffphysics/physx-resources/issues">GitHub issues</a>.</p><p>Icons adapted from: <a href="https://material.io/resources/icons/">Material.io</a>; <a href="https://commons.wikimedia.org/wiki/User:Evolution_and_evolvability">Thomas Shafee</a>; <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>.</p></div>
 </div>

@@ -142,23 +142,24 @@ function initPage(fileIn='../data/data.jsonp'){
     })
     makeFilters();
     makePresets();
+    makeSearch();
     console.log('loading data from',fileIn)
     ajax(fileIn,{
-    			"dataType": "jsonp",
-    			"callback":"data",
-                "this":this,
-    			"error": function(error) {
-    				console.log('events error:',error);
-    			},
-    			"success": function(dataIn){
-                    // this.data=dataIn;
-                    this.data=dataIn.sort(function(a,b){
-                        return (b['Resource Name'] > a['Resource Name'])?-1:1;
-                    })
-                    populateData();
-                    whenLoaded();
-    			}
-    		});
+		"dataType": "jsonp",
+		"callback":"data",
+        "this":this,
+		"error": function(error) {
+			console.log('events error:',error);
+		},
+		"success": function(dataIn){
+            // this.data=dataIn;
+            this.data=dataIn.sort(function(a,b){
+                return (b['Resource Name'] > a['Resource Name'])?-1:1;
+            })
+            populateData();
+            whenLoaded();
+		}
+	});
     // updateFilters();
 }
 function whenLoaded(){
@@ -374,6 +375,30 @@ function makePresets(){
         }
     })
 }
+function makeSearch(){
+    $('#search-input').val('');
+    $('#search-opt-toggle').click(function(){
+        if ($(this).hasClass('less')){
+            $(this).removeClass('less');
+            $(this).addClass('more');
+            $('#search-options').removeClass('hidden');
+        }else{
+            $(this).removeClass('more');
+            $(this).addClass('less');
+            $('#search-options').addClass('hidden');
+        }
+    });
+    $('.search-opt > input').change(function(){
+        searchList();
+    });
+    $('#search-clear').click(function(){
+        console.log(this);
+        $('#search-input').val('');
+        searchList();
+    });
+    searchList();
+    
+}
 function applyPreset(pid){
     if (!presets[pid]){console.log('invalid preset',pid);return;}
     px=presets[pid];
@@ -452,6 +477,37 @@ function updateFilters(){
             $('#filt-'+stag+'_label > .filt-count').html(nactive);
         }
     }
+}
+function searchList(){
+    // Declare variables
+    console.log('')
+    var input, filter, title, desc, author;
+    input = document.getElementById('search-input');
+    filter = input.value.toUpperCase();
+    // Loop through all list items, and hide those who don't match the search query
+    $('.block-item').each(function(){
+        // title=$(this).find('.block-title > h3').text();
+        desc=$(this).find('.res-desc').text();
+        desc=$(this).find('.res-author').text();
+        srchtxt='';
+        if ($('#search-title-input').prop('checked')){
+            srchtxt+=$(this).find('.block-title > h3').text();
+        }
+        if ($('#search-desc-input').prop('checked')){
+            srchtxt+=$(this).find('.res-desc').text();
+        }
+        if ($('#search-author-input').prop('checked')){
+            srchtxt+=$(this).find('.res-author').text();
+        }
+        if (srchtxt.toUpperCase().indexOf(filter) > -1){
+            console.log('show',title);
+            $(this).removeClass('search-hidden');
+        }else{
+            console.log('hide',title);
+            $(this).addClass('search-hidden');
+        }
+        
+    });
 }
 function ajax(url,attrs){
     // courtesy of slowe
