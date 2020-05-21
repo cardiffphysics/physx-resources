@@ -956,5 +956,20 @@
     "Curriculum Links": "Space exploration",
     "Age Range": "11-14;",
     "Requirements": "Any device; Web-access; Printer"
+  },
+  {
+    "Resource Name": "BH Lunchtime Scientist - Prof Jane Greaves, Astrobiologist",
+    "Domain": "Astronomy",
+    "Resource/Workshop": "Resource",
+    "Type of Resource": "Oneline; Video; Degree-prep",
+    "URL": "https://www.youtube.com/watch?v=HuRmf3V71pk",
+    "Image": "ras.png",
+    "Description": "This BH Lunchtime Scientist hosted by the Royal Astronomical Society launched on 13 May with a conversation with astrobiologist Professor Jane Greaves of University of Cardiff who shared her research on life elsewhere in the universe. BH Lunchtime Scientist is an online conversation with GCSE students and teachers about science and today's event focused on the field of Astrobiology. Jane spoke about her research and the prospects for finding extra-terrestrial life in our solar system and on planets around other stars.",
+    "Author/Originator": "Royal Astronomical Society/Cardiff University (J Greaves)",
+    "Cardiff?": "Collaboration",
+    "Curriculum Links": "Astrobiology",
+    "Age Range": "14-16; 16-18",
+    "Duration": "45mins",
+    "Requirements": "Any device; Web-access;"
   }
 ]
