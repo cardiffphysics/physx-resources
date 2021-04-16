@@ -1088,5 +1088,35 @@
     "Author/Originator": "Curved House Kids / UK Space Agency / STFC",
     "Curriculum Links": "Numeracy and Literacy, Critical Analysis, Group working, Space Exploration, Cross-curricula links",
     "Age Range": "4-7; 7-9; 9-11"
+  },
+  {
+    "Resource Name": "DisCUver Vision",
+    "Domain": "Physics",
+    "Resource/Workshop": "Resource",
+    "Type of Resource": "Online; App; Degree-prep; Interactive",
+    "Languages": "English",
+    "URL": "https://play.google.com/store/apps/details?id=com.CU.disCUverVision&hl=en",
+    "Image": "discuver.jpg",
+    "Description": "<p>Have you ever struggled to understand certain parts of your university course? Things which are in 3 dimensions can be hard to show on paper or a projector screen, such as a car engine, a model of the interior of the Earth or a human skull.</p><p>disCUver Vision is a new app, supported by Cardiff University, which lets you explore 3D models related to your university course in augmented reality. You can place these models in the real world using your phone or tablet camera, allowing you to move around them, interact with them and pull them apart.</p><p>The app currently supports Physics, Engineering and Bioscience, but with plans to expand to other subjects soon.</p>",
+    "Author/Originator": "Cardiff University (Mathew Allen)",
+    "Cardiff?": "Cardiff-only",
+    "Curriculum Links": "Physics, Astronomy",
+    "Age Range": "16-18; >18"
+  },
+  {
+    "Resource Name": "Arecibo Stories",
+    "Domain": "Astronomy",
+    "Resource/Workshop": "Resource",
+    "Type of Resource": "Online; Interactive",
+    "Languages": "English, <a href=\"http://blogs.cardiff.ac.uk/physicsoutreach/2021/04/01/arecibo-stories/\">Cymraeg</a>",
+    "URL": "http://blogs.cardiff.ac.uk/physicsoutreach/2021/04/01/arecibo-stories/",
+    "URL_cy": "http://blogs.cardiff.ac.uk/physicsoutreach/2021/04/01/arecibo-stories/",
+    "Image": "arecibostories.png",
+    "Description": "<p>Arecibo Stories brings together memories of the Arecibo Telescope from those who used it. The telescope sadly collapsed in December 2020, but part of it will live on through the stories that we tell.</p><p>This game works best on a computer (not a tablet or mobile device), and may not be compatible with some older browsers. You can visit the <a href=\"https://i.simmer.io/@Virtualspace/arecibo-stories\">simmer.io site</a> to have the option of viewing fullscreen.</p><p>Captions are also available in Welsh.</p>",
+    "Author/Originator": "Cardiff University, IOP Wales",
+    "Cardiff?": "Collaboration",
+    "Curriculum Links": "Astronomy",
+    "Age Range": "14-16; 16-18; >18",
+    "Requirements": "Computer; Web-access"
   }
 ]
