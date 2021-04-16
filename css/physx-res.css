@@ -855,6 +855,11 @@ div.block-item .block-title{
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
+.icon.icon-welsh{
+    background:url('../img/welshflag.svg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
 .icon.icon-dom-coding{
     background:url('../icon/dom-coding.svg');
     background-repeat: no-repeat;
@@ -923,6 +928,10 @@ p.res-author:before {
 
 p.res-duration:before {
 	content: "Workshop Duration: ";
+	font-weight: bold;
+}
+p.res-lang:before {
+	content: "Languages: ";
 	font-weight: bold;
 }
 

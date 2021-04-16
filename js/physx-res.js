@@ -75,6 +75,14 @@ var filters={
             'collaboration':{'tag':'author-collaboration',name:"Collaboration"},
             'external':{'tag':'author-external',name:"External provider"}
         }
+    },'lang':{
+        tag:'lang',
+        title:'Cymraeg',
+        type:'normal',
+        select:{
+            'welsh':{'tag':'lang-welsh',name:'Ie (Yes)'},
+            'nowelsh':{'tag':'lang-nowelsh',name:'Na (No)'}
+        }
     }
 }
 var presets={
@@ -109,7 +117,12 @@ var presets={
     'cardiff-only':{
         button:false,
         title:'Cardiff-only',
-        selected:{author:['author-cardiff'],age:[],type:[],dom:[],req:[]}
+        selected:{author:['author-cardiff']}
+    },
+    'welsh':{
+        button:false,
+        title:'Cymraeg',
+        selected:{lang:['lang-welsh']}
     }
 
 }
@@ -187,12 +200,12 @@ function populateData(){
     // console.log(hid);
     var _h=hid;
     for (d in this.data){
-        _dx=this.data[d];
+        let _dx=this.data[d];
         if (_dx['Resource/Workshop']!='Resource'){
             continue
         }
         _dx.classlist='';
-        _i='item-'+d;
+        let _i='item-'+d;
         // console.log($('#'+_h));
         $('#'+_h).append('<div class="block-item" id="'+_i+'"></div>');
         // console.log($('#'+_i));
@@ -203,9 +216,16 @@ function populateData(){
         $('#'+_i).append('<p class="res res-req"></p>');
         $('#'+_i).append('<p class="res res-clink">'+_dx['Curriculum Links']+'</p>');
         $('#'+_i).append('<p class="res res-author">'+_dx['Author/Originator']+'</p>');
+        if (_dx['Languages']){
+            let langtxt=_dx['Languages'];
+            if (_dx.URL){
+                langtxt=langtxt.replace('English','<a href="'+_dx.URL+'">English</a>');
+            }
+            $('#'+_i).append('<p class="res res-lang">'+langtxt+'</p>');
+        }
         $('#'+_i).append('<p class="res res-desc">'+_dx['Description']+'</p>');
         if (_dx.URL){
-            urltxt='<span class="res-url"><a title="'+_dx['Resource Name']+'" href="'+_dx.URL_+'">More info</a></span>';
+            let urltxt='<span class="res-url"><a title="'+_dx['Resource Name']+'" href="'+_dx.URL_+'">More info</a></span>';
             // $('#'+_i).append('<p class="res res-url">'+urltxt+'</p>');
             $('#'+_i+' .block-title h3').append('<a href="'+_dx.URL+'">'+_dx['Resource Name']+'</a>');
             $('#'+_i+' .block-img').append('<a href="'+_dx.URL+'"><div class="block-link">Click here</div></a>');
@@ -272,6 +292,16 @@ function populateData(){
             }
         }else{
             $('#'+_i).addClass('author-external');
+        }
+        if (_dx['Welsh']){
+            if (_dx['Welsh'].toLowerCase()=='yes'){
+                $('#'+_i).addClass('lang-welsh');
+                $('#'+_i+' .block-title').append('<div class="icon icon-welsh"></div>');
+            }else{
+                $('#'+_i).addClass('lang-nowelsh');
+            }
+        }else{
+            $('#'+_i).addClass('lang-nowelsh');
         }
     }
 }
