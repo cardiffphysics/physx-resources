@@ -90,39 +90,40 @@ var presets={
         button:true,
         title:'Primary School',
         selected:{age:['age-4-7','age-7-9','age-9-11']},
-        unselected:{type:[],dom:[],req:[],author:[]}
+        unselected:{type:[],dom:[],req:[],author:[],lang:[]}
     },
     'secondary':{
         button:true,
         title:'Secondary School',
         selected:{age:['age-11-14','age-14-16','age-16-18']},
-        unselected:{type:[],dom:[],req:[],author:[]}
+        unselected:{type:[],dom:[],req:[],author:[],lang:[]}
     },
     'degree':{
         button:true,
         title:'Degree Prep',
         selected:{age:['age-16-18','age-gt18'],type:['type-degree-prep']},
-        unselected:{dom:[],req:[],author:[]}
-    },
-    'all':{
-        button:true,
-        title:'All',
-        unselected:{age:[],type:[],dom:[],req:[],author:[]}
+        unselected:{dom:[],req:[],author:[],lang:[]}
     },
     'noweb':{
         button:false,
         title:'No web-access',
-        unselected:{req:['req-web-access'],age:[],type:[],dom:[],author:[]}
+        unselected:{req:['req-web-access'],age:[],type:[],dom:[],author:[],lang:[]}
     },
     'cardiff-only':{
         button:false,
         title:'Cardiff-only',
-        selected:{author:['author-cardiff']}
+        selected:{author:['author-cardiff'],lang:[]}
     },
-    'welsh':{
-        button:false,
+    'cymraeg':{
+        button:true,
         title:'Cymraeg',
-        selected:{lang:['lang-welsh']}
+        selected:{lang:['lang-welsh']},
+        unselected:{age:[],type:[],dom:[],req:[],author:[]}
+    },
+    'all':{
+        button:true,
+        title:'All',
+        unselected:{age:[],type:[],dom:[],req:[],author:[],lang:[]}
     }
 
 }

@@ -361,7 +361,7 @@ h3.filter-name{
     font-weight:bold;
 }
 #preset-more.less::before{
-    content:'\A0\A0\232A';
+    content:'More \A0\A0\232A';
     text-align
 }
 #preset-more.more::before{
