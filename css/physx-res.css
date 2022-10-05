@@ -588,6 +588,19 @@ div.block-item .block-title{
     height:2.5em;
     margin-bottom: 0.5em;
 }
+
+.filt-option.cat-resource, .block-item.cat-resource{
+    background-color:#e9e2ef;
+}
+.filt-option.cat-extension, .block-item.cat-extension{
+    background-color:#e4f2e7;
+}
+.filt-option.cat-workshop, .block-item.cat-workshop{
+    background-color:#e1f4fe;
+}
+.filt-option.cat-other, .block-item.cat-other{
+    background-color:#fffcd5;
+}
 .filt-option.dom-astronomy, .block-item.dom-astronomy .block-title {
     background-color: #4f4c9a;
 }
