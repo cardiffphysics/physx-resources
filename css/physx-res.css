@@ -573,6 +573,10 @@ div.block-img {
 .block-link a{
     color:white;
 }
+.block-img .block-link.booking{
+    margin-top:0.5em;
+    background-color:#48c7e9;
+}
 div.block-item h3.block-white, div.block-item h3.block-white a {
 	padding-left: 5px;
     display: inline-block;
@@ -601,6 +605,8 @@ div.block-item .block-title{
 .filt-option.cat-other, .block-item.cat-other{
     background-color:#fffcd5;
 }
+
+
 .filt-option.dom-astronomy, .block-item.dom-astronomy .block-title {
     background-color: #4f4c9a;
 }

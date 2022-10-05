@@ -250,6 +250,9 @@ function populateData(){
         }else{
             $('#'+_i+' .block-title h3').append(_dx['Resource Name']);
         }
+        if (_dx.Bookable=="Yes"){
+            $('#'+_i+' .block-img').append('<a href="https://blogs.cardiff.ac.uk/physicsoutreach/about-us/contact-us/"><div class="block-link booking">Booking</div></a>');
+        }
         if (_dx['Category']){
             _dx.categories={}
             let cats=_dx['Category'].split(';')
