@@ -2,7 +2,7 @@ data([
   {
     "Resource Name": "Black Hole Hunter",
     "Domain": "Gravitational Waves",
-    "Resource/Workshop": "Resource",
+    "Category": "Resource",
     "Type of Resource": "Online; Audio",
     "Languages": "Various",
     "Welsh": "yes",
@@ -18,6 +18,7 @@ data([
   {
     "Resource Name": "Black Hole Bubble Plot",
     "Domain": "Gravitational Waves",
+    "Category": "Other",
     "Type of Resource": "Online",
     "Languages": "Various",
     "Welsh": "yes",
@@ -33,7 +34,7 @@ data([
   {
     "Resource Name": "LIGO Compact Binary Catalogue",
     "Domain": "Gravitational Waves",
-    "Resource/Workshop": "Resource",
+    "Category": "Resource",
     "Type of Resource": "Online",
     "Languages": "Various",
     "URL": "http://catalog.gardiffgravity.org",
@@ -48,6 +49,7 @@ data([
   {
     "Resource Name": "Gravoscope",
     "Domain": "Gravitational Waves",
+    "Category": "Other",
     "Type of Resource": "Online; Interactive",
     "Languages": "English",
     "URL": "http://astrog80.astro.cf.ac.uk/Gravoscope/",
@@ -62,7 +64,7 @@ data([
   {
     "Resource Name": "Searching for Gravitational Waves in Noisy Data",
     "Domain": "Gravitational Waves",
-    "Resource/Workshop": "Resource",
+    "Category": "Resource",
     "Type of Resource": "Printable activity",
     "Languages": "English",
     "URL": "http://cgwp.gravity.psu.edu/outreach/activities/template_activity/",
@@ -75,6 +77,7 @@ data([
   {
     "Resource Name": "Hands-on Gravitational Wave Astronomy: Extraction of Astrophysical Information from Simulated Signals",
     "Domain": "Gravitational Waves",
+    "Category": "Extension",
     "Type of Resource": "Printable activity",
     "Languages": "English",
     "URL": "http://cgwp.gravity.psu.edu/outreach/activities/handson_activity/",
@@ -98,7 +101,7 @@ data([
   {
     "Resource Name": "LIGO/Virgo Science Summaries",
     "Domain": "Gravitational Waves",
-    "Resource/Workshop": "Resource",
+    "Category": "Extension",
     "Type of Resource": "Degree Prep; Reading",
     "Languages": "English",
     "URL": "http://www.ligo.org/science/outreach.php",
@@ -112,7 +115,7 @@ data([
   {
     "Resource Name": "Make your own Hertzsprung-Russell diagram",
     "Domain": "Astronomy",
-    "Resource/Workshop": "Resource",
+    "Category": "Resource; Workshop",
     "Type of Resource": "Craft",
     "Languages": "English",
     "URL": "http://blogs.cardiff.ac.uk/physicsoutreach/resources/star-in-a-box/",
@@ -127,7 +130,7 @@ data([
   {
     "Resource Name": "Lifecycle of Stars",
     "Domain": "Astronomy",
-    "Resource/Workshop": "Resource",
+    "Category": "Resource",
     "Type of Resource": "Online; Interactive;",
     "Languages": "English",
     "URL": "http://blogs.cardiff.ac.uk/physicsoutreach/resources/star-in-a-box/",
@@ -142,7 +145,7 @@ data([
   {
     "Resource Name": "Star in a Box app",
     "Domain": "Astronomy",
-    "Resource/Workshop": "Resource",
+    "Category": "Resource",
     "Type of Resource": "Online; Interactive",
     "Languages": "English, <a href=\"https://starinabox.lco.global/\">Cymraeg</a>",
     "Welsh": "yes",
@@ -157,7 +160,7 @@ data([
   {
     "Resource Name": "Stars as Black Bodies",
     "Domain": "Astronomy",
-    "Resource/Workshop": "Resource",
+    "Category": "Resource; Workshop",
     "Type of Resource": "Worksheet",
     "Languages": "English",
     "URL": "http://blogs.cardiff.ac.uk/physicsoutreach/resources/star-in-a-box/",
@@ -171,7 +174,7 @@ data([
   {
     "Resource Name": "Chromoscope",
     "Domain": "Astronomy",
-    "Resource/Workshop": "Resource",
+    "Category": "Resource; Extension",
     "Type of Resource": "Online; Interactive",
     "Languages": "English, <a href=\"http://www.chromoscope.net\">Cymraeg</a>, Deutch, Dansk, Espanol, Francais, Gaeilge, Hebrew, Italiano, Japanese, Polish, Portunguese, Svenska, Turkish, Chinese",
     "Welsh": "yes",
@@ -188,7 +191,7 @@ data([
   {
     "Resource Name": "Space Telescope Designer - Group Activity",
     "Domain": "Astronomy",
-    "Resource/Workshop": "Resource",
+    "Category": "Resource; Workshop",
     "Type of Resource": "Printable activity; Degree-prep; Independent Research",
     "Languages": "English",
     "URL": "http://blogs.cardiff.ac.uk/physicsoutreach/resources/space-telescope-designer-group-activity/",
@@ -203,7 +206,7 @@ data([
   {
     "Resource Name": "Space Telescope Designer - Online",
     "Domain": "Astronomy",
-    "Resource/Workshop": "Resource",
+    "Category": "Resource",
     "Type of Resource": "Online; Interactive",
     "Languages": "English",
     "URL": "https://chrisnorth.github.io/design-a-space-telescope",
@@ -218,7 +221,7 @@ data([
   {
     "Resource Name": "Satellite Builder",
     "Domain": "Astronomy",
-    "Resource/Workshop": "Resource",
+    "Category": "Resource",
     "Type of Resource": "Online; Interactive",
     "Languages": "English",
     "URL": "https://chrisnorth.github.io/classroom-rocket-scientist/",
@@ -233,7 +236,7 @@ data([
   {
     "Resource Name": "CMB Simulator",
     "Domain": "Astronomy",
-    "Resource/Workshop": "Resource",
+    "Category": "Resource",
     "Type of Resource": "Online; Interactive",
     "Languages": "English",
     "URL": "https://chrisnorth.github.io/planckapps/Simulator/",
@@ -248,7 +251,7 @@ data([
   {
     "Resource Name": "Multiwavelength Universe: Online Activity",
     "Domain": "Astronomy",
-    "Resource/Workshop": "Resource",
+    "Category": "Resource",
     "Type of Resource": "Online; Interactive",
     "Languages": "English",
     "URL": "https://chrisnorth.github.io/multiwavelength-universe",
@@ -263,7 +266,7 @@ data([
   {
     "Resource Name": "Multiwavelength Universe (printable)",
     "Domain": "Astronomy",
-    "Resource/Workshop": "Resource",
+    "Category": "Resource; Workshop",
     "Type of Resource": "Printable activity",
     "Languages": "English",
     "URL": "http://blogs.cardiff.ac.uk/physicsoutreach/resources/multiwavelength-universe-printable/",
@@ -278,7 +281,6 @@ data([
   {
     "Resource Name": "Agent ExoPlanet",
     "Domain": "Astronomy",
-    "Resource/Workshop": "Resource",
     "Type of Resource": "Online; Interactive",
     "Languages": "English",
     "URL": "http://blogs.cardiff.ac.uk/physicsoutreach/resources/agent-exoplanet/",
@@ -292,7 +294,7 @@ data([
   {
     "Resource Name": "Messier Bingo",
     "Domain": "Astronomy",
-    "Resource/Workshop": "Resource",
+    "Category": "Resource",
     "Type of Resource": "Online; Interactive",
     "Languages": "English, <a href=\"https://www.universe.wales/messier-bingo-cy/\">Cymraeg</a>",
     "Welsh": "yes",
@@ -308,11 +310,11 @@ data([
   {
     "Resource Name": "Space Scoop",
     "Domain": "Astronomy",
-    "Resource/Workshop": "Resource",
+    "Category": "Extension",
     "Type of Resource": "Online; Reading",
-    "Languages": "English, <a href=\"http://www.spacescoop.org/cy/\">Cymraeg",
-    "Welsh": "many others\"",
-    "URL": "http://astrog80.astro.cf.ac.uk/Gravoscope/",
+    "Languages": "Many",
+    "Welsh": "yes",
+    "URL": "http://www.spacescoop.org/",
     "URL_cy": "http://www.spacescoop.org/cy/",
     "Image": "http://www.spacescoop.org/en/",
     "Description": "spacescooplogo.png",
@@ -325,7 +327,7 @@ data([
   {
     "Resource Name": "Pythagorean Astronomy Podcast",
     "Domain": "Astronomy",
-    "Resource/Workshop": "Resource",
+    "Category": "Extension",
     "Type of Resource": "Podcast",
     "Languages": "English",
     "URL": "http://blogs.cardiff.ac.uk/physicsoutreach/category/media/pythagorean-astronomy/",
@@ -340,7 +342,7 @@ data([
   {
     "Resource Name": "Cosmic Infographics",
     "Domain": "Astronomy",
-    "Resource/Workshop": "Resource",
+    "Category": "Resource",
     "Type of Resource": "Online; Interactive",
     "Languages": "English",
     "URL": "http://cosmos-book.github.io/contents",
@@ -354,7 +356,6 @@ data([
   {
     "Resource Name": "Cosmos in your Pocket",
     "Domain": "Astronomy",
-    "Resource/Workshop": "Resource",
     "Type of Resource": "Printable activity",
     "Languages": "English, <a href=\"http://www.unawe.org/resources/guides/Cosmos_Activity_Pocket_book_Welsh/\">Cymraeg</a>",
     "Welsh": "yes",
@@ -370,7 +371,6 @@ data([
   {
     "Resource Name": "Telescope in your Pocket",
     "Domain": "Astronomy",
-    "Resource/Workshop": "Resource",
     "Type of Resource": "Printable activity",
     "Languages": "English, <a href=\"https://issuu.com/universeintheclassroom/docs/telescope_booklet_cover_cy-full\">Cymraeg</a>",
     "Welsh": "yes",
@@ -386,7 +386,7 @@ data([
   {
     "Resource Name": "Ada's Adventures in Science; Comic",
     "Domain": "Physics; Astronomy",
-    "Resource/Workshop": "Resource",
+    "Category": "Extension",
     "Type of Resource": "Reading",
     "Languages": "English, Espanol, Deutsch, Cymraeg, Mongolian, Tamil, Polish, French, Portuguese",
     "Welsh": "yes",
@@ -401,7 +401,6 @@ data([
   {
     "Resource Name": "Hubble's Expansion of the Universe",
     "Domain": "Astronomy",
-    "Resource/Workshop": "Resource",
     "Type of Resource": "Coding",
     "Languages": "English",
     "URL": "http://resources.faulkes-telescope.com/course/view.php?id=143",
@@ -429,7 +428,7 @@ data([
   {
     "Resource Name": "Universe in the Classroom Activities",
     "Domain": "Astronomy",
-    "Resource/Workshop": "Resource",
+    "Category": "Resource",
     "Type of Resource": "Craft; Printable activity",
     "Languages": "English",
     "URL": "http://www.universe.wales/activities/",
@@ -444,7 +443,7 @@ data([
   {
     "Resource Name": "Universe in the Classroom Welsh Activities",
     "Domain": "Astronomy",
-    "Resource/Workshop": "Resource",
+    "Category": "Resource",
     "Type of Resource": "Activity guide",
     "Languages": "<a href=\"http://www.universe.wales/welsh-activities/\">Cymraeg</a>",
     "Welsh": "yes",
@@ -461,7 +460,7 @@ data([
   {
     "Resource Name": "Statistics of Galaxies",
     "Domain": "Astronomy; Maths",
-    "Resource/Workshop": "Resource",
+    "Category": "Resource",
     "Type of Resource": "Printable Activity",
     "Languages": "English",
     "URL": "http://blogs.cardiff.ac.uk/physicsoutreach/2018/03/27/astronomy-data-in-maths-physics/",
@@ -476,7 +475,7 @@ data([
   {
     "Resource Name": "Hubble's Law",
     "Domain": "Astronomy",
-    "Resource/Workshop": "Resource",
+    "Category": "Resource; Workshop",
     "Type of Resource": "Printable Activity",
     "Languages": "English",
     "URL": "http://blogs.cardiff.ac.uk/physicsoutreach/2018/03/27/astronomy-data-in-maths-physics/",
@@ -491,7 +490,7 @@ data([
   {
     "Resource Name": "Herschel Space Observatory Model",
     "Domain": "Astronomy",
-    "Resource/Workshop": "Resource",
+    "Category": "Extension; Other",
     "Type of Resource": "Craft",
     "Languages": "English",
     "URL": "http://herschel.cf.ac.uk/education/model",
@@ -507,7 +506,7 @@ data([
   {
     "Resource Name": "Planck Satellite models",
     "Domain": "Astronomy",
-    "Resource/Workshop": "Resource",
+    "Category": "Extension; Other",
     "Type of Resource": "Craft",
     "Languages": "English",
     "URL": "http://planck.cf.ac.uk/education",
@@ -523,7 +522,7 @@ data([
   {
     "Resource Name": "Virtual ISSYP - Perimeter Institute",
     "Domain": "Physics",
-    "Resource/Workshop": "Resource",
+    "Category": "Extension",
     "Type of Resource": "Online; Video; Degree prep",
     "Languages": "English",
     "URL": "https://www.perimeterinstitute.ca/outreach/students/virtual-issyp",
@@ -538,7 +537,7 @@ data([
   {
     "Resource Name": "Codeacademy Python course",
     "Domain": "Coding",
-    "Resource/Workshop": "Resource",
+    "Category": "Extension; Other",
     "Type of Resource": "Online; Coding; Degree prep",
     "Languages": "English",
     "URL": "https://www.codecademy.com/catalog/language/python",
@@ -552,7 +551,7 @@ data([
   {
     "Resource Name": "EDX Online Courses",
     "Domain": "Physics",
-    "Resource/Workshop": "Resource",
+    "Category": "Extension; Other",
     "Type of Resource": "Online; Coding; Degree prep",
     "Languages": "English",
     "URL": "https://www.edx.org/",
@@ -566,7 +565,6 @@ data([
   {
     "Resource Name": "Maths text book (AQA FP3)",
     "Domain": "Maths",
-    "Resource/Workshop": "Resource",
     "Type of Resource": "Worksheet; Degree prep",
     "Languages": "English",
     "URL": "http://www.homepages.ucl.ac.uk/~zcahc79/MATH6103_Books/AQA-MFP3-TEXTBOOK.pdf",
@@ -579,7 +577,7 @@ data([
   {
     "Resource Name": "Research Activity: Explaining the periodic table - from a physicist's perspective",
     "Domain": "Physics",
-    "Resource/Workshop": "Resource",
+    "Category": "Extension",
     "Type of Resource": "Degree Prep; Independent Research",
     "Languages": "English",
     "Image": "periodic-table.png",
@@ -593,7 +591,7 @@ data([
   {
     "Resource Name": "Openstax: Astronomy Textbook",
     "Domain": "Astronomy",
-    "Resource/Workshop": "Resource",
+    "Category": "Extension",
     "Type of Resource": "Degree Prep; Reading",
     "Languages": "English",
     "URL": "https://openstax.org/details/astronomy",
@@ -607,7 +605,7 @@ data([
   {
     "Resource Name": "Openstax: College Physics Textbook",
     "Domain": "Physics",
-    "Resource/Workshop": "Resource",
+    "Category": "Extension",
     "Type of Resource": "Degree Prep; Reading",
     "Languages": "English",
     "URL": "https://openstax.org/details/books/college-physics",
@@ -621,7 +619,7 @@ data([
   {
     "Resource Name": "Sustainable Energy: Without the Hot Air",
     "Domain": "Physics",
-    "Resource/Workshop": "Resource",
+    "Category": "Extension",
     "Type of Resource": "Book; Reading; Degree prep",
     "Languages": "English",
     "URL": "https://www.withouthotair.com/",
@@ -635,7 +633,7 @@ data([
   {
     "Resource Name": "Game Hack Tutorials",
     "Domain": "Coding",
-    "Resource/Workshop": "Resource",
+    "Category": "Extension",
     "Type of Resource": "Coding",
     "Languages": "English",
     "URL": "https://gamehack.glitch.me/",
@@ -650,7 +648,7 @@ data([
   {
     "Resource Name": "Kip Thorne Public Lecture",
     "Domain": "Astronomy",
-    "Resource/Workshop": "Resource",
+    "Category": "Extension",
     "Type of Resource": "Online; Video; Degree prep",
     "Languages": "English",
     "URL": "https://www.youtube.com/watch?v=GlmMxmWHEfg",
@@ -665,7 +663,7 @@ data([
   {
     "Resource Name": "AR Adventure in Space App",
     "Domain": "Astronomy",
-    "Resource/Workshop": "Resource",
+    "Category": "Extension",
     "Type of Resource": "Augmented Reality; App; Interactive",
     "Languages": "English",
     "URL": "https://octagon.studio/portfolio/ar-adventure-in-space/",
@@ -679,7 +677,7 @@ data([
   {
     "Resource Name": "Gravitational Wave Apps",
     "Domain": "Gravitational Waves",
-    "Resource/Workshop": "Resource",
+    "Category": "Extension",
     "Type of Resource": "App; Interactive; Computer",
     "Languages": "English",
     "URL": "https://www.laserlabs.org/",
@@ -693,7 +691,7 @@ data([
   {
     "Resource Name": "Spot the Space Station",
     "Domain": "Astronomy",
-    "Resource/Workshop": "Resource",
+    "Category": "Extension",
     "Type of Resource": "Observing",
     "Languages": "English",
     "URL": "https://spotthestation.nasa.gov/",
@@ -706,7 +704,7 @@ data([
   {
     "Resource Name": "Virtual Reality Physics Experiences",
     "Domain": "Astronomy",
-    "Resource/Workshop": "Resource",
+    "Category": "Extension",
     "Type of Resource": "Virtual Reality; App; Interactive",
     "Languages": "English",
     "URL": "https://play.google.com/store/apps/developer?id=Faulkes+Telescope&hl=en",
@@ -722,7 +720,7 @@ data([
   {
     "Resource Name": "Augmented Reality Physics Resources",
     "Domain": "Astronomy",
-    "Resource/Workshop": "Resource",
+    "Category": "Extension",
     "Type of Resource": "Augmented Reality; App; Interactive",
     "Languages": "English, <a href=\"https://play.google.com/store/apps/developer?id=Faulkes+Telescope&hl=cy\">Cymraeg</a>",
     "Welsh": "yes",
@@ -739,7 +737,7 @@ data([
   {
     "Resource Name": "IOP Spark Collection",
     "Domain": "Physics",
-    "Resource/Workshop": "Resource",
+    "Category": "Resource",
     "Type of Resource": "Collection",
     "Languages": "English, <a href=\"https://spark.iop.org/search?query=cymraeg\">Cymraeg</a>",
     "Welsh": "yes",
@@ -754,7 +752,7 @@ data([
   {
     "Resource Name": "Ogden Trust Resource Collection",
     "Domain": "Physics",
-    "Resource/Workshop": "Resource",
+    "Category": "Resource",
     "Type of Resource": "Collection",
     "Languages": "English",
     "URL": "https://www.ogdentrust.com/resources-cpd",
@@ -767,7 +765,7 @@ data([
   {
     "Resource Name": "Zooniverse.org",
     "Domain": "Physics; Astronomy",
-    "Resource/Workshop": "Resource",
+    "Category": "Extension",
     "Type of Resource": "Collection; Independent Research; Online",
     "Languages": "English",
     "URL": "www.zooniverse.org",
@@ -781,7 +779,7 @@ data([
   {
     "Resource Name": "CoolCosmos",
     "Domain": "Astronomy",
-    "Resource/Workshop": "Resource",
+    "Category": "Resource; Extension",
     "Type of Resource": "Online; Collection",
     "Languages": "English",
     "URL": "http://coolcosmos.ipac.caltech.edu/",
@@ -795,7 +793,7 @@ data([
   {
     "Resource Name": "Serol's Cosmic Explorers",
     "Domain": "Astronomy",
-    "Resource/Workshop": "Resource",
+    "Category": "Resource",
     "Type of Resource": "Various; Online; Independent Research; Observing",
     "Languages": "English",
     "URL": "https://serol.lco.global",
@@ -809,7 +807,7 @@ data([
   {
     "Resource Name": "Serol: Dark Sky Dash",
     "Domain": "Astronomy",
-    "Resource/Workshop": "Resource",
+    "Category": "Extension",
     "Type of Resource": "Online; Interactive",
     "Languages": "English",
     "URL": "https://serol.lco.global/game/",
@@ -822,7 +820,7 @@ data([
   {
     "Resource Name": "Build your own Serol",
     "Domain": "Astronomy",
-    "Resource/Workshop": "Resource",
+    "Category": "Extension",
     "Type of Resource": "Craft; Printable activity",
     "Languages": "English",
     "URL": "https://lco.global/education/resources/activities-home/",
@@ -835,7 +833,6 @@ data([
   {
     "Resource Name": "Serol colouring sheets",
     "Domain": "Astronomy",
-    "Resource/Workshop": "Resource",
     "Type of Resource": "Printable activity",
     "Languages": "English",
     "URL": "https://lco.global/education/resources/activities-home/",
@@ -848,7 +845,6 @@ data([
   {
     "Resource Name": "Astronaut Training: Taste",
     "Domain": "Astronomy",
-    "Resource/Workshop": "Resource",
     "Type of Resource": "Craft; Independent Research",
     "Languages": "English",
     "URL": "https://lco.global/education/activities/astronaut-training-taste/",
@@ -861,7 +857,6 @@ data([
   {
     "Resource Name": "Return to Earth: Build a Lander",
     "Domain": "Astronomy",
-    "Resource/Workshop": "Resource",
     "Type of Resource": "Craft; Independent Research",
     "Languages": "English",
     "URL": "https://lco.global/education/activities/return-to-earth-build-a-lander/",
@@ -876,7 +871,6 @@ data([
   {
     "Resource Name": "How Big is the Solar System",
     "Domain": "Astronomy",
-    "Resource/Workshop": "Resource",
     "Type of Resource": "Craft; Independent Research",
     "Languages": "English",
     "URL": "https://lco.global/education/activities/how-big-solar-system/",
@@ -890,7 +884,6 @@ data([
   {
     "Resource Name": "Craters in the Classroom",
     "Domain": "Astronomy",
-    "Resource/Workshop": "Resource",
     "Type of Resource": "Craft; Independent Research",
     "Languages": "English",
     "URL": "https://lco.global/education/activities/craters-in-the-classroom/",
@@ -904,7 +897,6 @@ data([
   {
     "Resource Name": "Measure the diameter of the Sun",
     "Domain": "Astronomy",
-    "Resource/Workshop": "Resource",
     "Type of Resource": "Craft; Independent Research; Degree prep; Observing",
     "Languages": "English",
     "URL": "https://lco.global/education/activities/measure-the-diameter-of-the-sun/",
@@ -918,7 +910,6 @@ data([
   {
     "Resource Name": "Calculating the Age of Solar System Objects",
     "Domain": "Astronomy",
-    "Resource/Workshop": "Resource",
     "Type of Resource": "Printable activity",
     "Languages": "English",
     "URL": "https://lco.global/education/activities/calculating-age-solar-system-objects/",
@@ -932,7 +923,6 @@ data([
   {
     "Resource Name": "How to Create Stunning Colour Images of the Cosmos (Using Photoshop)",
     "Domain": "Astronomy",
-    "Resource/Workshop": "Resource",
     "Type of Resource": "Independent Research; Observing; Degree prep",
     "Languages": "English",
     "URL": "https://lco.global/education/activities/how-make-color-astronomical-images-photoshop/",
@@ -946,7 +936,6 @@ data([
   {
     "Resource Name": "How to Create Stunning Colour Images of the Cosmos (Using Pixlr)",
     "Domain": "Astronomy",
-    "Resource/Workshop": "Resource",
     "Type of Resource": "Online; Independent Research; Observing; Degree prep",
     "Languages": "English",
     "URL": "https://lco.global/education/activities/how-create-stunning-colour-images-cosmos-using-pixlr/",
@@ -960,7 +949,6 @@ data([
   {
     "Resource Name": "How to Create Stunning Colour Images of the Cosmos (Using GIMP)",
     "Domain": "Astronomy",
-    "Resource/Workshop": "Resource",
     "Type of Resource": "Independent Research; Observing; Degree prep",
     "Languages": "English",
     "URL": "https://lco.global/education/activities/how-to-create-stunning-colour-images-of-the-cosmos/",
@@ -974,7 +962,6 @@ data([
   {
     "Resource Name": "Plotting a Supernova Light curve",
     "Domain": "Astronomy",
-    "Resource/Workshop": "Resource",
     "Type of Resource": "Online; Independent Research; Degree Prep",
     "Languages": "English",
     "URL": "https://lco.global/education/activities/plotting-a-supernova-light-curve/",
@@ -988,7 +975,6 @@ data([
   {
     "Resource Name": "Plotting an Asteroid Light Curve",
     "Domain": "Astronomy",
-    "Resource/Workshop": "Resource",
     "Type of Resource": "Online; Independent Research; Observing",
     "Languages": "English",
     "URL": "https://lco.global/education/activities/plotting-an-asteroid-light-curve/",
@@ -1002,7 +988,6 @@ data([
   {
     "Resource Name": "Measuring the Age of the Universe",
     "Domain": "Astronomy",
-    "Resource/Workshop": "Resource",
     "Type of Resource": "Online; Independent Research; Degree Prep",
     "Languages": "English",
     "URL": "https://lco.global/education/activities/measuring-the-age-of-the-universe/",
@@ -1016,7 +1001,6 @@ data([
   {
     "Resource Name": "Measure the Age of Ancient Cosmic Explosions",
     "Domain": "Astronomy",
-    "Resource/Workshop": "Resource",
     "Type of Resource": "Online; Independent Research; Degree Prep",
     "Languages": "English",
     "URL": "https://lco.global/education/activities/calculate-the-age-of-ancient-cosmic-explosion/",
@@ -1030,7 +1014,7 @@ data([
   {
     "Resource Name": "Gravitational Waves Online Workshop",
     "Domain": "Gravitational Waves",
-    "Resource/Workshop": "Resource",
+    "Category": "Resource; Workshop",
     "Type of Resource": "Online; Independent Research; Degree Prep",
     "Languages": "English, <a href=\"https://play.google.com/store/apps/developer?id=Faulkes+Telescope&hl=en\">Cymraeg</a>",
     "Welsh": "yes",
@@ -1046,7 +1030,7 @@ data([
   {
     "Resource Name": "UniverseLab",
     "Domain": "Astronomy",
-    "Resource/Workshop": "Resource",
+    "Category": "Resource",
     "Type of Resource": "Collection",
     "Languages": "English, <a href=\"https://www.trioscicardiff.co.uk/cy/activities/universelab/\">Cymraeg</a>",
     "Welsh": "yes",
@@ -1062,7 +1046,7 @@ data([
   {
     "Resource Name": "BH Lunchtime Scientist - Prof Jane Greaves, Astrobiologist",
     "Domain": "Astronomy",
-    "Resource/Workshop": "Resource",
+    "Category": "Extension",
     "Type of Resource": "Oneline; Video; Degree-prep",
     "Languages": "English",
     "URL": "https://www.youtube.com/watch?v=HuRmf3V71pk",
@@ -1078,7 +1062,7 @@ data([
   {
     "Resource Name": "Discovery Diaries",
     "Domain": "Astronomy",
-    "Resource/Workshop": "Resource",
+    "Category": "Resource; Extension",
     "Type of Resource": "Printable activity; Independent Research;",
     "Languages": "English, <a href=\"https://discoverydiaries.org/cymraeg/\">Cymraeg</a>",
     "Welsh": "yes",
@@ -1092,7 +1076,7 @@ data([
   {
     "Resource Name": "DisCUver Vision",
     "Domain": "Physics",
-    "Resource/Workshop": "Resource",
+    "Category": "Extension; Other",
     "Type of Resource": "Online; App; Degree-prep; Interactive",
     "Languages": "English",
     "URL": "https://play.google.com/store/apps/details?id=com.CU.disCUverVision&hl=en",
@@ -1106,7 +1090,7 @@ data([
   {
     "Resource Name": "Arecibo Stories",
     "Domain": "Astronomy",
-    "Resource/Workshop": "Resource",
+    "Category": "Extension",
     "Type of Resource": "Online; Interactive",
     "Languages": "English, <a href=\"http://blogs.cardiff.ac.uk/physicsoutreach/2021/04/01/arecibo-stories/\">Cymraeg</a>",
     "URL": "http://blogs.cardiff.ac.uk/physicsoutreach/2021/04/01/arecibo-stories/",

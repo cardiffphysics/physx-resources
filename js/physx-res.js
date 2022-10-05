@@ -1,8 +1,20 @@
 var filters={
-    'age':{
+    'category':{
+        tag:'cat',
+        title:'Category',
+        type:'normal',
+        state:'open',
+        select:{
+            'Resource':{'tag':'cat-resource',name:"Classroom Resource"},
+            'Extension':{'tag':'cat-extension',name:"Extension Activity"},
+            'Workshop':{'tag':'cat-workshop',name:"Workshop"},
+            'Other':{'tag':'cat-other',name:"Other"}
+        }
+    },'age':{
         tag:'age',
         title:'Age',
         type:'normal',
+        state:'open',
         select:{
             'age47':{'tag':'age-4-7',name:"4-7"},
             'age79':{'tag':'age-7-9',name:"7-9"},
@@ -16,6 +28,7 @@ var filters={
         tag:'dom',
         title:'Subject Area',
         type:'normal',
+        state:'open',
         select:{
             'Astronomy':{'tag':'dom-astronomy',name:"Astronomy",icon:'dom-astro.svg'},
             'GravWaves':{'tag':'dom-gravitational-waves',name:"Gravitational Waves",icon:'dom-gw.svg'},
@@ -28,6 +41,7 @@ var filters={
         tag:'type',
         title:'Activity types',
         type:'normal',
+        state:'closed',
         select:{
             'Printable':{'tag':'type-printable-activity',name:"Printable Activity",icon:'svg'},
             'Book':{'tag':'type-book',name:"Book",icon:'svg'},
@@ -52,6 +66,7 @@ var filters={
         tag:'req',
         title:'Requirements',
         type:'req',
+        state:'closed',
         desc:'Deselect any that are unavailable',
         select:{
             'Any-device':{'tag':'req-any-device',name:"Any device",icon:'svg'},
@@ -70,6 +85,7 @@ var filters={
         tag:'author',
         title:'Author',
         type:'normal',
+        state:'closed',
         select:{
             'cardiff':{'tag':'author-cardiff',name:"Cardiff University"},
             'collaboration':{'tag':'author-collaboration',name:"Collaboration"},
@@ -78,6 +94,7 @@ var filters={
     },'lang':{
         tag:'lang',
         title:'Cymraeg',
+        state:'closed',
         type:'normal',
         select:{
             'welsh':{'tag':'lang-welsh',name:'Ie (Yes)'},
@@ -89,20 +106,20 @@ var presets={
     'primary':{
         button:true,
         title:'Primary School',
-        selected:{age:['age-4-7','age-7-9','age-9-11']},
+        selected:{cat:['cat-resource'],age:['age-4-7','age-7-9','age-9-11']},
         unselected:{type:[],dom:[],req:[],author:[],lang:[]}
     },
     'secondary':{
         button:true,
         title:'Secondary School',
-        selected:{age:['age-11-14','age-14-16','age-16-18']},
+        selected:{cat:['cat-resource'],age:['age-11-14','age-14-16','age-16-18']},
         unselected:{type:[],dom:[],req:[],author:[],lang:[]}
     },
     'degree':{
         button:true,
         title:'Degree Prep',
         selected:{age:['age-16-18','age-gt18'],type:['type-degree-prep']},
-        unselected:{dom:[],req:[],author:[],lang:[]}
+        unselected:{cat:[],dom:[],req:[],author:[],lang:[]}
     },
     'noweb':{
         button:false,
@@ -123,7 +140,7 @@ var presets={
     'all':{
         button:true,
         title:'All',
-        unselected:{age:[],type:[],dom:[],req:[],author:[],lang:[]}
+        unselected:{cat:[],age:[],type:[],dom:[],req:[],author:[],lang:[]}
     }
 
 }
@@ -202,7 +219,7 @@ function populateData(){
     var _h=hid;
     for (d in this.data){
         let _dx=this.data[d];
-        if (_dx['Resource/Workshop']!='Resource'){
+        if (_dx['Category']==''){
             continue
         }
         _dx.classlist='';
@@ -233,7 +250,15 @@ function populateData(){
         }else{
             $('#'+_i+' .block-title h3').append(_dx['Resource Name']);
         }
-
+        if (_dx['Category']){
+            _dx.categories={}
+            let cats=_dx['Category'].split(';')
+            for (c in cats){
+                let cat=cats[c].trim().toLowerCase().replace(' ','-');
+                _dx.categories=cats[c];
+                $('#'+_i).addClass('cat-'+cat);
+            }
+        }
         if (_dx['Age Range']){
             _dx.ages={};
             ages=_dx['Age Range'].split(';');
@@ -313,7 +338,9 @@ function makeFilters(){
     for (filt in filters){
         // console.log(filt);
         var ftag=filters[filt].tag;
-        $('#filter-holder').append('<div class="filter open" id="filter-'+ftag+'"><h3 class="filter-name">'+filters[filt].title+'</h3></div>')
+        var fclass=(filters[filt].state)?filters[filt].state:"";
+        fclass=fclass+" filter";
+        $('#filter-holder').append('<div class="'+fclass+'" id="filter-'+ftag+'"><h3 class="filter-name">'+filters[filt].title+'</h3></div>')
         $('#filter-'+ftag+'.filter').append('<div class="select"><div class="select-none">Select None</div><div class="select-all">Select All</div></div>');
         $('.select-none').each(function(){
             $(this).click(function(){
@@ -428,7 +455,7 @@ function makeSearch(){
         searchList();
     });
     searchList();
-    
+
 }
 function applyPreset(pid){
     if (!presets[pid]){console.log('invalid preset',pid);return;}
@@ -537,7 +564,7 @@ function searchList(){
             console.log('hide',title);
             $(this).addClass('search-hidden');
         }
-        
+
     });
 }
 function ajax(url,attrs){
