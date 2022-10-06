@@ -219,9 +219,10 @@ function populateData(){
     var _h=hid;
     for (d in this.data){
         let _dx=this.data[d];
-        if (_dx['Category']==''){
+        if (!_dx['Category']){
             continue
         }
+        console.log(_dx['Resource Name'],":",_dx['Category'])
         _dx.classlist='';
         let _i='item-'+d;
         // console.log($('#'+_h));
@@ -309,7 +310,7 @@ function populateData(){
             }
         }
         if (_dx['Cardiff?']){
-            console.log(_dx['Resource Name'],_dx['Cardiff?'].toLowerCase);
+            // console.log(_dx['Resource Name'],_dx['Cardiff?'].toLowerCase);
             if (_dx['Cardiff?'].toLowerCase()=='cardiff-only'){
                 $('#'+_i).addClass('author-cardiff');
                 $('#'+_i+' .block-title').append('<div class="icon icon-author-cardiff"></div>');
@@ -367,13 +368,13 @@ function makeFilters(){
         // sort filter order
         var filtOrder=[];
         for (s in filters[filt].select){filtOrder.push(s)}
-        console.log('unordered',filt,filtOrder);
+        // console.log('unordered',filt,filtOrder);
         var fsel=filters[filt].select;
         if (filters[filt].sort){
             filtOrder=filtOrder.sort(function(a,b){
                 return (fsel[a].name > fsel[b].name)?1:-1;
             })
-            console.log('ordered',filt,filtOrder);
+            // console.log('ordered',filt,filtOrder);
         }
         for (sx in filtOrder){
             var s=filtOrder[sx];
@@ -453,7 +454,7 @@ function makeSearch(){
         searchList();
     });
     $('#search-clear').click(function(){
-        console.log(this);
+        // console.log(this);
         $('#search-input').val('');
         searchList();
     });
@@ -463,12 +464,12 @@ function makeSearch(){
 function applyPreset(pid){
     if (!presets[pid]){console.log('invalid preset',pid);return;}
     px=presets[pid];
-    console.log(pid,px);
+    // console.log(pid,px);
     if (px.selected){
         for (filt in px.selected){
             $('#filter-'+filt).find('input').each(function(){$(this).prop('checked',false)})
             for (s in px.selected[filt]){
-                console.log(px.selected[filt][s]);
+                // console.log(px.selected[filt][s]);
                 $('#filt-'+px.selected[filt][s]).prop('checked',true);
             }
         }
@@ -541,7 +542,7 @@ function updateFilters(){
 }
 function searchList(){
     // Declare variables
-    console.log('')
+    // console.log('')
     var input, filter, title, desc, author;
     input = document.getElementById('search-input');
     filter = input.value.toUpperCase();
@@ -561,10 +562,10 @@ function searchList(){
             srchtxt+=$(this).find('.res-author').text();
         }
         if (srchtxt.toUpperCase().indexOf(filter) > -1){
-            console.log('show',title);
+            // console.log('show',title);
             $(this).removeClass('search-hidden');
         }else{
-            console.log('hide',title);
+            // console.log('hide',title);
             $(this).addClass('search-hidden');
         }
 
