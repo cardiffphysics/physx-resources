@@ -230,6 +230,7 @@ function populateData(){
         // console.log($('#'+_i));
         $('#'+_i).append('<div class="block-title"><h3 class="block-white"></h3></div>');
         $('#'+_i).append('<div class="block-img"><img src="'+((_dx.Image.substring(0,4)=='http')?_dx.Image:'img/'+_dx.Image)+'" alt="image"></div>');
+        $('#'+_i).append('<p class="res res-cat"></p>');
         $('#'+_i).append('<p class="res res-type"></p>');
         $('#'+_i).append('<p class="res res-age"></p>');
         $('#'+_i).append('<p class="res res-req"></p>');
@@ -261,6 +262,12 @@ function populateData(){
                 let cat=cats[c].trim().toLowerCase().replace(' ','-');
                 _dx.categories=cats[c];
                 $('#'+_i).addClass('cat-'+cat);
+                console.log(cats[c])
+                let cname=filters.category.select[cats[c].trim()].name
+                $('#'+_i+' .res-cat').append('<span class="res-cat-item">'+cname+'</span>');
+                if (c<cats.length-1){
+                    $('#'+_i+' .res-cat').append('<span class="res-cat-item">; </span>');
+                }
             }
         }
         if (_dx['Age Range']){
