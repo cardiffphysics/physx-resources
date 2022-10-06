@@ -1109,5 +1109,19 @@ data([
     "Curriculum Links": "Astronomy",
     "Age Range": "14-16; 16-18; >18",
     "Requirements": "Computer; Web-access"
+  },
+  {
+    "Resource Name": "Astronomy Picture of the Day",
+    "Domain": "Astronomy",
+    "Category": "Extension; Other",
+    "Type of Resource": "Online",
+    "Languages": "English",
+    "URL": "https://apod.nasa.gov/apod/astropix.html",
+    "Image": "nasa_logo.png",
+    "Description": "Each day a different image or photograph of our fascinating universe is featured, along with a brief explanation written by a professional astronomer.",
+    "Author/Originator": "Various",
+    "Curriculum Links": "Astronomy",
+    "Age Range": "11-14; 14-16; 16-18; >18",
+    "Requirements": "Any device; Web-access"
   }
 ]);
